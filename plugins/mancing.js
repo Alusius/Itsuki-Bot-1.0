@@ -1,4 +1,3 @@
-let fetch = require('node-fetch')
 let { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, usedPrefix }) => {
 	if (!db.data.chats[m.chat].rpg && m.isGroup) throw global.rpg
@@ -54,7 +53,7 @@ zero12 = `${rbrb12}`
 
 let perfect = (pickRandom(['Anjir GG', 'Mantap', 'Sempurna', 'Mancing Mania...', 'Besar Nih']))
 
-let hsl = `Mantap
+hsl = `Mantap
 *《 Hasil Memancing Kali Ini 》*
  *🦀 = [ ${zero2} ]*			*🐠 = [ ${zero6} ]*
  *🦞 = [ ${zero8} ]*			 *🐟 = [ ${zero11} ]*
@@ -62,8 +61,7 @@ let hsl = `Mantap
  *🦑 = [ ${zero4} ]*			 *🐳 = [ ${zero12} ]*
  *🐙 = [ ${zero3} ]*			 *🦈 = [ ${zero9} ]*
   *🐡 = [ ${zero5} ]*			*🐋 = [ ${zero1} ]*
-`trim()
-
+`
 global.db.data.users[m.sender].paus += rbrb1
 global.db.data.users[m.sender].fishingroddurability -= rbrb
 global.db.data.users[m.sender].kepiting += rbrb2
@@ -80,8 +78,8 @@ global.db.data.users[m.sender].ikan += rbrb11
 global.db.data.users[m.sender].orca += rbrb12
 
 setTimeout(() => {
-conn.send2Button( m.chat, hsl, watermark, 'Again', '.mancing', 'Kolam', '.kolam', m)
-}, 20000) 
+                     m.reply(`${hsl}`)
+                     }, 20000) 
 
                      setTimeout(() => {
                      m.reply(`${perfect}`)
@@ -98,7 +96,7 @@ conn.send2Button( m.chat, hsl, watermark, 'Again', '.mancing', 'Kolam', '.kolam'
                      setTimeout(() => {
                      m.reply('_Sedang Memancing..._')
                      }, 0) 
-        } else conn.sendButton(m.chat, `*Sepertinya Anda Sudah Kecapekan*\n*Silahkan Istirahat Sejenak Sekitar ${timer}*\n*Untuk Bisa Melanjutkan Memancing Lagi*\n`, '©RadBotZ', 'KOLAM', '#kolam', m )
+        } else conn.sendButton(m.chat, `*Sepertinya Anda Sudah Kecapekan*\n*Silahkan Istirahat Sejenak Sekitar ${timer}*\n*Untuk Bisa Melanjutkan Memancing Lagi*\n`, '© mikebot', 'KOLAM', '#kolam', m )
      } else conn.reply(m.chat, 'Upgrade fishing rod dulu dah mau patah' ,m)
    } else conn.reply(m.chat, 'beli fishing rod dulu di #shop' ,m)
 }

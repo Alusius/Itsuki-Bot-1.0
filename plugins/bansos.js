@@ -28,7 +28,7 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
         conn.sendButton( m.chat, `Sorry Gan Lu g Berhasil Korupsi bansos Dan Tidak masuk penjara karna kamu *melarikan diri🏃*`, wm, `Kembali`, `${usedPrefix}menu`, m)
         global.db.data.users[m.sender].lastbansos = new Date * 1
       }
-    } else conn.sendButton(m.chat, `Kamu sudah Melakukan Korupsi Bansos, dan kamu harus menunggu selama ${timers} agar bisa korupsi bansos kembali`, wm, `Menu`, `${usedPrefix}menu`, m)
+    } else conn.sendButton(m.chat, `Kamu sudah Melakukan Korupsi Bansos, dan kamu harus menunggu selama ${timers} agar bisa korupsi bansos kembali`, watermark, `Menu`, `${usedPrefix}menu`, m)
   } catch (e) {
     throw `${e}`
   }

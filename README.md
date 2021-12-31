@@ -5,15 +5,6 @@
 
 Simple Rpg WhatsApp Bot
 
-<a href="https://github.com/Drz103/RadBot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Drz103/RadBot?label=Forks&color=blue&style=flat-square"></a>
-<a href="https://github.com/Drz103/RadBot/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/Drz103/RadBot?label=Watchers&color=green&style=flat-square"></a>
-<a href="https://github.com/Drz103/RadBot/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/Drz103/RadBot?label=Stars&color=yellow&style=flat-square"></a>
-<a href="https://github.com/Drz103/RadBot/graphs/contributors"><img title="Contributors" src="https://img.shields.io/github/contributors/Drz103/RadBot?label=Contributors&color=blue&style=flat-square"></a>
-<a href="https://github.com/Drz103/RadBot/issues"><img title="Issues" src="https://img.shields.io/github/issues/Drz103/RadBot?label=Issues&color=success&style=flat-square"></a>
-<a href="https://github.com/Drz103/RadBot/issues?q=is%3Aissue+is%3Aclosed"><img title="Issues" src="https://img.shields.io/github/issues-closed/Drz103/RadBot?label=Issues&color=red&style=flat-square"></a>
-<a href="https://github.com/Drz103/RadBot/pulls"><img title="Pull Request" src="https://img.shields.io/github/issues-pr/Drz103/RadBot?label=PullRequest&color=success&style=flat-square"></a>
-<a href="https://github.com/Drz103/RadBot/pulls?q=is%3Apr+is%3Aclosed"><img title="Pull Request" src="https://img.shields.io/github/issues-pr-closed/Drz103/RadBot?label=PullRequest&color=red&style=flat-square"></a>
-
 ## Join Group Diskusi
 [![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/D5IU5pzGDSyE6lAkqqYnvr) 
 **NO BOT**

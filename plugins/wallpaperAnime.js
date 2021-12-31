@@ -1,15 +1,12 @@
-const fetch = require('node-fetch')
+let fetch = require('node-fetch')
+let handler = async (m, { conn, command, usedPrefix }) => {
+	
+	conn.sendButtonImg(m.chat, await ( await fetch(`https://api.lolhuman.xyz/api/random/wallnime?apikey=Dawnfrostkey`)).buffer(), 'Nih kak', watermark, 'NEXT', `.${command}`, m)
 
-let handler = async (m, { conn }) => {
-    let res = await fetch(global.API('xteam', '/randomimage/wpmobile', {}, 'APIKEY'))
-    if (!res.ok) throw await res.text()
-    let img = await res.buffer()
-    if (!img) throw img
-    conn.sendFile(m.chat, img, '', '© stikerin', m, 0, { thumbnail: await (await fetch(img)).buffer() })
 }
-handler.help = ['wallpaperanime']
-handler.tags = ['internet']
-handler.command = /^(wallpaper|wp)anime$/i
-handler.limit = true
+
+handler.help = ['wallnime']
+handler.tags = ['anime']
+handler.command = /^(wallnime)$/i
 
 module.exports = handler

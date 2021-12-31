@@ -96,18 +96,8 @@ if (opts['test']) {
   rl.on('line', line => {
     process.send(line.trim())
   })
-  conn.connect().then(async () => {
-    await global.db.read()
-    global.db.data = {
-      users: {},
-      chats: {},
-      stats: {},
-      msgs: {},
-      sticker: {},
-      settings: {},
-      ...(global.db.data || {})
-    }
-    global.db.chain = _.chain(global.db.data)
+  conn.connect().then(() => {
+ conn.sendMessage('62858929626673@c.us', 'Bot Telah Tersambung Ke Database RadBotZ ღ', 'conversation');
     fs.writeFileSync(authFile, JSON.stringify(conn.base64EncodedAuthInfo(), null, '\t'))
     global.timestamp.connect = new Date
   })

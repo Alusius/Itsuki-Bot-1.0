@@ -1,17 +1,12 @@
-let fs = require('fs')
-let handler = async (m) => {
-let ara = fs.readFileSync('./audio/baka.m4a') 
-conn.fakeReply(m.chat, ara, '0@s.whatsapp.net', '*B,bakka !**', 'status@broadcast')
+let fetch = require('node-fetch')
+let handler = async (m, { conn, command, usedPrefix }) => {
+	
+	conn.sendButtonImg(m.chat, await ( await fetch(`https://api.lolhuman.xyz/api/random2/baka?apikey=Dawnfrostkey`)).buffer(), 'nih', watermark, 'NEXT', `${usedPrefix + command}`, m)
+
 }
 
-handler.customPrefix = ['b']
-handler.tags = ['audio'] 
-handler.command = /^(aka)$/i
-
-handler.owner = false
-handler.mods = false 
-handler.premium = false
-handler.group = false 
-handler.private = false
+handler.help = ['baka']
+handler.tags = ['anime']
+handler.command = /^(baka)$/i
 
 module.exports = handler

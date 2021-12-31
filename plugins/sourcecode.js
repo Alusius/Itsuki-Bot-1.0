@@ -6,8 +6,8 @@ Hai 👋
 Bot Ini Menggunakan Sc dari github
 https://github.com/Drz103/RadBot
 `.trim(), '©souce code', 'Thanks', '.tqto')
-handler.help = ['donasi']
+handler.help = ['sourcecode']
 handler.tags = ['info']
-handler.command = /^dona(te|si)$/i
+handler.command = /^(sourcecode|sc|script|github)$/i
 
 module.exports = handler

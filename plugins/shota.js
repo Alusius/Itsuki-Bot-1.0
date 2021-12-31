@@ -5,8 +5,8 @@ let handler = async (m, { conn, command, usedPrefix }) => {
 
 }
 
-//handler.help = ['shota']
-//handler.tags = ['anime']
+handler.help = ['shota']
+handler.tags = ['anime']
 handler.command = /^(shota)$/i
 
 module.exports = handler

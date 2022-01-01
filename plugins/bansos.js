@@ -1,3 +1,4 @@
+let fetch = require('node-fetch')
 let { MessageType } = require('@adiwajshing/baileys')
 let fs = require('fs')
 
@@ -17,18 +18,18 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
     let user = global.db.data.users[m.sender]
     if (new Date - global.db.data.users[m.sender].lastbansos > 86400000) {
       if (Aku > Kamu) {
-        conn.sendFile( m.chat, kbansos, 'b.jpg', `Kamu Tertangkap Setelah Kamu korupsi dana bansos🕴️💰,  Dan kamu harus membayar denda 3 Juta rupiah💵`, m)
-        user.money -= 3000000
+        conn.send2ButtonLoc(m.chat, await (await fetch(kbansos)).buffer(), 'Kamu Tertangkap Setelah Kamu korupsi dana bansos🕴️💰.  Dan kamu harus membayar denda 30 ribu rupiah💵', watermark, 'Again', '.bansos', 'Dompet', '.wallet', m)
+        user.money -= 30000
         global.db.data.users[m.sender].lastbansos = new Date * 1
       } else if (Aku < Kamu) {
-        user.money += 3000000
-        conn.sendFile( m.chat, mbansos, 'b.jpg', `Kamu berhasil  korupsi dana bansos🕴️💰,  Dan kamu mendapatkan 3 Juta rupiah💵`, m)
+        user.money += 30000
+        conn.send2ButtonLoc(m.chat, await (await fetch(mbansos)).buffer(), 'Kamu berhasil  korupsi dana bansos🕴️💰.  Dan kamu mendapatkan 30 ribu rupiah💵', watermark, 'Again', '.bansos', 'Dompet', '.wallet', m)
         global.db.data.users[m.sender].lastbansos = new Date * 1
       } else {
         conn.sendButton( m.chat, `Sorry Gan Lu g Berhasil Korupsi bansos Dan Tidak masuk penjara karna kamu *melarikan diri🏃*`, wm, `Kembali`, `${usedPrefix}menu`, m)
         global.db.data.users[m.sender].lastbansos = new Date * 1
       }
-    } else conn.sendButton(m.chat, `Kamu sudah Melakukan Korupsi Bansos, dan kamu harus menunggu selama ${timers} agar bisa korupsi bansos kembali`, watermark, `Menu`, `${usedPrefix}menu`, m)
+    } else conn.sendButton(m.chat, `Kamu sudah Melakukan Korupsi Bansos, dan kamu harus menunggu selama ${timers} agar bisa korupsi bansos kembali`, wm, `Menu`, `${usedPrefix}menu`, m)
   } catch (e) {
     throw `${e}`
   }

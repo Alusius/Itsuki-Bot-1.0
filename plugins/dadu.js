@@ -1,28 +1,16 @@
-let handler = async (m, { conn, command, text }) => {
-  conn.reply(m.chat, `
-Angka Dadu Anda : ${pickRandom(['1','2','3','4','5','6','7','8','9','10','11','12'])}
-Angka Dadu Bot : ${pickRandom(['1','2','3','4','5','6','7','8','9','10','11','12'])}
-
-Siapakah pemenangnya?
-`.trim(), m)
+const dir = [
+  'https://tinyurl.com/ygms8wvy',
+  'https://tinyurl.com/yhdyhnap',
+  'https://tinyurl.com/yfwjbou7',
+  'https://tinyurl.com/yh3e3ogt',
+  'https://tinyurl.com/yfmhpvxs',
+  'https://tinyurl.com/ygpxka9q'
+];
+let handler = async (m, { conn }) => {
+  conn.sendFile(m.chat, dir[Math.floor(Math.random() * dir.length)], 'dadu.webp', '', m)
 }
 handler.help = ['dadu']
-handler.tags = ['game']
-handler.command = /^dadu/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
+handler.tags = ['sticker', 'fun']
+handler.command = /^dadu$/i
 
 module.exports = handler
-
-function pickRandom(list) {
-  return list[Math.floor(Math.random() * list.length)]
-}
-

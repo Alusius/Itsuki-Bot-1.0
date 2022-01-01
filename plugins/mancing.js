@@ -1,3 +1,4 @@
+let fetch = require('node-fetch')
 let { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, usedPrefix }) => {
 	if (!db.data.chats[m.chat].rpg && m.isGroup) throw global.rpg
@@ -53,7 +54,7 @@ zero12 = `${rbrb12}`
 
 let perfect = (pickRandom(['Anjir GG', 'Mantap', 'Sempurna', 'Mancing Mania...', 'Besar Nih']))
 
-hsl = `Mantap
+let hsl = `Mantap
 *《 Hasil Memancing Kali Ini 》*
  *🦀 = [ ${zero2} ]*			*🐠 = [ ${zero6} ]*
  *🦞 = [ ${zero8} ]*			 *🐟 = [ ${zero11} ]*
@@ -61,7 +62,7 @@ hsl = `Mantap
  *🦑 = [ ${zero4} ]*			 *🐳 = [ ${zero12} ]*
  *🐙 = [ ${zero3} ]*			 *🦈 = [ ${zero9} ]*
   *🐡 = [ ${zero5} ]*			*🐋 = [ ${zero1} ]*
-`
+`.trim()
 global.db.data.users[m.sender].paus += rbrb1
 global.db.data.users[m.sender].fishingroddurability -= rbrb
 global.db.data.users[m.sender].kepiting += rbrb2
@@ -78,8 +79,8 @@ global.db.data.users[m.sender].ikan += rbrb11
 global.db.data.users[m.sender].orca += rbrb12
 
 setTimeout(() => {
-                     m.reply(`${hsl}`)
-                     }, 20000) 
+conn.send2Button( m.chat, hsl, watermark, 'Pasar', '.pasar', 'Kolam', '.kolam', m)
+}, 20000) 
 
                      setTimeout(() => {
                      m.reply(`${perfect}`)

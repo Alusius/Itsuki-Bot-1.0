@@ -1,13 +1,9 @@
-let util = require('util')
-let path = require('path')
-
-let handler = async (m, { conn }) => {
-let vn = './audio/araara.m4a'
-conn.sendFile(m.chat, vn, 'araara.m4a', null, m, true, {
-type: 'audioMessage', // paksa tanpa convert di ffmpeg
-ptt: true // true diatas ga work, sebab dipaksa tanpa convert ;v
-})
+let fs = require('fs')
+let handler = async (m) => {
+let stc = fs.readFileSync('./audio/araara.m4a')
+conn.fakeReply(m.chat, stc, '0@s.whatsapp.net', '*Ara Ara*', 'status@broadcast')
 }
-handler.customPrefix = /^(ara ara)$/i
+handler.customPrefix = /ara ara|araara|ara2|araara|arara/i
 handler.command = new RegExp
+
 module.exports = handler

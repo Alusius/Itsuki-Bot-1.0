@@ -9,8 +9,8 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
     let randomkamu = `${Math.floor(Math.random() * 81)}`.trim() //hehe Biar Susah Menang :v
     let Aku = (randomaku * 1)
     let Kamu = (randomkamu * 1)
-    let kbansos = './lib/kbansos.jpg'
-    let mbansos = './lib/mbansos.jpg'
+    let kbansos = 'https://telegra.ph/file/e11ef7400eb6d3264d4bc.jpg'
+    let mbansos = 'https://telegra.ph/file/b8fb6e6100eddbbe4691e.jpg'
     //let name = conn.getName[m.sender]
     let __timers = (new Date - global.db.data.users[m.sender].lastbansos)
     let _timers = (86400000 - __timers) 

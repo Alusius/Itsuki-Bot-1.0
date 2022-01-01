@@ -13,6 +13,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ╠═〘 ${package.name} 〙 ═
 ╠➥ *Versi : 9.99.99
 ╠➥ *Issue:* ${package.bugs.url}
+╠➥ *Homepage:* https://github.com/Drz103/RadBot
 ╠➥ *Prefix:* ' ${usedPrefix} '
 ╠➥ *Menu:* ${usedPrefix}menu
 ╠➥ *Ping:* ${neww - old} *ms*
@@ -40,7 +41,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ╠═ ©2021 ${package.name}
 ╠═ Scrip original by Norutomo
 ╠═ Creator : Raditya,Beniismael
-╠═ Api xsteam :St4r
+╠═ Api xsteam : Dawnfrosty
 ╠═ Resta
 ╠═ Ariq
 ╠═〘 BOTRADITYA 〙 ═

@@ -8,7 +8,7 @@ const anu = {
        message: {
                     locationMessage: {
                     name: '1 Tag',
-                    jpegThumbnail: fs.readFileSync('./src/mikey.jpg')
+                    jpegThumbnail: fs.readFileSync('./src/RadBotZ.jpg')
                           }
                         }
                       }

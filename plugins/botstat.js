@@ -9,6 +9,15 @@ let handler = async (m, { conn }) => {
     let uptime = clockString(_uptime)
 
     let str = `
+┌─〔 Info RadBotZ 〕
+│Name: RadBotZ
+│Main Owner: Raditya
+│Operated Since: 19 September 2021
+│Language Used: Nodejs (JS)
+│Server: Heroku
+│SC: _github.com/Drz103/RadBot.git_
+└────
+
 ┌─〔 Status 〕
 ├ Aktif selama ${uptime}
 ├ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}

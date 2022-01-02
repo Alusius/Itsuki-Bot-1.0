@@ -5,7 +5,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 		let no = 0
 			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
-                        "title": "Daftar Gacha yang ada pada Bot Atena",
+                        "title": "Daftar Gacha yang ada pada RadBotZ",
                         "description": `Pencet tombol "LIST-GACHA" untuk menampilkan daftar gacha`,
 						"footerText": "Harap menggunakan command ini dengan bijak!",
                         "buttonText": "LIST-GACHA",

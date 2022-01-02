@@ -6,8 +6,8 @@ conn.sendButtonImg(m.chat, barbar.result,'*MEME INDO*', watermark,'NEXT','.memei
 }
 handler.help = ['memeindo']
 handler.tags = ['fun']
-handler.command = /^(memeindo)$/i
+handler.command = /^(memeindo|memein)$/i
 handler.private = false
-handler.limit = true
+handler.limit = false
 
 module.exports = handler

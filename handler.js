@@ -631,7 +631,7 @@ global.dfail = (type, m, conn) => {
   let owr = {
     rowner: fs.readFileSync('./src/STK-20211226-WA0091.webp')
   }[type]
-  if (owr) return conn.sendFile(m.chat, './src/STK-20211226-WA0091.webp', m ,{sendEphemeral: false})
+  if (owr) return conn.sendFile(m.chat, './src/STK-20211226-WA0091.webp', m)
   let msg = {
     owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
     mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',

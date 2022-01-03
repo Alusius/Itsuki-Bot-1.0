@@ -25,7 +25,7 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
 }}
 
 handler.help = ['miss']
-handler.tags = ['nulis']
+handler.tags = ['fun']
 handler.command = /^miss$/i
 handler.owner = false
 handler.mods = false

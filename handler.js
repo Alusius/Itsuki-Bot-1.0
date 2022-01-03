@@ -629,9 +629,9 @@ Untuk mematikan fitur ini, ketik
 global.dfail = (type, m, conn) => {
 	let name = conn.getName(m.sender)
   let owr = {
-    rowner: fs.readFileSync('./src/STK-20211226-WA0091.webp')
+    rowner: 'https://telegra.ph/file/2848948d64ea43302c882.png'
   }[type]
-  if (owr) return conn.sendFile(m.chat, './src/STK-20211226-WA0091.webp', m)
+  if (owr) return conn.sendSticker(m.chat, 'https://telegra.ph/file/2848948d64ea43302c882.png', m ,{sendEphemeral: true})
   let msg = {
     owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
     mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',

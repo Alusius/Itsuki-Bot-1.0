@@ -46,10 +46,10 @@ handler.all = async function (m, { isBlocked }) {
 }
 
     // salam
-    //let reg = //i
-    //let isSalam = reg.exec(m.text)
-    //if (isSalam && !m.fromMe) {
-        //m.reply(`وَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ\n_wa\'alaikumussalam wr.wb._`)
+    let reg = //i
+    let isSalam = reg.exec(m.text)
+    if (isSalam && !m.fromMe) {
+        m.reply(`وَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ\n_wa\'alaikumussalam wr.wb._`)
     }
 
     // backup db

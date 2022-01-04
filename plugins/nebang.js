@@ -12,7 +12,7 @@ let handler = async (m, { conn }) => {
         global.db.data.users[m.sender].lastnebang = new Date * 1
     } else {
         let buttons = `silahkan tunggu *馃晵${timers}* lagi untuk bisa menebang lagi`.trim()
-        conn.send2Button(m.chat, buttons, '漏RadBotZ', 'nyampah', '#nyampah', 'Inventory', '#inv')
+        conn.send2Button(m.chat, buttons, '漏RadBotZ', 'nyampah', '#nyampah', 'Inventory', '#inv', m)
     }
 }
 handler.help = ['nebang']

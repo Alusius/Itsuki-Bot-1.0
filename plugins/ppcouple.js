@@ -3,7 +3,7 @@ let handler = async (m, { text }) => {
   let url = await fetch('https://erdwpe-api.herokuapp.com/randomimg/ppcouple')
   let barbar = await url.json()
 await conn.sendFile(m.chat, barbar.male, '', 'cowo', m)
-await conn.sendButtonImg(m.chat, barbar.female,'cewe', watermark,'NEXT','.ppcp', m)
+await conn.sendButtonImg(m.chat, barbar.female, 'cewe', watermark, 'NEXT', '.ppcp', m)
 }
 handler.help = ['ppcp', 'ppcouple']
 handler.tags = ['fun']

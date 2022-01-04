@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
   let json = await res.json()
   if (!json.status) throw json
   await conn.sendFile(m.chat, json.result.male, '', 'cowo', m)
-  await conn.sendFile(m.chat, json.result.female, '', 'cewe', m)
+  await conn.sendButtonImg(m.chat, json.result.female, 'cewe', watermark,'NEXT','.ppcp', m)
 }
 handler.help = ['ppcouple', 'ppcp']
 handler.tags = ['internet', 'anime']

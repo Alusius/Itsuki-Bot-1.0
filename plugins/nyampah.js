@@ -11,7 +11,7 @@ let handler = async (m, { conn }) => {
         global.db.data.users[m.sender].lastnyampah = new Date * 1
     } else {
         let buttons = `silahkan tunggu *馃晵${timers}* untuk bisa menyampah lagi`.trim()
-        conn.send2Button(m.chat, buttons, '漏RadBotZ', 'Shop', '#shop', 'Inventory', '#inv')
+        conn.send2Button(m.chat, buttons, '漏RadBotZ', 'Shop', '#shop', 'Inventory', '#inv', m)
     }
 }
 handler.help = ['nyampah']

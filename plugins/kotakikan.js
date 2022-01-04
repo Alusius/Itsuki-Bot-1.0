@@ -52,7 +52,7 @@ let isi = ` *🦀Kepiting = ${kepiting}*
 *🦈Hiu = ${hiu}*
 *🐡Buntal = ${buntal}*
 *🐳Orca = ${orca}*`.trim()
-  await conn.send2ButtonLoc(m.chat, await(await fetch(kolam)).buffer(), past, '©KOLAM', 'FISH SHOP', '#tokoikan', 'SHOP', '#shop', m)
+  await conn.send2ButtonLoc(m.chat, await(await fetch(kolam)).buffer(), past, '©KOLAM', 'PASAR', '#pasar', 'SHOP', '#shop', m)
   }
   handler.help = ['kotakikan', 'kolam', 'kolamikan']
   handler.tags = ['rpg']

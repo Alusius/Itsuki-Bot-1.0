@@ -1,4 +1,5 @@
 let { performance } = require('perf_hooks')
+let fetch = require('node-fetch')
 let fs = require ('fs')
 let path = require('path')
 let handler  = async (m, { conn, usedPrefix }) => { 
@@ -9,11 +10,11 @@ let handler  = async (m, { conn, usedPrefix }) => {
   let old = Math.round(performance.now())
   await m.reply('wait Kakak!!')
   let neww = Math.round(performance.now())
-  conn.reply(m.chat, `
+  let str = `
 ╠═〘 ${package.name} 〙 ═
-╠➥ *Versi : 9.99.99
+╠➥ *Versi* : 1.5.0
+╠➥ *Homepage* : https://github.com/Drz103/RadBot
 ╠➥ *Issue:* ${package.bugs.url}
-╠➥ *Homepage:* https://github.com/Drz103/RadBot
 ╠➥ *Prefix:* ' ${usedPrefix} '
 ╠➥ *Menu:* ${usedPrefix}menu
 ╠➥ *Ping:* ${neww - old} *ms*
@@ -41,11 +42,11 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ╠═ ©2021 ${package.name}
 ╠═ Scrip original by Norutomo
 ╠═ Creator : Raditya,Beniismael
-╠═ Api xsteam : Dawnfrosty
+╠═ Api xsteam :St4r
 ╠═ Resta
 ╠═ Ariq
-╠═〘 BOTRADITYA 〙 ═
-`.trim(), m)
+╠═〘 BOTRADITYA 〙 ═`.trim()
+     await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©RadBotZ ⁩×͜×', 'Owner', '.owner', 'Menu', '.menu', m)
 }
 handler.help = ['infobot']
 handler.tags = ['info']

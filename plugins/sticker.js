@@ -3,36 +3,57 @@ const { sticker } = require('../lib/sticker')
 const uploadFile = require('../lib/uploadFile')
 const uploadImage = require('../lib/uploadImage')
 let { webp2png } = require('../lib/webp2mp4')
+let fs = require('fs')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
+const ftoko = {
+key: {
+			fromMe: false,
+			participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})
+		},
+		message: {
+			"productMessage": {
+				"product": {
+					"productImage":{
+						"mimetype": "image/jpeg",
+						"jpegThumbnail": fs.readFileSync('./src/RadBotZ.jpg'), //Gambarnye
+					},
+					"title": `Hai ${conn.getName(m.sender)}`, //Kasih namalu 
+					"description": `Rp 9.999.999.999`, 
+					"currencyCode": "Rp",
+					"priceAmount1000": "500000",
+					"retailerId": `ppk`,
+					"productImageCount": 1
+				},
+				    "businessOwnerJid": `628162633549@s.whatsapp.net`
+		}
+	}
+}
   let stiker = false
   try {
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (/webp|image|video/g.test(mime)) {
-      if (/video/g.test(mime)) if ((q.msg || q).seconds > 11) return m.reply('Maksimal 10 detik!')
+    if (/webp/.test(mime)) {
       let img = await q.download()
-      if (!img) throw `balas gambar/video/stiker dengan perintah ${usedPrefix + command}`
-      let out
-      try {
-        if (/webp/g.test(mime)) out = await webp2png(img)
-        else if (/image/g.test(mime)) out = await uploadImage(img)
-        else if (/video/g.test(mime)) out = await uploadFile(img)
-        stiker = await sticker(false, out, global.packname, global.author)
-      } catch (e) {
-        console.error(e)
-        stiker = await sticker(img, false, global.packname, global.author)
-      }
+      let out = await webp2png(img)
+      if (!img) throw `balas stiker dengan perintah ${usedPrefix + command} <packname>|<author>`
+      stiker = await sticker(0, out, global.packname, global.author)
+    } else if (/image/.test(mime)) {
+      let img = await q.download()
+      let link = await uploadImage(img)
+      if (!img) throw `balas gambar dengan perintah ${usedPrefix + command} <packname>|<author>`
+      stiker = await sticker(0, link, global.packname, global.author)
+    } else if (/video/.test(mime)) {
+      if ((q.msg || q).seconds > 11) return m.reply('Maksimal 10 detik!')
+      let img = await q.download()
+      let link = await uploadFile(img)
+      if (!img) throw `balas video dengan perintah ${usedPrefix + command} <packname>|<author>`
+      stiker = await sticker(0, link, global.packname, global.author)
     } else if (args[0]) {
       if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
       else return m.reply('URL tidak valid!')
     }
-  } catch (e) {
-    console.error(e)
-    if (Buffer.isBuffer(e)) stiker = e
   } finally {
-    if (stiker) await conn.sendMessage(m.chat, stiker, MessageType.sticker, {
-      quoted: m
-    })
+    if (stiker) await conn.sendMessage(m.chat, stiker, MessageType.sticker, { quoted: m})
     else throw `Gagal${m.isGroup ? ', balas gambarnya!' : ''}`
   }
 }

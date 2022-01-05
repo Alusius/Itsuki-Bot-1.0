@@ -1,10 +1,10 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn }) => conn.sendButtonLoc(m.chat, await (await fetch(fla + 'Source code')).buffer(), `
-*────── 「 SCRIPT 」 ──────*
+*─────── 「 SCRIPT 」 ───────*
 Hai 👋
 
 Bot Ini Menggunakan Sc dari github
-https://github.com/Drz103/RadBot
+https://github.com/Drz103
 `.trim(), '©souce code', 'Thanks', '.tqto')
 handler.help = ['sourcecode']
 handler.tags = ['info']

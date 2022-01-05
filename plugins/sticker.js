@@ -53,7 +53,7 @@ key: {
       else return m.reply('URL tidak valid!')
     }
   } finally {
-    if (stiker) await conn.sendMessage(m.chat, stiker, MessageType.sticker, { quoted: m})
+    if (stiker) await conn.sendMessage(m.chat, stiker, MessageType.sticker, { quoted: anu})
     else throw `Gagal${m.isGroup ? ', balas gambarnya!' : ''}`
   }
 }

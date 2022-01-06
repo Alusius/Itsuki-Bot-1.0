@@ -35,8 +35,8 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'by Raditya' // ganti aja
-global.author = 'RadBotZ' // ganti aja
+global.packname = 'by' // ganti aja
+global.author = 'RadBotZv1' // ganti aja
 
 // silakan di ganti klo mau
 global.wait = '_Wait.._'
@@ -55,7 +55,10 @@ global.ttq = `Thanks to:
 •Dawnfrosty
 •Beniismael
 •Raditya (owner)
-•Rasel  
+•Rasel
+•Furqan
+•Elyas
+•Atenabot  
 •Nadin
 •Aca Mirabel
 •Penyedia Layanan API
@@ -79,7 +82,6 @@ global.kandang = 'https://telegra.ph/file/67a6ee607d03a4e52757d.jpg'
 global.kolam = 'https://telegra.ph/file/5aa5dfa3394477e11fb18.jpg'
 global.fishp = 'https://telegra.ph/file/6e6828da968f92d08b29c.jpg'
 global.thumbfoto = 'https://telegra.ph/file/4f4a5a3cde6a98a96da79.jpg' //thumbnail foto tools
-global.yamete = 'https://telegra.ph/file/f7b13f18a1f21e5ca6aed.jpg' //qr
 global.thanks = 'https://telegra.ph/file/01917f7782b70de8f418d.jpg'
 global.script = 'https://telegra.ph/file/e911c7dc09a3ed123c113.jpg'
 global.deskripsiurl = 'Saya adalah Bot WhatsApp ×͜×.'
@@ -90,7 +92,6 @@ global.multiplier = 500 // The higher, The harder levelup
 //*****************PEMBATAS*********************
 // JANGAN DI GANTI NTAR KLO GABISA JAN TANYA GW
 
-let fs = require('fs')
 let chalk = require('chalk')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {

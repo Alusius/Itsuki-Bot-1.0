@@ -4,7 +4,7 @@ let cdm = `${MeNit(new Date - LastClaim)}`
 let cds = `${DeTik(new Date - LastClaim)}`
 let cd1 = Math.ceil(44 - cdm)
 let cd2 = Math.ceil(59 - cds)
-  if (new Date - global.db._data.users[m.sender].lastclaim > 2700000) {
+  if (new Date - global.db.data.users[m.sender].lastclaim > 2700000) {
     global.db.data.users[m.sender].uang += 7000
     global.db.data.users[m.sender].exp += 100
     m.reply('Nih gaji lu +Rp7000')

@@ -4,6 +4,7 @@ BIG THANKS TO
 
 •Allah swt
 •Nurutomo
+•Adiwajshing
 •Ariffb
 •IrwanX
 •Dawnfrosty
@@ -11,7 +12,12 @@ BIG THANKS TO
 •Raditya (gua)
 •Furqan
 •Elyas
-•Rasel  
+•Rasel
+•Xteam
+•khael
+•Atenabot
+•Zeks
+•Rendycraft  
 •Nadin
 •Aca Mirabel
 •Penyedia Layanan API

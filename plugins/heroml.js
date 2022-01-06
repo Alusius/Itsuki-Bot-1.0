@@ -54,8 +54,8 @@ ${json.background_story}
 
     conn.sendFile(m.chat, thumb, 'tiktokstalk.jpg', hasil, m)
 }
-handler.help = ['githubstalk'].map(v => v + ' <query>')
+handler.help = ['heroml'].map(v => v + ' <query>')
 handler.tags = ['internet']
-handler.command = /^(mls)$/i
+handler.command = /^(heroml)$/i
 
 module.exports = handler

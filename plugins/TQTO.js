@@ -16,6 +16,7 @@ BIG THANKS TO
 •Xteam
 •khael
 •Atenabot
+•Baka Botz
 •Zeks
 •Rendycraft  
 •Nadin

@@ -13,7 +13,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 _${json.author}_\n
 ${json.lyrics}\n\n
 ${json.links.genius}
-`, watermark, 'Next', `${usedPrefix + command}`, m)
+`, watermark, 'NEXT', `.lirik ${text}`, m)
 }
 handler.help = ['lirik'].map(v => v + ' <Apa>')
 handler.tags = ['internet', 'edukasi']

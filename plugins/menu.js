@@ -375,6 +375,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "title": "Kata penutup",
                                     "description": "Terimakasih untuk user yang telah menggunakan bot, jika ada kesalahan atau permintaan bisa chat ke nomor owner\nNote: chat P/main² tidak akan di respon(user bisa terkena banned/block)",
                                     "rowId": ".creator"
+                                }, {
+                                    "title": "Thanks To |🎖️|",
+                                    "description": "Terima kasih banyak untuk user yang telah berpartisipasi dalam bot",
+                                    "rowId": ".tqto"
                                 }],
                                 "title": "⟣─────────────❲ Penutup ❳─────────────⟢"
                             }

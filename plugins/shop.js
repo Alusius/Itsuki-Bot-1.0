@@ -310,11 +310,11 @@ Contoh penggunaan: *${usedPrefix + command} buy potion 1*
                         } else conn.reply(m.chat, `iron anda tidak cukup`, m)
                         break
                     default:
-                        return conn.sendButton(m.chat, Kchat, watermark, 'Inventory', '.inv', m)
+                        return conn.reply(m.chat, Kchat, m)
                 }
                 break
             default:
-                return conn.reply(m.chat, Kchat, m)
+                return conn.send2Button(m.chat, Kchat, watermark, 'Dompet', '.dompet', 'Inventory', '.inv', m)
             }
         } else if (/beli|buy/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)

@@ -310,7 +310,7 @@ Contoh penggunaan: *${usedPrefix + command} buy potion 1*
                         } else conn.reply(m.chat, `iron anda tidak cukup`, m)
                         break
                     default:
-                        return conn.reply(m.chat, Kchat, m)
+                        return conn.sendButton(m.chat, Kchat, watermark, 'Inventory', '.inv', m)
                 }
                 break
             default:

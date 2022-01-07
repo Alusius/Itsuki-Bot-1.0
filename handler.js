@@ -644,9 +644,9 @@ global.dfail = (type, m, conn) => {
   }[type]
   if (msg) return conn.sendButton(m.chat, msg, watermark, 'OK', 'Nanii', m)
   let unreg = {
-    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar ${name}.16*`
+    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar RadBotZ.16*`
   }[type]
-  if (unreg) return conn.sendButton(m.chat, 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar ${name}.16\nAtau klik button dibawah*', watermark, 'VERIFY', `.daftar ${name}.16`, m)
+  if (unreg) return conn.sendButton(m.chat, `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar ${name}.16\nAtau klik button dibawah*`, watermark, '×͜×VERIFY', `.daftar ${name}.16`, m)
 }
 
 let chalk = require('chalk')

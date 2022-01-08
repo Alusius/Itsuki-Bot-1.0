@@ -242,7 +242,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Untuk kamu yang ingin melihat daftar harga sewa dan premium.",
                                     "rowId": ".sewabot"
                                 }],
-                                "title": "⟣────────❲ Tentang Bot dan lainnya ❳────────⟢"
+                                "title": "⟣──────────❲ Tentang Bot dan lainnya ❳──────────⟢"
                             }, {
                                 "rows": [{
                                     "title": `[🧾| Semua Perintah`,
@@ -361,7 +361,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Menu Khusu Owner",
                                     "rowId": ".? owner"
                                 }],
-                                "title": "⟣────────────❲  All-Menu  ❳────────────⟢"
+                                "title": "⟣──────────────❲  All-Menu  ❳──────────────⟢"
                             }, {
                                 "rows": [{
                                     "title": "Owner bot",
@@ -380,7 +380,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Terima kasih banyak untuk user yang telah berpartisipasi dalam bot",
                                     "rowId": ".tqto"
                                 }],
-                                "title": "⟣─────────────❲ Penutup ❳─────────────⟢"
+                                "title": "⟣───────────────❲ Penutup ❳───────────────⟢"
                             }
                         ], "contextInfo": 
 						{ "stanzaId": m.key.id,

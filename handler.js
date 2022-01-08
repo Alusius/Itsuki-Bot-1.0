@@ -568,9 +568,19 @@ module.exports = {
                 .setBackground("https://telegra.ph/file/89a6260f0a6720240e698.jpg")
                 .toAttachment()
 
-              this.sendButtonImg(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome👋' : 'Byee👋',action === 'add' ? 'Welcome👋' : 'Byee👋', null, {
-                contextInfo: {
-                  mentionedJid: [user]
+              this.sendButtonImg(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome👋' : 'Byee👋',action === 'add' ? 'Welcome👋' : 'Byee👋', {
+key: {
+fromMe: false,
+participant: '0@s.whatsapp.net',
+remoteJid: 'status@broadcast'
+},
+message: {
+contactMessage: {
+displayName: this.getName(user),
+vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;WA;;;\nFN:WA\nTEL;type=CELL;type=VOICE;waid=${user.split('@')[0]}:${user.split('@')[0]}\nEND:VCARD`
+}
+}
+}, false, { contextInfo: { mentionedJid: [user]
                 }
               })
             }

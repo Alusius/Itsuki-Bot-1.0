@@ -7,7 +7,7 @@ chara: ${res.result.character}
 anime: ${res.result.anime}
 episode: ${res.result.episode}`.trim()
 
-    conn.sendButton(m.chat, hasil, '©RadBotZ', 'Next', `${usedPrefix + command}`, m)
+    conn.sendButton(m.chat, hasil, watermark, 'Next', `${usedPrefix + command}`, m)
 }
 handler.help = ['quoteanime']
 handler.tags = ['anime', 'quotes']

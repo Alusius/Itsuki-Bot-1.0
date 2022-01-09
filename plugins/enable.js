@@ -277,7 +277,7 @@ ${usedPrefix}off welcome
 let str = `
 *${type}* berhasil di *${isEnable ? 'nyala' : 'mati'}kan* ${isAll ? 'untuk bot ini' : isUser ? '' : 'untuk chat ini'}
 `.trim()
-     await conn.send2ButtonLoc(m.chat, await(await fetch(fla + 'Sukses')).buffer(), str, '©RadBotZ ⁩×͜×', 'Owner', '.owner', 'Menu', '.menu', m)
+     await conn.send2Button(m.chat, str, watermark, 'Owner', '.owner', 'Menu', '.menu', m)
 }
 handler.help = ['on', 'off'].map(v => v + ' <opsi>')
 handler.tags = ['group', 'owner']

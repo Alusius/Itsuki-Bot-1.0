@@ -13,9 +13,9 @@ let handler  = async (m, { conn, text }) => {
   for (let id of chats) /*conn.send2ButtonLoc*/conn.send2Button(id, `${text}`.trim(), `\n_* ALL BROADCAST*_\n${time}`, 'Owner', '.owner', 'Menu', '.menu', /*'Donasi', '.ds'*/)
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${chats.length} chat_`, m)
 }
-handler.help = ['broadcast2','bc2'].map(v => v + ' <teks>')
+handler.help = ['broadcast2', 'bcbutton', 'bc2'].map(v => v + ' <teks>')
 handler.tags = ['owner']
-handler.command = /^bcbutton$/i
+handler.command = /^(broadcast2|bcbutton|bc2)$/i
 handler.owner = true
 handler.mods = false
 handler.premium = false

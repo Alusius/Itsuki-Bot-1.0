@@ -15,7 +15,7 @@ let handler = async (m, { conn }) => {
 ║
 ╠═ ©2021 Rpg wabot-aq
 ╠═ Scrip original by Nurutomo
-╠═〘 RAD BOT〙 ═`.trim(), '©RadBotZ', 'Dana', '#viadana', 'Pulsa', '#viapulsa', m)
+╠═〘 RAD BOT〙 ═`.trim(), watermark, 'Dana', '#viadana', 'Pulsa', '#viapulsa', m)
 }
 
 handler.command = /^sewabot$/i

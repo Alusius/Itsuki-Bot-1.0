@@ -1,30 +1,24 @@
-let fs = require('fs')
-let speed = require('performance-now')
-let handler = async (m, { conn }) => {
-            const formater1 = (seconds) => {
-                    const pad1 = (s) => {
-                        return (s < 10 ? '0' : '') + s
-                    }                   
-                    const hrs = Math.floor(seconds / (60 * 60))
-                    const mins = Math.floor(seconds % (60 * 60) / 60)
-                    const secs = Math.floor(seconds % 60)
-                    return '  ' + pad1(hrs) + ' : ' + pad1(mins) + ' : ' + pad1(secs)
-                }
-            const uptime1 = process.uptime()
-            const timestampi = speed();
-            const latensip = speed() - timestampi
-			conn.reply(m.chat, `BOT ONLINE SELAMA\n ${formater1(uptime1)}`, 'conversation', { quoted: m, contextInfo: { externalAdReply :{
-sourceUrl: 'https://wa.me/62858929626673?text=Assalamualaikum',
-mediaType: 2,
-title: `Runtime : ${formater1(uptime1)}`,
-body: 'RadBotZ By Raditya',
-thumbnailUrl: fs.readFileSync('./src/RadBotZ.jpg')
-,
-}}})
-        }
-        
-handler.help = ['runtime']
-handler.tags = ['info', 'tools']
+let handler = async (m, { usedPrefix, command }) => {
+let _uptime = process.uptime() * 1000
+let uptime = clockString(_uptime)
+let time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
+let runnya = `
+*───「 RUNTIME BOT 」───*
 
-handler.command = /^(runtime)$/i
-module.exports = handler 
+Time : ${time}
+Runtime : ${uptime}
+`
+conn.sendButton(m.chat, runnya, watermark, 'Menu', '.menu', m) 
+}
+handler.help = ['runtime']
+handler.tags = ['info']
+handler.command = /^(uptime|runtime)$/i
+
+module.exports = handler
+
+function clockString(ms) {
+    let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+    let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+    let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+    return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+}

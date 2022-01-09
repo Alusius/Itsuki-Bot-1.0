@@ -1,6 +1,7 @@
 let handler  = async (m, { conn, text, usedPrefix: _p }) => {
   let fs = require('fs')
   let fetch = require('node-fetch')
+  let time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
   const {
     MessageType,
     Mimetype
@@ -32,7 +33,7 @@ const anu = {
   let teks = text ? text : cc.text
   let content = await conn.cMod(m.chat, cc, /bc|broadcast/i.test(text))
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${groups.length} grup_`, m)
-  for (let id of groups) conn.send2Button(id, text, '\n_*BROADCAST GRUP*_', 'Owner', '.owner', 'menu', _p + 'menu', anu)
+  for (let id of groups) conn.send2Button(id, text, '\n_*BROADCAST GRUP*_\n${time}', 'Owner', '.owner', 'menu', _p + 'menu', anu)
   conn.reply(m.chat, `_Done_`, m)
 }
 

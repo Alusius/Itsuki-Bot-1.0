@@ -33,7 +33,7 @@ const anu = {
   let teks = text ? text : cc.text
   let content = await conn.cMod(m.chat, cc, /bc|broadcast/i.test(text))
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${groups.length} grup_`, m)
-  for (let id of groups) conn.send2Button(id, text, '\n_*BROADCAST GRUP*_\n${time}', 'Owner', '.owner', 'menu', _p + 'menu', anu)
+  for (let id of groups) conn.send2Button(id, text, `\n*BROADCAST GRUP*\n${time}`, 'Owner', '.owner', 'menu', _p + 'menu', anu)
   conn.reply(m.chat, `_Done_`, m)
 }
 

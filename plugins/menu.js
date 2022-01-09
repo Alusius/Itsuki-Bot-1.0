@@ -242,7 +242,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Untuk kamu yang ingin melihat daftar harga sewa dan premium.",
                                     "rowId": ".sewabot"
                                 }],
-                                "title": "⟣────────❲ Tentang Bot dan lainnya ❳─────────⟢"
+                                "title": "⟣─────────❲ Tentang Bot dan lainnya ❳──────────⟢"
                             }, {
                                 "rows": [{
                                     "title": `[🧾| Semua Perintah`,

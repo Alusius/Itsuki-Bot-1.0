@@ -4,7 +4,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   m.reply('Sedang Diproses...')
   bzz = await fetch(`https://api.xteam.xyz/randomimage/pussy?apikey=Dawnfrostkey`)
   res = await bzz.buffer()
-  conn.sendButtonImg(m.chat, res, 'mpsss ahhh', '©RadBotZ', 'Next', `${usedPrefix + command}`, m, false)
+  conn.sendButtonImg(m.chat, res, 'mpsss ahhh', watermark, 'NEXT', `${usedPrefix + command}`, m, false)
 }
 handler.help = ['pussy <erorr>']
 handler.tags = ['hentai']

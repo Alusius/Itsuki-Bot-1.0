@@ -306,7 +306,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 }
 handler.help = ['menu', '?', 'help']
 handler.tags = ['main']
-handler.command = /^(\catalog)$/i
+handler.command = /^(\!)$/i
 
 handler.register = true
 

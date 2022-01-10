@@ -656,7 +656,7 @@ global.dfail = (type, m, conn) => {
   let unreg = {
     unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar RadBotZ.16*`
   }[type]
-  if (unreg) return conn.sendButton(m.chat, `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar ${name}.16\nAtau klik button dibawah*`, watermark, '×͜×VERIFY', `.daftar ${name}.16`, m)
+  if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu`, watermark, 'Verify', '#daftar Undefined.17', { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `©radbotz_`, itemCount: 2022, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')
 }
 
 let chalk = require('chalk')

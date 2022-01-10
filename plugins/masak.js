@@ -1,37 +1,22 @@
-let imageToBase64 = require("image-to-base64");
-let axios = require("axios");
+let fetch = require("node-fetch")
 
-let handler = async(m, { conn, text }) => {
-
-  if (!text) return conn.reply(m.chat, 'Harap Masukan Query', m)
-
-  await m.reply('Searching...')
-   axios.get(`https://api.zeks.xyz/api/resep-masak?apikey=MIMINGANZ&q=${text}`)
-    .then((res) => {
-      imageToBase64(res.data.thumb)
-        .then(
-          (ress) => {
-            let buf = Buffer.from(ress, 'base64')
-            let hasil = `*${res.data.title}*\n\nTingkat : ${res.data.tingkat}\nWaktu : ${res.data.duration}\nBahan2 :${res.data.bahan}\nPorsi : ${res.data.banyak}\nLangkah2 :\n${res.data.cara}\n\nSumber :\n${res.data.url}\n*Selamat Mencoba!`
-
-     conn.sendButton(m.chat, hasil, watermark, 'OK', 'OK', m)
-        })
-    })
+let handler = async (m, { conn, text }) => {
+  let res = await fetch(global.API('zeks', '/api/resep-masak', { q : text }, 'apikey'))
+  if (!res.ok) throw await res.text()
+  let json = await res.json()
+  if (!json.title) throw json
+  await conn.sendFile(m.chat, json.thumb, '', `
+${json.title}
+${json.url}\n
+*Tingkat:* ${json.tingkat}
+*Durasi:* ${json.duration}
+*Porsi:* ${json.banyak}\n\n
+*Bahan:* ${json.bahan}
+*Cara:* ${json.cara}
+`.trim(), m)
 }
-handler.help = ['resep', 'masak'].map(v => v + ' <masakan>')
-handler.tags = ['internet']
+handler.help = ['resep <makanan>', 'masak <makanan>']
+handler.tags = ['internet', 'edukasi']
 handler.command = /^(resep|masak)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
-handler.exp = 0
-handler.limit = true
 
 module.exports = handler

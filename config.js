@@ -1,4 +1,18 @@
+// Bismillahirrahmanirrahim
+// thank you to ALLAH Swt
+// thank you to Nurutomo as wabot-aq
+// thank you to ariffb as stikerinbot
+// thank you to botstylee
+// thank you to bochilgaming as games-wabot
+// thank you to benni ismael
+// thank you to zerochanBot
+// thank you to fernazer
+// thank you to MikeBot Dev Team
+// thank you to ALL Bot creator
+// and thanks you to who support my Bot
 let fs = require('fs')
+let chalk = require('chalk')
+
 global.linkGC = ['https://chat.whatsapp.com/EVCGfzxLWfp81n0WhmVklH', 'https://chat.whatsapp.com/FnNAbem8o6r4pgLhSdO8Q9', 'https://chat.whatsapp.com/HBhy7rVae3o0PkIfkhvs2N'] // ganti jadi group lu
 global.owner = ['6285813385281', '62858929626673', '6285892962667'] // Masukan nomot kalian
 global.mods = ['6289669349047', '6288261394557'] // Moderator
@@ -35,8 +49,26 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'by' // ganti aja
-global.author = 'RadBotZv1' // ganti aja
+const spack = fs.readFileSync("lib/exif.json")
+const stickerpack = JSON.parse(spack)
+if (stickerpack.spackname == '') {
+  var sticker_name = 'rad#'
+  var sticker_author = '©radbotz'
+} else {
+  var sticker_name = stickerpack.spackname
+  var sticker_author = stickerpack.sauthor
+}
+
+const file_exif = "lib/exif.json"
+fs.watchFile(file_exif, () => {
+  fs.unwatchFile(file_exif)
+  console.log(chalk.redBright("Update 'exif.json'"))
+  delete require.cache[file_exif]
+  require('./lib/exif.json')
+})
+
+global.packname = sticker_name
+global.author = sticker_author
 
 // silakan di ganti klo mau
 global.wait = '_Wait.._'
@@ -92,7 +124,6 @@ global.multiplier = 500 // The higher, The harder levelup
 //*****************PEMBATAS*********************
 // JANGAN DI GANTI NTAR KLO GABISA JAN TANYA GW
 
-let chalk = require('chalk')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
   fs.unwatchFile(file)

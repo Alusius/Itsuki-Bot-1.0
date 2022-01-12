@@ -106,16 +106,15 @@ Price:
 Untuk 1 group
 
 Nb:bot ini masih terus dikembangkan.`
+
+// Ubah saja
 global.ppkosong = 'https://telegra.ph/file/22fd84e4a3244e1b17e4e.png'
 global.ppgc = 'https://telegra.ph/file/22fd84e4a3244e1b17e4e.png'
 global.image = 'https://telegra.ph/file/4f4a5a3cde6a98a96da79.jpg'//change the image
 global.bank = 'https://telegra.ph/file/d5ddf4cc627bb0e6bc420.jpg'
 global.kandang = 'https://telegra.ph/file/67a6ee607d03a4e52757d.jpg'
 global.kolam = 'https://telegra.ph/file/5aa5dfa3394477e11fb18.jpg'
-global.fishp = 'https://telegra.ph/file/6e6828da968f92d08b29c.jpg'
-global.thumbfoto = 'https://telegra.ph/file/4f4a5a3cde6a98a96da79.jpg' //thumbnail foto tools
 global.thanks = 'https://telegra.ph/file/01917f7782b70de8f418d.jpg'
-global.script = 'https://telegra.ph/file/e911c7dc09a3ed123c113.jpg'
 global.deskripsiurl = 'Saya adalah Bot WhatsApp ×͜×.'
 
 // tingkat kesulitan, semakin tinggi semakin susah

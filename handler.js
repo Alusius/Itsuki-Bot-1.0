@@ -228,7 +228,7 @@ module.exports = {
         if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
         if (chat) {
           if (!('isBanned' in chat)) chat.isBanned = false
-          if (!('welcome' in chat)) chat.welcome = false
+          if (!('welcome' in chat)) chat.welcome = true
           if (!('detect' in chat)) chat.detect = false
           if (!('sWelcome' in chat)) chat.sWelcome = ''
           if (!('sBye' in chat)) chat.sBye = ''
@@ -237,13 +237,14 @@ module.exports = {
           if (!('descUpdate' in chat)) chat.descUpdate = true
           if (!('delete' in chat)) chat.delete = false
           if (!('antiBadword' in chat)) chat.antiBadword = true
+          if (!('stiker' in chat)) chat.stiker = true
           if (!('rpg' in chat)) chat.delete = true
           if (!('nsfw' in chat)) chat.delete = false
           if (!('antiLink' in chat)) chat.antiLink = false
           if (!('viewonce' in chat)) chat.viewonce = true
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
-          welcome: false,
+          welcome: true,
           detect: false,
           sWelcome: '',
           sBye: '',
@@ -251,6 +252,7 @@ module.exports = {
           sDemote: '',
           descUpdate: true,
           delete: false,
+          stiker: true,
           rpg: true,
           nsfw: false,
           antiBadword: true,
@@ -278,7 +280,7 @@ module.exports = {
           antitroli: true,
           backup: false,
           backupDB: 0,
-          groupOnly: true,
+          groupOnly: false,
           jadibot: false,
           onsfw: true,
           status: 0,

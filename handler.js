@@ -592,7 +592,8 @@ vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;WA;;;\nFN:WA\nTEL;type=CELL;type=VOICE;waid
       case 'demote':
         if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```is no longer Admin```')
         text = text.replace('@user', '@' + participants[0].split('@')[0])
-        if (chat.detect) this.sendMessage(jid, text, MessageType.extendedText, {
+        let kntl = fs.readFileSync('./src/RadBotZ.jpg')
+        if (chat.detect) this.send2ButtonLoc(jid, kntl, text, watermark, 'MENU', '#menu', 'OWNER', '#owner', null, {
           contextInfo: {
             mentionedJid: this.parseMention(text)
           }
@@ -604,13 +605,14 @@ vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;WA;;;\nFN:WA\nTEL;type=CELL;type=VOICE;waid
     if (m.key.fromMe) return
     let chat = global.db.data.chats[m.key.remoteJid]
     if (chat.delete) {
-    if (chat.delete) return
-    await this.sendButton(m.key.remoteJid, `
-Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
+    await this.sendButton(m.key.remoteJid, `*—「 Anti Delete 」—*
+*📢 Terdeteksi Penghapusan Pesan !*
+*◇ Nama :* @${m.participant.split`@`[0]}
+*◇ Type*: ${Object.keys(m.message.message)[0]}
+*◇ Number*: ${require('awesome-phonenumber')(`+${m.participant.split`@`[0]}`).getNumber('international')}
 
-Untuk mematikan fitur ini, ketik
-*.enable delete*
-`.trim(), watermark, 'DISABLE DELETE', '#off antidelete', {
+klick untuk mematikannya atau ketik #disable delete
+`.trim(), watermark, 'DISABLE DELETE', '.disable delete', {
       quoted: m.message,
       contextInfo: {
         mentionedJid: [m.participant]

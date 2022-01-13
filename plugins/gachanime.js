@@ -1,7 +1,5 @@
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-	if (!args[0]) {
-		let no = 0
-			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
+let handler = async (m, { conn }) =>
+conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": "Daftar Gacha yang ada pada RadBotZ",
                         "description": `Pencet tombol "LIST-GACHA" untuk menampilkan daftar gacha`,
@@ -26,57 +24,57 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                                 "title": "⟣────────❲ Tentang Bot dan lainnya ❳────────⟢"
                             }, {
                                 "rows": [{
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 1.`,
                                     "description": "Waifu",
-                                    "rowId": `${usedPrefix}waifu`
+                                    "rowId": `.waifu`
                                 }, {
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 2.`,
                                     "description": "Husbu",
-                                    "rowId": `${usedPrefix}husbu`
+                                    "rowId": `.husbu`
                                 }, {
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 3.`,
                                     "description": "Neko",
-                                    "rowId": `${usedPrefix}neko`
+                                    "rowId": `.neko`
                                 }, {
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 4.`,
                                     "description": "Loli (buat para pedo👎🏿)",
-                                    "rowId": `${usedPrefix}loli`
+                                    "rowId": `.loli`
                                 }, {
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 5.`,
                                     "description": "Elf",
-                                    "rowId": `${usedPrefix}elf`
+                                    "rowId": `.elf`
                                 }, {
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 6.`,
                                     "description": "Shota",
-                                    "rowId": `${usedPrefix}shota`
+                                    "rowId": `.shota`
                                 }, {
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 7.`,
                                     "description": "Sagiri",
-                                    "rowId": `${usedPrefix}sagiri`
+                                    "rowId": `.sagiri`
                                 }, {
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 8.`,
                                     "description": "Elaina",
-                                    "rowId": `${usedPrefix}elaina`
+                                    "rowId": `.elaina`
                                 }, {
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 9.`,
                                     "description": "Kanna",
-                                    "rowId": `${usedPrefix}kanna`
+                                    "rowId": `.kanna`
                                 }, {
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 10.`,
                                     "description": "Shinobu",
-                                    "rowId": `${usedPrefix}shinobu`
+                                    "rowId": `.shinobu`
                                 }, {
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 11.`,
                                     "description": "Megumin",
-                                    "rowId": `${usedPrefix}megumin`
+                                    "rowId": `.megumin`
                                 }, {
-                                    "title": `Gacha ${no+=1}. `,
+                                    "title": `Gacha 12. `,
                                     "description": "Art",
-                                    "rowId": `${usedPrefix} art`
+                                    "rowId": `. art`
                                 }, {
-                                    "title": `Gacha ${no+=1}.`,
+                                    "title": `Gacha 13.`,
                                     "description": "Wallpaper Anime",
-                                    "rowId": `${usedPrefix}wallnime` 
+                                    "rowId": `.wallnime` 
                                 }],
                                 "title": "⟣────────────❲  List Gacha  ❳────────────⟢"
                             }, {
@@ -94,19 +92,18 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                                     "rowId": ".creator"
                                 }],
                                 "title": "⟣─────────────❲ Penutup ❳─────────────⟢"
-                            }
+                                    }
                         ], "contextInfo": { "stanzaId": m.key.id,
-"participant": m.sender,
+"participant": "0@s.whatsapp.net",
 "quotedMessage": m.message
 }
                     }
                  }, {}), {waitForAck: true})
-		
-handler.help = ['gachanime'].map(v => v + ' <type>')
+
+handler.help = ['gachanime']
 handler.tags = ['anime']
-handler.command = /^gachanime$/i
+handler.command = /^(gachanime)$/i
 
 handler.limit = true
 
 module.exports = handler
-//credit: KhaelSan

@@ -77,7 +77,7 @@ global.nsfw = 'Fitur NSFW Dimatikan\nKetik *!enable* *nsfw* untuk menggunakan fi
 global.eror = '_*Error*_'
 
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&doScale=true&scaleWidth=500&scaleHeight=500&fontsize=100&fillTextType=0&backgroundColor=%23101820&text='
-global.watermark = '©Games ×͜×' //change the watermark (beberapa harus manual)
+global.watermark = '©radbotz ×፝֟͜×' //change the watermark (beberapa harus manual)
 global.version = '𝑩𝑶𝑻 @^1.1.4'
 global.ttq = `Thanks to:
 •Allah swt

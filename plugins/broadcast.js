@@ -2,7 +2,7 @@ let fs = require('fs')
 const fetch = require('node-fetch')
 
 let handler = async (m, { conn, text }) => {
-    let logo = fs.readFileSync(./src/RadBotZ.jpg)
+    let logo = fs.readFileSync('./src/RadBotZ.jpg')
     let chats = conn.chats.all().filter(v => !v.read_only && v.message).map(v => v.jid)
     conn.reply(m.chat, `_Send a broadcast message to ${chats.length} chats_\nestimation complete ${chats.length * 1.5} seconds`, m)
     for (let id of chats) {

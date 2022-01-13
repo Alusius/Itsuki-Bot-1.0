@@ -32,7 +32,7 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@adiwajshing/baileys": "^3.5.3",
+    "@adiwajshing/baileys": "^3.5.2",
     "awesome-phonenumber": "^2.67.0",
     "axios": "^0.24.0",
     "brainly-scraper-v2": "^2.0.4-1",
@@ -40,7 +40,7 @@
     "cfonts": "^2.9.3",
     "chalk": "^4.1.1",
     "cheerio": "^1.0.0-rc.5",
-    "cjs": "^0.0.11"
+    "cjs": "^0.0.11",
     "express": "^4.17.1",
     "file-type": "^16.5.2",
     "form-data": "^4.0.0",

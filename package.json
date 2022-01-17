@@ -35,7 +35,7 @@
     "@adiwajshing/baileys": "^3.5.2",
     "awesome-phonenumber": "^2.67.0",
     "axios": "^0.24.0",
-    "brainly-scraper-v2": "^2.0.4-1",
+    "brainly-scraper-v2": "^1.1.2",
     "canvacord": "^5.2.3",
     "cfonts": "^2.9.3",
     "chalk": "^4.1.1",

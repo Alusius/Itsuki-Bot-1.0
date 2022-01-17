@@ -313,115 +313,115 @@ _${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik_
                 {
                   "title": `Semua Perintah`,
                   "description": "",
-                  "rowId": `${_p}? all`
+                  "rowId": `${_p}! all`
                 }, {
                   "title": "Epic Rpg",
                   "description": "",
-                  "rowId": `${_p}? rpg`
+                  "rowId": `${_p}1 rpg`
                 }, {
                   "title": "Game",
                   "description": "",
-                  "rowId": `${_p}? game`
+                  "rowId": `${_p}! game`
 
                 }, {
                   "title": "XP",
                   "description": "",
-                  "rowId": `${_p}? xp`
+                  "rowId": `${_p}! xp`
                  
                  }, {
                   "title": "Anime",
                   "description": "",
-                  "rowId": `${_p}? anime`
+                  "rowId": `${_p}! anime`
                 
                 }, {
                   "title": "Hentai",
                   "description": "",
-                  "rowId": `${_p}? dewasa`
+                  "rowId": `${_p}! dewasa`
 
                 }, {
                   "title": "Stiker",
                   "description": "",
-                  "rowId": `${_p}? stiker`
+                  "rowId": `${_p}! stiker`
                 }, {
                   "title": "Kerang Ajaib",
                   "description": "",
-                  "rowId": `${_p}? kerangajaib`
+                  "rowId": `${_p}! kerangajaib`
                 }, {
                   "title": "Quotes",
                   "description": "",
-                  "rowId": `${_p}? quotes`
+                  "rowId": `${_p}! quotes`
                 }, {
                   "title": "Admin",
                   "description": "",
-                  "rowId": `${_p}? admin`
+                  "rowId": `${_p}! admin`
                 }, {
                   "title": "Grup",
                   "description": "",
-                  "rowId": `${_p}? grup`
+                  "rowId": `${_p}! grup`
                 }, {
                   "title": "Premium",
                   "description": "",
-                  "rowId": `${_p}? premium`
+                  "rowId": `${_p}! premium`
                 }, {
                   "title": "Internet",
                   "description": "",
-                  "rowId": `${_p}? internet`
+                  "rowId": `${_p}! internet`
                 }, {
                   "title": "Anonymous",
                   "description": "",
-                  "rowId": `${_p}? anonymous`
+                  "rowId": `${_p}! anonymous`
                 }, {
                   "title": "Nulis & Logo",
                   "description": "",
-                  "rowId": `${_p}? nulis`
+                  "rowId": `${_p}! nulis`
                 }, {
                   "title": "Downloader",
                   "description": "",
-                  "rowId": `${_p}? downloader`
+                  "rowId": `${_p}! downloader`
                 }, {
                   "title": "Tools",
                   "description": "",
-                  "rowId": `${_p}? tools`
+                  "rowId": `${_p}! tools`
                 }, {
                   "title": "Fun",
                   "description": "",
-                  "rowId": `${_p}? fun`
+                  "rowId": `${_p}! fun`
                 }, {
                   "title": "Database",
                   "description": "",
-                  "rowId": `${_p}? database`
+                  "rowId": `${_p}! database`
                 }, {
                   "title": "Vote & Absen",
                   "description": "",
-                  "rowId": `${_p}? vote`
+                  "rowId": `${_p}! vote`
                 }, {
                   "title": "Al-Qur\'an",
                   "description": "",
-                  "rowId": `${_p}? quran`
+                  "rowId": `${_p}! quran`
                 }, {
                   "title": "Pengubah Suara",
                   "description": "",
-                  "rowId": `${_p}? audio`
+                  "rowId": `${_p}! audio`
                 }, {
                   "title": "Jadi Bot",
                   "description": "",
-                  "rowId": `${_p}? jadibot`
+                  "rowId": `${_p}! jadibot`
                 }, {
                   "title": "Info",
                   "description": "",
-                  "rowId": `${_p}? info`
+                  "rowId": `${_p}! info`
                 }, {
                   "title": "Tanpa Kategori",
                   "description": "",
-                  "rowId": `${_p}? tanpakategori`
+                  "rowId": `${_p}! tanpakategori`
                 }, {
                   "title": "Owner",
                   "description": "",
-                  "rowId": `${_p}? owner`
+                  "rowId": `${_p}! owner`
                }, {
                   "title": "Source code",
                   "description": "",
-                  "rowId": `${_p}? sc`
+                  "rowId": `${_p}sc`
                 }
               ]
             }

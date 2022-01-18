@@ -553,21 +553,25 @@ module.exports = {
             } finally {
               text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Selamat datang, @user!').replace('@subject', this.getName(jid)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
                 (chat.sBye || this.bye || conn.bye || 'Sampai jumpa, @user!')).replace(/@user/g, '@' + user.split`@`[0])
-              let wel = await fetch(global.API('https://caliphapi.com', '/welcome2', {
-                username: this.getName(user),
-                groupname: this.getName(jid),
-                membercount: groupMetadata.participants.length,
-                profile: pp,
-                background: 'https://i.ibb.co/KhtRxwZ/dark.png'
-              }, 'apikey'))
-              let lea = await fetch(global.API('https://caliphapi.com', '/goodbye2', {
-                username: this.getName(user),
-                groupname: this.getName(jid),
-                membercount: groupMetadata.participants.length,
-                profile: pp,
-                background: 'https://i.ibb.co/KhtRxwZ/dark.png'
-              }, 'apikey'))
-              await this.sendButtonImg(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome👋' : 'Byee👋',action === 'add' ? 'Welcome👋' : 'Byee👋', {
+              let wel = await new knights.Welcome()
+                .setUsername(this.getName(user))
+                .setGuildName(this.getName(jid))
+                .setGuildIcon(ppgc)
+                .setMemberCount(groupMetadata.participants.length)
+                .setAvatar(pp)
+                .setBackground("https://telegra.ph/file/89a6260f0a6720240e698.jpg")
+                .toAttachment()
+
+              let lea = await new knights.Goodbye()
+                .setUsername(this.getName(user))
+                .setGuildName(this.getName(jid))
+                .setGuildIcon(ppgc)
+                .setMemberCount(groupMetadata.participants.length)
+                .setAvatar(pp)
+                .setBackground("https://telegra.ph/file/89a6260f0a6720240e698.jpg")
+                .toAttachment()
+
+              this.sendButtonImg(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome👋' : 'Byee👋',action === 'add' ? 'Welcome👋' : 'Byee👋', {
 key: {
 fromMe: false,
 participant: '0@s.whatsapp.net',

@@ -553,21 +553,21 @@ module.exports = {
             } finally {
               text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Selamat datang, @user!').replace('@subject', this.getName(jid)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
                 (chat.sBye || this.bye || conn.bye || 'Sampai jumpa, @user!')).replace(/@user/g, '@' + user.split`@`[0])
-              let wel = API('caliph', '/welcome2', {
+              let wel = await fetch(global.API('https://caliphapi.com', '/welcome2', {
                 username: this.getName(user),
                 groupname: this.getName(jid),
                 membercount: groupMetadata.participants.length,
                 profile: pp,
                 background: 'https://i.ibb.co/KhtRxwZ/dark.png'
-              }, 'apikey')
-              let lea = API('caliph', '/goodbye2', {
+              }, 'apikey'))
+              let lea = await fetch(global.API('https://caliphapi.com', '/goodbye2', {
                 username: this.getName(user),
                 groupname: this.getName(jid),
                 membercount: groupMetadata.participants.length,
                 profile: pp,
                 background: 'https://i.ibb.co/KhtRxwZ/dark.png'
-              }, 'apikey')
-              this.sendButtonImg(jid, action === 'add' ? wel : lea, text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome👋' : 'Byee👋',action === 'add' ? 'Welcome👋' : 'Byee👋', {
+              }, 'apikey'))
+              await this.sendButtonImg(jid, action === 'add' ? wel : lea, text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome👋' : 'Byee👋',action === 'add' ? 'Welcome👋' : 'Byee👋', {
 key: {
 fromMe: false,
 participant: '0@s.whatsapp.net',

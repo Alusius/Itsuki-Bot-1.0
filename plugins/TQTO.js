@@ -17,6 +17,7 @@ BIG THANKS TO
 •khael
 •Atenabot
 •Baka Botz
+•ZeeoneOfc
 •Zeks
 •Rendycraft  
 •Nadin
@@ -32,3 +33,4 @@ handler.command = /^(tqto|thanks|thanksto|bigthanks)$/i
 module.exports = handler
 
 // di ilangin jangan,di tambahin boleh
+

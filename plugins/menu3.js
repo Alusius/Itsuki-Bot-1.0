@@ -509,8 +509,8 @@ _${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik_
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     await conn.sendMessage(m.chat, { "contentText": text.trim(), "footerText": `*© ${conn.getName(conn.user.jid)} || 2021*`,
 "buttons": [
-{buttonId: 'Pemilik Bot', buttonText: {displayText: '.owner'}, type: 1},
-{buttonId: 'Donasi', buttonText: {displayText: '.donasi'}, type: 1}
+{buttonId: '.owner', buttonText: {displayText: 'Pemilik Bot'}, type: 1},
+{buttonId: '.donasi', buttonText: {displayText: 'Donasi'}, type: 1}
 ],
 "headerType": "DOCUMENT", "documentMessage": {
             "url": "https://mmg.whatsapp.net/d/f/Ah9LXq1Z_XnRLzlVnZSt6_yWxC6mp20xTpZRSJxc7TUP.enc",

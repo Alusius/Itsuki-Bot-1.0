@@ -567,7 +567,7 @@ module.exports = {
                 profile: pp,
                 background: 'https://i.ibb.co/KhtRxwZ/dark.png'
               }, 'apikey')
-              await this.sendButtonImg(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome👋' : 'Byee👋',action === 'add' ? 'Welcome👋' : 'Byee👋', {
+              await this.sendButtonImg(jid, action === 'add' ? wel : lea, text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome👋' : 'Byee👋',action === 'add' ? 'Welcome👋' : 'Byee👋', {
 key: {
 fromMe: false,
 participant: '0@s.whatsapp.net',

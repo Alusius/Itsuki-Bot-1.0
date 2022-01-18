@@ -32,7 +32,7 @@ _*Note*_ :
 -Kode ID jangan sampai lupa! Karna Diantara Kodenya adalah kode gift yang berhadiah! Jika Anda Beruntung!
 -Kalau mau unreg, lupa sn ketik ${usedPrefix}sn
 `.trim()
-await conn.send2ButtonLoc(m.chat, await(await fetch(fla + 'Daftar')).buffer(), caption, '©RadBotZ ⁩×͜×', 'Menu', `.menu`, 'Tutorial', `.tutorial`, m)
+await conn.send2ButtonLoc(m.chat, await(await fetch(fla + 'Daftar')).buffer(), caption, watermark, 'Menu', `.menu`, 'Tutorial', `.tutorial`, m)
 }
 handler.help = ['daftar <nama|umur>','register <nama|umur>']
 handler.tags = ['main']

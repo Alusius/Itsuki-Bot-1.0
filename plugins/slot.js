@@ -1,7 +1,7 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
 
-	axios.get(`https://api.xteam.xyz/game/virtualslot?APIKEY=Dawnfrostkey`).then ((res) => {
+	axios.get(`https://api.xteam.xyz/game/virtualslot?APIKEY=apivproject`).then ((res) => {
 	 	let hasil = `${res.data.map}\nHasil : ${res.data.hasil}\nScore :${res.data.score}`                  
 
     conn.reply(m.chat, hasil, m)

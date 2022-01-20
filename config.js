@@ -40,7 +40,7 @@ global.APIKeys = { // APIKey Here
   'https://bx-hunter.herokuapp.com': 'Ikyy69',
   'https://hardianto-chan.herokuapp.com': 'hardianto',
   'https://neoxr-api.herokuapp.com': 'yntkts',
-  'https://api.xteam.xyz': 'Dawnfrostkey',
+  'https://api.xteam.xyz': 'apivproject',
   'https://api.lolhuman.xyz': 'Dawnfrostkey',
   'https://caliphapi.com': 'ELYASXD',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
@@ -80,34 +80,6 @@ global.eror = '_*Error*_'
 
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&doScale=true&scaleWidth=500&scaleHeight=500&fontsize=100&fillTextType=0&backgroundColor=%23101820&text='
 global.watermark = '©radbotz ×፝֟͜×' //change the watermark (beberapa harus manual)
-global.version = '𝑩𝑶𝑻 @^1.1.4'
-global.ttq = `Thanks to:
-•Allah swt
-•Nurutomo
-•Ariffb
-•IrwanX
-•Dawnfrosty
-•Beniismael
-•Raditya (owner)
-•Rasel
-•Furqan
-•Elyas
-•Atenabot  
-•Nadin
-•Aca Mirabel
-•Penyedia Layanan API
-•Orang-orang yang Berdonasi
-•My ortu
-
-Jika menemukan bug atau request fitur dan join bot harap chat owner dengan cara:
-*-report* [pesan].
-
-(Bot join group NOT FREE!)
-Price:
-10K untuk 1 bulan
-Untuk 1 group
-
-Nb:bot ini masih terus dikembangkan.`
 
 // Ubah saja
 global.ppkosong = 'https://telegra.ph/file/22fd84e4a3244e1b17e4e.png'

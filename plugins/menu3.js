@@ -90,8 +90,9 @@ ${'```%npmdesc```'}
   if (teks == 'anime') tags = {
     'anime': 'A N I M E'
    }
-  if (teks == 'dewasa') tags = {
-    'dewasa': 'H E N T A I'
+  if (teks == 'nsfw') tags = {
+    'hentai': 'H E N T A I',
+    'bokep': 'B O K E P'
   }
   if (teks == 'stiker') tags = {
     'sticker': 'S T I C K E R'
@@ -336,7 +337,7 @@ _${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik_
                 }, {
                   "title": "Hentai",
                   "description": "",
-                  "rowId": `${_p}! dewasa`
+                  "rowId": `${_p}! nsfw`
 
                 }, {
                   "title": "Stiker",
@@ -507,7 +508,7 @@ _${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik_
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.sendMessage(m.chat, { "contentText": text.trim(), "footerText": `*© ${conn.getName(conn.user.jid)} || 2021*`,
+    await conn.sendMessage(m.chat, { "contentText": text.trim(), "footerText": `©radbotz`,
 "buttons": [
 {buttonId: '.owner', buttonText: {displayText: 'Pemilik Bot'}, type: 1},
 {buttonId: '.donasi', buttonText: {displayText: 'Donasi'}, type: 1}

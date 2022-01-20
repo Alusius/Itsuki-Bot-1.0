@@ -5,7 +5,7 @@ const { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn}) => {
 	if (!db.data.chats[m.chat].nsfw && m.isGroup) throw global.nsfw
   try {
-  let res = await fetch('https://api.xteam.xyz/randomimage/hentaiguf?APIKEY=Dawnfrostkey')
+  let res = await fetch('https://api.xteam.xyz/randomimage/hentaiguf?APIKEY=apivproject')
   let json = await res.json()
   let { 
 result

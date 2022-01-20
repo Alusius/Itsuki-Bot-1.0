@@ -3,7 +3,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
    response = args.join(' ')
   if (!args) throw 'Masukkan Parameter'
   m.reply('Sedang Diproses...')
-  let res = `https://api.xteam.xyz/randomimage/jahy?apikey=Dawnfrostkey`
+  let res = `https://api.xteam.xyz/randomimage/jahy?apikey=apivproject`
   conn.sendButtonImg(m.chat, await ( await fetch(res)).buffer(), `wangy wangy wangy`, watermark, 'NEXT', `${usedPrefix + command}`, m)
 }
 handler.help = ['jahy'].map(v => v + ' ')

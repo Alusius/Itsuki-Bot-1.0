@@ -3,7 +3,7 @@ let handler = async (m, { conn, args }) => {
    response = args.join(' ')
   if (!args) throw 'Masukkan Parameter'
   m.reply('Sedang Diproses...')
-  let res = `https://api.xteam.xyz/randomimage/bdsm?apikey=Dawnfrostkey`
+  let res = `https://api.xteam.xyz/randomimage/bdsm?apikey=apivproject`
   conn.sendFile(m.chat, res, 'bdsm.jpg', `wangy wangy wangy`, m, false)
 }
 handler.help = ['bdsm'].map(v => v + ' ')

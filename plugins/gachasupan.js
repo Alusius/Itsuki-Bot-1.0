@@ -3,7 +3,7 @@ conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": "Daftar Gacha yang ada pada RadBotZ",
                         "description": `Pencet tombol "LIST-GACHA" untuk menampilkan daftar gacha`,
-						"footerText": "Harap menggunakan command ini dengan bijak!",
+			"footerText": "Harap menggunakan command ini dengan bijak!",
                         "buttonText": "LIST-GACHA",
                         "listType": "SINGLE_SELECT",
                         "sections": [

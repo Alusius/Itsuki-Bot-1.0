@@ -1,13 +1,9 @@
 let fetch = require('node-fetch')
 let handler  = async (m, { conn, usedPrefix, command }) => {
-  let res = await fetch(`https://raw.githubusercontent.com/Alfarqun/database/main/jokes/darkjokes.json`)
-  let json = await res.buffer()
-  conn.sendButtonImg(m.chat, json, 'DarkJokes', watermark, 'Get Again', `${usedPrefix + command}`, m)
+conn.sendButtonImg(m.chat, await ( await fetch(global.API('xteam', '/asupan/darkjoke', {}, 'APIKEY'))).buffer(), 'Drag joles', watermark, 'NEXT', `${usedPrefix + command}`, m)
 }
-handler.help = ['darkjokes', 'darkjoke']
+handler.help = ['darkjokes', 'darkjokes']
 handler.tags = ['internet','image']
-
-handler.command = /^(darkjokes|darkjoke)$/i
-handler.register = true
+handler.command = /^(darkjoke|darkjokes)$/i
 
 module.exports = handler

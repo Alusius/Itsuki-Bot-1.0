@@ -10,7 +10,6 @@ await conn.sendButtonImg(m.chat, await (await fetch(url)).buffer(), url, waterma
 handler.help = ['randomnime']
 handler.tags = ['internet', 'anime'] 
 handler.command = /^(randomnime)$/i
-handler.limit = true
 handler.register = true
 
 handler.limit = true

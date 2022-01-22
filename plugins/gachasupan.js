@@ -98,7 +98,7 @@ conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                                 }, {
                                     "title": `Gacha 19.`,
                                     "description": "Gheayubie",
-                                    "rowId": `.gheayubie`
+                                    "rowId": `.geayubi`
                                 }, {
                                     "title": `Gacha 20.`,
                                     "description": "Santuy",

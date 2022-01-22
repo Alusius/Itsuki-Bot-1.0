@@ -45,7 +45,7 @@ ${'```%npmdesc```'}
 }
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'rpg', 'game', 'xp', 'anime', 'dewasa', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
+  let arrayMenu = ['all', 'rpg', 'game', 'xp', 'anime', 'nsfw', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'M  A I N',
@@ -53,7 +53,7 @@ ${'```%npmdesc```'}
   'game': 'G A M E',
   'xp': 'E X P & L I M I T',
   'anime': 'A N I M E',
-  'dewasa': 'H E N T A I',
+  'nsfw': 'N S F W',
   'sticker': 'S T I C K E R',
   'kerang': 'K E R A N G  A J A I B',
   'quotes': 'Q U O T E S',

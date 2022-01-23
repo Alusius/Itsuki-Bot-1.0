@@ -8,9 +8,10 @@
 </p>
 <p align="center">
 </p> 
-# RadBot
 
 ---
+
+# RadBot
 
 # Simple Rpg WhatsApp Bot
 

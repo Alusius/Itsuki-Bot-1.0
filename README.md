@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://telegra.ph/file/63560c3d19d6bcce228f5.jpg" alt="RadBot" width="500"/>
+<img src="https://telegra.ph/file/63560c3d19d6bcce228f5.jpg" alt="RadBot" width="700"/>
 
 
 </p>

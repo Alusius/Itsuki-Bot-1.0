@@ -7,7 +7,8 @@
 <a href="#"><img title="RadBot" src="https://img.shields.io/badge/GANTI SESSIONNYA DULU SEBELUM PAKAI-red?colorA=%255ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
-</p> # RadBot
+</p> 
+# RadBot
 
 ---
 

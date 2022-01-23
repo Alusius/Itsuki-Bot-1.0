@@ -1,9 +1,25 @@
 <p align="center">
-	<img src="https://telegra.ph/file/63560c3d19d6bcce228f5.jpg" width="35%" style="margin-left: auto;margin-right: auto;display: block;">
-</p>
-<h1 align="center">RadBot</h1>
+<img src="https://telegra.ph/file/63560c3d19d6bcce228f5.jpg" alt="RadBot" width="250"/>
 
-Simple Rpg WhatsApp Bot
+
+</p>
+<p align="center">
+<a href="#"><img title="RadBot" src="https://img.shields.io/badge/GANTI SESSIONNYA DULU SEBELUM PAKAI-red?colorA=%255ff0000&colorB=%23017e40&style=for-the-badge"></a>
+</p>
+<p align="center">
+</p>
+<p align="center">
+</p>
+<p align="center">
+<a href="https://github.com/Drz103/RadBot"><img title="Followers" src="https://img.shields.io/github/followers/Drz103?color=blue&style=flat-square"></a>
+<a href="https://github.com/Drz103/RadBot"><img title="Stars" src="https://img.shields.io/github/stars/Drz103/RadBot?color=red&style=flat-square"></a>
+<a href="https://github.com/Drz103/RadBot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Drz103/RadBot?color=red&style=flat-square"></a>
+<a href="https://github.com/Drz103/RadBot"><img title="Watching" src="https://img.shields.io/github/watchers/Paquito1923/=RadBot?label=Watchers&color=blue&style=flat-square"></a>
+</p>
+
+---
+
+# Simple Rpg WhatsApp Bot
 
 ## Join Group Diskusi
 [![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/D5IU5pzGDSyE6lAkqqYnvr) 

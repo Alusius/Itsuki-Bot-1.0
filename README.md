@@ -8,14 +8,6 @@
 </p>
 <p align="center">
 </p>
-<p align="center">
-</p>
-<p align="center">
-<a href="https://github.com/Drz103/RadBot"><img title="Followers" src="https://img.shields.io/github/followers/Drz103?color=blue&style=flat-square"></a>
-<a href="https://github.com/Drz103/RadBot"><img title="Stars" src="https://img.shields.io/github/stars/Drz103/RadBot?color=red&style=flat-square"></a>
-<a href="https://github.com/Drz103/RadBot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Drz103/RadBot?color=red&style=flat-square"></a>
-<a href="https://github.com/Drz103/RadBot"><img title="Watching" src="https://img.shields.io/github/watchers/Drz103/RadBot?label=Watchers&color=blue&style=flat-square"></a>
-</p>
 
 ---
 

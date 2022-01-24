@@ -10,6 +10,6 @@ handler.tags = ['anime']
 handler.command = /^(wallnime)$/i
 handler.register = true
 
-hadler.limit = true
+handler.limit = true
 
 module.exports = handler

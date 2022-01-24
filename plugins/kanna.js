@@ -7,9 +7,9 @@ let res = await (await fetch('https://raw.githubusercontent.com/Alfarqun/databas
 await conn.sendButtonImg(m.chat, await (await fetch(url)).buffer(), 'Kawai > _<', watermark, 'NEXT', `${usedPrefix + command}`, m)
 }
 
-handler.help = ['kannaa']
+handler.help = ['kanna']
 handler.tags = ['internet', 'anime'] 
-handler.command = /^(kannaaa)$/i
+handler.command = /^(kanna)$/i
 handler.limit = true
 handler.register = true
 

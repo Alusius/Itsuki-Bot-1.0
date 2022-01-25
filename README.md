@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://telegra.ph/file/63560c3d19d6bcce228f5.jpg" alt="RadBot" width="400"/>
+<img src="https://telegra.ph/file/63560c3d19d6bcce228f5.jpg" alt="RadBot" width="100"/>
 
 
 <p align="center"> <a href="https://Lexxy24.github.io"> <img src="https://readme-typing-svg.herokuapp.com?size=15&width=280&lines=Created+By+Radbotz+Official+🗿" alt="Lexxy Official" /> </a> </p>
@@ -12,12 +12,7 @@
 
 ---
 
-# RadBot
-
 # Simple Rpg WhatsApp Bot
-
-## Join Group Diskusi
-[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/D5IU5pzGDSyE6lAkqqYnvr) 
 
 ## Deploy to heroku
 
@@ -89,3 +84,8 @@ node .
 ```
 
 ---------
+
+# My Sosial 
+- [Group ](https://chat.whatsapp.com/D5IU5pzGDSyE6lAkqqYnvr) 
+- [YouTube ](https://youtube.com/c/LEX4YOUU) 
+- [Whatsapp ](https://wa.me/62858929626673)

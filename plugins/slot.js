@@ -4,23 +4,14 @@ let handler = async(m, { conn, text }) => {
 	axios.get(`https://api.xteam.xyz/game/virtualslot?APIKEY=apivproject`).then ((res) => {
 	 	let hasil = `${res.data.map}\nHasil : ${res.data.hasil}\nScore :${res.data.score}`                  
 
-    conn.reply(m.chat, hasil, m)
+    conn.sendButton(m.chat, hasil, watermark, 'Lagi', '.slot', m)
 	})
 }
-handler.help = ['slot'].map(v => v + ' ')
+handler.help = ['slot']
 handler.tags = ['game']
 handler.command = /^(slot)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
+handler.register = true
 
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
-handler.exp = 0
 handler.limit = true
 
 module.exports = handler

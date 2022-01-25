@@ -544,8 +544,8 @@ module.exports = {
           let groupMetadata = await this.groupMetadata(jid)
           for (let user of participants) {
             // let pp = './src/avatar_contact.png'
-            let pp = './src/mikey.jpg'
-            let ppgc = './src/mikey.jpg'
+            let pp = './src/RadBotZ.jpg'
+            let ppgc = './src/RadBotZ.jpg'
             try {
               pp = await uploadImage(await (await fetch(await this.getProfilePicture(user))).buffer())
               ppgc = await uploadImage(await (await fetch(await this.getProfilePicture(jid))).buffer())
@@ -655,9 +655,12 @@ global.dfail = (type, m, conn) => {
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
     admin: 'Perintah ini hanya untuk *Admin* grup!',
     nsfw: 'Perintah ini hanya bisa diaktifkan oleh owner',
-    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
   }[type]
   if (msg) return conn.sendButton(m.chat, msg, watermark, 'OK', 'Nanii', m)
+  let botAdmin = {
+    botAdmin: 'Mikir dkit lah bang *BOT NYA BUKAN ADMIN*',
+  }[type]
+  if (botAdmin) return conn.sendButton(m.chat, botAdmin, 'lupa saya', 'Eh iya ya', 'Nanii', m)
   let unreg = {
     unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar RadBotZ.16*`
   }[type]

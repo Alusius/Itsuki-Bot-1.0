@@ -24,10 +24,11 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Drz103/RadBot)
 
 Heroku Buildpack
-| BuildPack | LINK |
-|--------|--------|
-| **FFMPEG** |[here](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
-| **IMAGEMAGICK** | [here](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
+```bash 
+> heroku/nodejs 
+> https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest 
+> https://github.com/clhuang/heroku-buildpack-webp-binaries.git 
+```
 
 Tutorial YouTube
 

@@ -5,5 +5,8 @@ conn.sendButtonImg(m.chat, await ( await fetch(global.API('xteam', '/asupan/dark
 handler.help = ['darkjokes', 'darkjokes']
 handler.tags = ['internet','image']
 handler.command = /^(darkjoke|darkjokes)$/i
+handler.register = true
+
+handler.limit = true
 
 module.exports = handler

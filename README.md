@@ -32,6 +32,24 @@ Heroku Buildpack
 Tutorial YouTube
 
 [![YouTube](https://img.shields.io/badge/YouTube-Video-red)](https://youtu.be/DzNIL45qHaM)
+
+## settings 
+Edit Nomor Owner DLL `'./config.js'`
+```ts 
+OwnerNumber = ['Nomerlu']
+GithubOwner = ['https://github.com/Drz103']
+GroupOwner = ['https://chat.whatsapp.com/D5IU5pzGDSyE6lAkqqYnvr']
+Apikey? = Apikey kalian, tidak paham? chat saya di wangsaf!
+
+Thumbnail
+global.ppkosong = 'https://telegra.ph/file/22fd84e4a3244e1b17e4e.png'
+global.ppgc = 'https://telegra.ph/file/22fd84e4a3244e1b17e4e.png'
+global.image = 'https://telegra.ph/file/4f4a5a3cde6a98a96da79.jpg'//change the image
+global.bank = 'https://telegra.ph/file/d5ddf4cc627bb0e6bc420.jpg'
+global.kandang = 'https://telegra.ph/file/67a6ee607d03a4e52757d.jpg'
+global.kolam = 'https://telegra.ph/file/5aa5dfa3394477e11fb18.jpg'
+```
+
 ## FOR TERMUX/UBUNTU/SSH USER
 
 ```bash

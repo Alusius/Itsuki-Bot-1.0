@@ -21,7 +21,7 @@ global.APIs = { // API Prefix
   // name: 'https://website'
   bx: 'https://bx-hunter.herokuapp.com',
   rey: 'https://server-api-rey.herokuapp.com',
-  hardianto: 'https://hardianto-chan.herokuapp.com',
+  hardianto: 'https://hardianto.xyz',
   neoxr: 'https://neoxr-api.herokuapp.com',
   nrtm: 'https://nurutomo.herokuapp.com',
   xteam: 'https://api.xteam.xyz',
@@ -38,7 +38,7 @@ global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey' (apikey kalian^_^)
   'https://server-api-rey.herokuapp.com': 'apirey',
   'https://bx-hunter.herokuapp.com': 'Ikyy69',
-  'https://hardianto-chan.herokuapp.com': 'hardianto',
+  'https://hardianto.xyz': 'hardianto',
   'https://neoxr-api.herokuapp.com': 'yntkts',
   'https://api.xteam.xyz': 'cristian9407',
   'https://api.lolhuman.xyz': 'Dawnfrostkey',
@@ -82,14 +82,11 @@ global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=tr
 global.watermark = '©radbotz ×፝֟͜×' //change the watermark (beberapa harus manual)
 
 // Ubah saja
-global.ppkosong = 'https://telegra.ph/file/22fd84e4a3244e1b17e4e.png'
-global.ppgc = 'https://telegra.ph/file/22fd84e4a3244e1b17e4e.png'
-global.image = 'https://telegra.ph/file/4f4a5a3cde6a98a96da79.jpg'//change the image
+global.image = 'https://telegra.ph/file/19b4b4ce07d87f5a55771.jpg'//thumbnail
 global.bank = 'https://telegra.ph/file/d5ddf4cc627bb0e6bc420.jpg'
 global.kandang = 'https://telegra.ph/file/67a6ee607d03a4e52757d.jpg'
 global.kolam = 'https://telegra.ph/file/5aa5dfa3394477e11fb18.jpg'
 global.thanks = 'https://telegra.ph/file/01917f7782b70de8f418d.jpg'
-global.deskripsiurl = 'Saya adalah Bot WhatsApp ×͜×.'
 
 // tingkat kesulitan, semakin tinggi semakin susah
 global.multiplier = 500 // The higher, The harder levelup

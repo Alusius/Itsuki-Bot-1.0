@@ -14,7 +14,7 @@ gay = `sayang`
   let q = m.quoted ? m.quoted : m
   let media = await q.download()
   let img = await uploadImage(media)
-  let buffer = await (await fetch('https://lolhuman.herokuapp.com/api/editor/pencil?apikey=Dawnfrostkey&img=' + img + '&apa=nani')).buffer() // Masukan ApiKeymu disini..
+  let buffer = await (await fetch('https://api.lolhuman.xyz/api/editor/pencil?apikey=rey2k21&img=' + img + '&apa=nani')).buffer() // Masukan ApiKeymu disini..
   let res = await fetch('https://raw.githubusercontent.com/herokuapp-com/kuhong-api/main/info/credit.json')
   let json = await res.json()
 

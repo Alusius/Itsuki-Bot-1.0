@@ -12,6 +12,8 @@
 
 ---
 
+# Timdak work di termux!
+
 # Simple Rpg WhatsApp Bot
 
 ## Deploy to heroku
@@ -45,20 +47,6 @@ global.bank = 'https://telegra.ph/file/d5ddf4cc627bb0e6bc420.jpg'
 global.kandang = 'https://telegra.ph/file/67a6ee607d03a4e52757d.jpg'
 global.kolam = 'https://telegra.ph/file/5aa5dfa3394477e11fb18.jpg'
 ```
-
-## FOR TERMUX/UBUNTU/SSH USER
-
-```bash
-apt update && apt upgrade
-apt install git -y
-apt install nodejs -y
-apt install ffmpeg -y
-apt install imagemagick -y
-git clone https://github.com/Drz103/RadBot
-cd RadBot
-npm install
-npm update
-```
 ---------
 
 ## FOR WINDOWS/VPS/RDP USER
@@ -87,5 +75,4 @@ node .
 
 # My Sosial 
 - [Group ](https://chat.whatsapp.com/D5IU5pzGDSyE6lAkqqYnvr) 
-- [YouTube ](https://youtube.com/c/LEX4YOUU) 
 - [Whatsapp ](https://wa.me/62858929626673)

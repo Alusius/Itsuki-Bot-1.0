@@ -1,4 +1,3 @@
-
 let xfar = require('xfarr-api')
 let handler = async (m, { usedPrefix, command, conn, args }) => {
 	 	  if (!args[0]) throw `Gunakan format: ${usedPrefix}${command} naruto`

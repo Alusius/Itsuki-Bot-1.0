@@ -3,12 +3,14 @@ let handler = async (m, { conn }) => conn.sendButtonLoc(m.chat, await (await fet
 BIG THANKS TO
 
 •Allah swt
+•My ortu
 •Nurutomo
 •Adiwajshing
 •Ariffb
 •Amel
 •IrwanX
 •Dawnfrosty
+•Rteam1
 •Beniismael
 •Raditya (gua)
 •Furqan
@@ -25,7 +27,6 @@ BIG THANKS TO
 •Aca Mirabel
 •Penyedia Layanan API
 •Orang-orang yang Berdonasi
-•My ortu
 `.trim(), watermark, 'Back', '.menu')
 handler.help = ['Thanksto', 'tqto']
 handler.tags = ['main']

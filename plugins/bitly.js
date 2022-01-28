@@ -3,7 +3,7 @@ let handler = async(m, { conn, text }) => {
 	if (!text) throw 'masukan link'
 
   await m.reply(global.wait) 
-      let json = await (await fetch(`https://api.xteam.xyz/shorturl/bitly?url=${text}&apikey=Dawnfrostkey`)).json()
+      let json = await (await fetch(`https://api.xteam.xyz/shorturl/bitly?url=${text}&apikey=cristian9407`)).json()
       if (!json.status) throw json
     let hasil = `ShortLink Telah Selesai :\n\nNih ${json.result.link}`.trim()
           

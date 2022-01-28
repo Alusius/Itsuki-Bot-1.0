@@ -11,24 +11,15 @@ Nih
 
   await m.reply('Sedang membuat...')
 
-  let hasil = await (await fetch('http://lolhuman.herokuapp.com/api/textprome/bloodfrosted?apikey=Dawnfrostkey&text=' + text)).buffer()
+  let hasil = await (await fetch('http://api.lolhuman.xyz/api/textprome/bloodfrosted?apikey=rey2k21&text=' + text)).buffer()
 
      conn.sendFile(m.chat, hasil, 'foto.jpg', str, m)
 }
 handler.help = ['bloodtext <teks>']
 handler.tags = ['sticker']
 handler.command = /^(bloodtext)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
+handler.register = true
 
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
-handler.exp = 0
 handler.limit = true
 
 module.exports = handler

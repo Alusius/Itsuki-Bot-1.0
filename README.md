@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://telegra.ph/file/63560c3d19d6bcce228f5.jpg" alt="RadBot" width="100"/>
+<img src="https://telegra.ph/file/63560c3d19d6bcce228f5.jpg" alt="RadBot" width="200"/>
 
 
 <p align="center"> <a href="https://Lexxy24.github.io"> <img src="https://readme-typing-svg.herokuapp.com?size=15&width=280&lines=Created+By+Radbotz+Official+🗿" alt="Lexxy Official" /> </a> </p>
@@ -40,8 +40,6 @@ GroupOwner = ['https://chat.whatsapp.com/D5IU5pzGDSyE6lAkqqYnvr']
 Apikey? = Apikey kalian, tidak paham? chat saya di wangsaf!
 
 Thumbnail
-global.ppkosong = 'https://telegra.ph/file/22fd84e4a3244e1b17e4e.png'
-global.ppgc = 'https://telegra.ph/file/22fd84e4a3244e1b17e4e.png'
 global.image = 'https://telegra.ph/file/4f4a5a3cde6a98a96da79.jpg'//change the image
 global.bank = 'https://telegra.ph/file/d5ddf4cc627bb0e6bc420.jpg'
 global.kandang = 'https://telegra.ph/file/67a6ee607d03a4e52757d.jpg'

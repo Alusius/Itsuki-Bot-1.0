@@ -6,6 +6,7 @@ BIG THANKS TO
 •Nurutomo
 •Adiwajshing
 •Ariffb
+•Amel
 •IrwanX
 •Dawnfrosty
 •Beniismael

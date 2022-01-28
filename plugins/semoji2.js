@@ -8,7 +8,7 @@ let handler  = async (m, { conn, text }) => {
   if (!text) throw 'Emojinya?'
   if (text) {
    await m.reply('Sedang membuat...')
-    let img = await (await fetch(`http://lolhuman.herokuapp.com/api/smoji/${encodeURIComponent(text)}?apikey=Dawnfrostkey`)).buffer()
+    let img = await (await fetch(`http://api.lolhuman.xyz/api/smoji/${encodeURIComponent(text)}?apikey=rey2k21`)).buffer()
     if (!img) throw img
     let stiker = await sticker(img, false, 'Emoji Maker', 'Lord Mimin')
     conn.sendMessage(m.chat, stiker, MessageType.sticker, {

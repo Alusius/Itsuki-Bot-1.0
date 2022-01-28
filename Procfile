@@ -1,1 +1,1 @@
-worker : npm i && npm update && npm i imgbb-uploader && npm i wa-sticker-formatter && npm i cjs && npm i @adiwajshing/baileys@latest && node .
+worker : npm i && npm update && node .

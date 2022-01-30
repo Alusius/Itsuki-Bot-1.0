@@ -13,7 +13,7 @@
 
 # Timdak work di termux!
 
-# Simple Rpg WhatsApp Bot
+# Slow respon
 
 ## Deploy to heroku
 

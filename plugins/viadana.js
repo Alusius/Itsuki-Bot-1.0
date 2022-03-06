@@ -1,34 +1,16 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
 let info = `╠═〘 PEMBAYARAN 〙 ═
-╠═ Untuk Pembayaran Via Dana
-╠➥ *085714313795*
-║- Chat Owner Terlebebih
-║ Dahulu
-╠═〘 Fitur 〙 ═
-║
-╠➥ *FITUR WELCOME*
-║    *FITUR STIKER*
-╠➥ *FITUR ADMIN*
-║    *KICK ORANG*
-║    *JADIIN ADMIN*
-╠➥ *FITUR ISLAM*
-║   *QURAN*
-║   *CEK JADWAL SHALAT*
-╠➥ *INTERNET*
-║   *BRAINLY*
-║   *GOOGLE*
-╠➥ *DAN 200 LEBIH*
-║   *FITUR LAINNYA*
-║ 
-╠═ ©2021 wabot-aq
-╠═ Scrip original by Nurutomo
-╠═〘 RAD BOT〙 ═
+╠═ Untuk Pembayaran Via Digi
+╠➥ *60149431385*
+║- Owner:
+║- wa.me/60189830350
+╠═〘 LYNXZY 〙 ═
 `.trim()
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*Sewa Bot*', 'status@broadcast') 
 }
-handler.help = ['viadana']
+handler.help = ['viadigi']
 handler.tags = ['info']
-handler.command = /^viadana$/i
+handler.command = /^viadigi$/i
 
 module.exports = handler

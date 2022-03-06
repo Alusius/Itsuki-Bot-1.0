@@ -9,37 +9,42 @@ let handler = async (m, { conn }) => {
     let uptime = clockString(_uptime)
 
     let str = `
-┌─〔 Info RadBotZ 〕
-│Name: RadBotZ
-│Main Owner: Raditya
-│Operated Since: 19 September 2021
-│Language Used: Nodejs (JS)
-│Server: Heroku
-│SC: _github.com/Drz103/RadBot.git_
-└────
+╭══════════════════
+║╭─❉ [𝐈𝐍𝐅𝐎𝐁𝐎𝐓] ❉───
+║│➸ NameBot: LynXzy
+║│➸ Main Owner: 
+║│➸ Operated Since: 25 December 2021
+║│➸ Language Used: Nodejs (JS)
+║│➸ Server: Heroku
+║│➸ SC: _github.com/LANxBOT_
+╰═════════════════
 
-┌─〔 Status 〕
-├ Aktif selama ${uptime}
-├ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-├ *${groups.length}* Grup
-├ *${chats.length - groups.length}* Chat Pribadi
-├ *${Object.keys(global.db.data.users).length}* Pengguna
-├ *${totaljadibot.length}* Jadibot
-├ *${conn.blocklist.length}* Terblock
-├ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
-├ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
-└────
+╭═════════════════
+║╭──❉ [𝐒𝐓𝐀𝐓𝐔𝐒] ❉──
+║│➸ Aktif selama ${uptime}
+║│➸ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+║│➸ *${groups.length}* Grup
+║│➸ *${chats.length - groups.length}* Chat Pribadi
+║│➸ *${Object.keys(global.db.data.users).length}* Pengguna
+║│➸ *${totaljadibot.length}* Jadibot
+║│➸ *${conn.blocklist.length}* Terblock
+║│➸ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
+║│➸ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
+║╰───────────────
+╰════════════════
 
-┌─〔 Pengaturan 〕
-├ ${anon ? '✅' : '❌'} *Anon Chat*
-├ ${anticall ? '✅' : '❌'} *Anti Call*
-├ ${antispam ? '✅' : '❌'} *Anti Spam*
-├ ${antitroli ? '✅' : '❌'} *Anti Troli*
-├ ${backup ? '✅' : '❌'} *Auto Backup DB*
-├ ${groupOnly ? '✅' : '❌'} *Mode Grup*
-├ ${jadibot ? '✅' : '❌'} *Jadi Bot*
-├ ${nsfw ? '✅' : '❌'} *Mode Nsfw*
-└────`.trim()
+╭════════════════════
+║╭──❉ Pengaturan 〕❉───
+║│➸ ${anon ? '✅' : '❌'} *Anon Chat*
+║│➸ ${anticall ? '✅' : '❌'} *Anti Call*
+║│➸ ${antispam ? '✅' : '❌'} *Anti Spam*
+║│➸ ${antitroli ? '✅' : '❌'} *Anti Troli*
+║│➸ ${backup ? '✅' : '❌'} *Auto Backup DB*
+║│➸ ${groupOnly ? '✅' : '❌'} *Mode Grup*
+║│➸ ${jadibot ? '✅' : '❌'} *Jadi Bot*
+║│➸ ${nsfw ? '✅' : '❌'} *Mode Nsfw*
+║╰─────────────────
+╰══════════════════`.trim()
      await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©RadBotZ ⁩×͜×', 'Owner', '.owner', 'Menu', '.menu', m)
 }
 handler.help = ['botstatus']

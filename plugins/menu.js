@@ -24,7 +24,6 @@ const defaultMenu = {
 ⁙┃〲
 ⁙┃〲 Uptime: *%uptime (%muptime)*
 ⁙┃〲 Database: %rtotalreg dari %totalreg
-⁙┃〲 GitHub: https://github.com/Drz103/RadBot
 ⁙┃〲
 ⁙╰•°°°🕊°°°°°🕊°°°°°°🕊°°°°°°°°
 %readmore`.trimStart(),
@@ -223,29 +222,29 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": `*${ucapan()}, ${name}*`.trim(),
-                        "description": `©RadBotZ`.trim(),
-                        "footerText": "Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
-                        "buttonText": "*Click Here*",
+                        "description": `©LynXzy🥀`.trim(),
+                        "footerText": "Hi kak >//<",
+                        "buttonText": "*Klik Disini*",
                         "listType": "SINGLE_SELECT",
                         "sections": [
                             {
                                 "rows": [{
-                                    "title": "Status Bot",
+                                    "title": "|🛠️|Status Bot",
                                     "description": "Status dan informasi Bot.",
                                     "rowId": ".botstatus"
                                 }, {
-                                    "title": "Rules",
+                                    "title": "|❗|Rules",
                                     "description": "User yang bijak selalu mematuhi Rules.",
                                     "rowId": ".rules"
                                 }, {
-                                    "title": "Sewa bot - Premium",
+                                    "title": "|👑|Sewa bot - Premium",
                                     "description": "Untuk kamu yang ingin melihat daftar harga sewa dan premium.",
                                     "rowId": ".sewabot"
                                 }],
                                 "title": "⟣─────────❲ Tentang Bot dan lainnya ❳──────────⟢"
                             }, {
                                 "rows": [{
-                                    "title": `[🧾| Semua Perintah`,
+                                    "title": `|🧾| Semua Perintah`,
                                     "description": "Memberikan Semua Fitur Bot",
                                     "rowId": ".? all"
                                 }, { 
@@ -353,7 +352,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Info Tentang Bot",
                                     "rowId": ".? info"
                                 }, { 
-                                    "title": "Tanpa Kategori",
+                                    "title": "|-|Tanpa Kategori",
                                     "description": "",
                                     "rowId": ".? tanpakategori"
                                 }, { 
@@ -364,19 +363,19 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                 "title": "⟣──────────────❲  All-Menu  ❳──────────────⟢"
                             }, {
                                 "rows": [{
-                                    "title": "Owner bot",
+                                    "title": "|👩🏻‍💼|Owner bot",
                                     "description": "pemilik RadBotZ",
                                     "rowId": ".owner"
                                 }, {
-                                    "title": "Donasi",
+                                    "title": "|💰|Donasi",
                                     "description": "Jangan lupa donasi untuk mendukung bot agar aktif selalu",
                                     "rowId": ".donasi"
                                 }, {
-                                    "title": "Kata penutup",
+                                    "title": "|🥀|Kata penutup",
                                     "description": "Terimakasih untuk user yang telah menggunakan bot, jika ada kesalahan atau permintaan bisa chat ke nomor owner\nNote: chat P/main² tidak akan di respon(user bisa terkena banned/block)",
                                     "rowId": ".creator"
                                 }, {
-                                    "title": "Thanks To |🎖️|",
+                                    "title": "|❤️|Thanks To",
                                     "description": "Terima kasih banyak untuk user yang telah berpartisipasi dalam bot",
                                     "rowId": ".tqto"
                                 }],

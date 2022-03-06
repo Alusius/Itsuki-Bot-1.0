@@ -1,16 +1,16 @@
 let fetch = require('node-fetch')
 let { MessageType } = require('@adiwajshing/baileys')
 let handler = async(m, { conn }) => {
-    let kontol = `Kebijakan Privasi, Syarat Ketentuan dan Peraturan Sirad BOT
+    let kontol = `Kebijakan Privasi, Syarat Ketentuan dan Peraturan Sirad botz
 
 Kebijakan Privasi
-1. RadBotZ tidak akan merekam data riwayat chat user.
-2. RadBotZ tidak akan menyebarkan nomor users.
-3. RadBotZ tidak akan menyimpan media yang dikirimkan oleh users.
-4. RadBotZ tidak akan menyalah gunakan data data users.
-5. Owner RadBotZ berhak melihat data riwayat chat users.
-6. Owner RadBotZ berhak melihat status users.
-7. Owner RadBotZ dapat melihat riwayat chat, dan media yang dikirimkan users.
+1. LynXzy tidak akan merekam data riwayat chat user.
+2. LynXzy tidak akan menyebarkan nomor users.
+3. LynXzy tidak akan menyimpan media yang dikirimkan oleh users.
+4. LynXzy tidak akan menyalah gunakan data data users.
+5. Owner LynXzy berhak melihat data riwayat chat users.
+6. Owner LynXzy berhak melihat status users.
+7. Owner LynXzy dapat melihat riwayat chat, dan media yang dikirimkan users.
 
 Peraturan Sirad Bot
 1. Users dilarang menelpon maupun memvideo call nomor bot.
@@ -21,14 +21,17 @@ Peraturan Sirad Bot
 
 Syarat Ketentuan Sirad Bot
 1. Bot akan keluar dari group apabila sudah waktunya keluar.
-2. RadBotZ dapat mem-ban users secara sepihak terlepas dari users salah atau tidak.
-3. RadBotZ *tidak akan bertanggungjawab atas apapun yang users lakukan terhadap fitur bot.*
-4. RadBotZ akan memberlakukan hukuman: block atau ban terhadap users yang melanggar peraturan.
-5. RadBotZ bertanggung jawab atas kesalahan fatal dalam programing maupun owner.
+2. LynXzy dapat mem-ban users secara sepihak terlepas dari users salah atau tidak.
+3. LynXzy *tidak akan bertanggungjawab atas apapun yang users lakukan terhadap fitur bot.*
+4. LynXzy akan memberlakukan hukuman: block atau ban terhadap users yang melanggar peraturan.
+5. LynXzy bertanggung jawab atas kesalahan fatal dalam programing maupun owner.
 
--Raditya
+-LAN XZY
+[GROUP OFFICIAL¹]
+- https://chat.whatsapp.com/EheAWPrQMhV25xW0N7l7WD
+[GROUP OFFICIAL²]
+- https://chat.whatsapp.com/GzDQlgoUamS5Ok4EOcYRRB
 
-Peraturan: 1 Oktober 2021
 `.trim()
   const button = {
         buttonText: 'Klik Di sini',

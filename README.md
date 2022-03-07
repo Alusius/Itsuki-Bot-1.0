@@ -33,9 +33,9 @@ Tutorial YouTube
 ## settings 
 Edit Nomor Owner DLL `'./config.js'`
 ```ts 
-OwnerNumber = ['Nomerlu']
-GithubOwner = ['https://github.com/Drz103']
-GroupOwner = ['https://chat.whatsapp.com/D5IU5pzGDSyE6lAkqqYnvr']
+OwnerNumber = ['wa.me/60189830350']
+GithubOwner = ['https://github.com/LANxBOT']
+GroupOwner = ['https://chat.whatsapp.com/EheAWPrQMhV25xW0N7l7WD']
 Apikey? = Apikey kalian, tidak paham? chat saya di wangsaf!
 
 Thumbnail
@@ -71,5 +71,5 @@ node .
 ---------
 
 # My Sosial 
-- [Group ](https://chat.whatsapp.com/D5IU5pzGDSyE6lAkqqYnvr) 
-- [Whatsapp ](https://wa.me/62858929626673)
+- [Group ](https://chat.whatsapp.com/EheAWPrQMhV25xW0N7l7WD) 
+- [Whatsapp ](https://wa.me/60189830350)

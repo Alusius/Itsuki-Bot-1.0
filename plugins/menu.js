@@ -352,7 +352,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Info Tentang Bot",
                                     "rowId": ".? info"
                                 }, { 
-                                    "title": "|-|Tanpa Kategori",
+                                    "title": "|─|Tanpa Kategori",
                                     "description": "",
                                     "rowId": ".? tanpakategori"
                                 }, { 
@@ -364,7 +364,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                             }, {
                                 "rows": [{
                                     "title": "|👩🏻‍💼|Owner bot",
-                                    "description": "pemilik RadBotZ",
+                                    "description": "pemilik Bot",
                                     "rowId": ".owner"
                                 }, {
                                     "title": "|💰|Donasi",

@@ -3,10 +3,10 @@ let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
 let time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
 let runnya = `
-*───「 RUNTIME BOT 」───*
+*───「 RUNTIME BOT💌 」───*
 
-Time : ${time}
-Runtime : ${uptime}
+⏲️Time : ${time}
+👾Runtime : ${uptime}
 `
 conn.sendButton(m.chat, runnya, watermark, 'Menu', '.menu', m) 
 }

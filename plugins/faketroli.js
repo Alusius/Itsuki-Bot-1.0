@@ -23,7 +23,7 @@ let handler = async(m, { conn, args, text, usedPrefix: _p }) => {
                             status: 1,
                             surface : 1,
                             message: tytyd,
-                            orderTitle: "RadBotZ",
+                            orderTitle: "LynXzy",
                             thumbnail: fs.readFileSync("./src/mike.jpg"),
                             sellerJid: '0@s.whatsapp.net'
                         }

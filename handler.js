@@ -229,7 +229,7 @@ module.exports = {
         if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
         if (chat) {
           if (!('isBanned' in chat)) chat.isBanned = false
-          if (!('welcome' in chat)) chat.welcome = false
+          if (!('welcome' in chat)) chat.welcome = true
           if (!('detect' in chat)) chat.detect = false
           if (!('sWelcome' in chat)) chat.sWelcome = ''
           if (!('sBye' in chat)) chat.sBye = ''
@@ -648,19 +648,19 @@ global.dfail = (type, m, conn) => {
   }[type]
   if (owr) return conn.sendSticker(m.chat, 'https://telegra.ph/file/2848948d64ea43302c882.png', m ,{sendEphemeral: true})
   let msg = {
-    owner: 'Khusus owner tolol🤸',
+    owner: 'Khusus owner, tolol🤸',
     mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Khusus premium tolol🤸',
+    premium: 'Khusus premium, tolol🤸',
     group: 'Perintah ini hanya dapat digunakan di grup!',
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Khusus Admin group tolol🤸',
+    admin: 'Khusus Admin group, tolol🤸',
     nsfw: 'Perintah ini hanya bisa diaktifkan oleh owner',
   }[type]
   if (msg) return conn.sendButton(m.chat, msg, watermark, 'OK', 'Nanii', m)
   let botAdmin = {
     botAdmin: 'Mikir dkit lah bang *BOT NYA BUKAN ADMIN*',
   }[type]
-  if (botAdmin) return conn.sendButton(m.chat, botAdmin, 'lupa saya', 'Eh iya ya', 'Nanii', m)
+  if (botAdmin) return conn.sendButton(m.chat, botAdmin, 'Lupa Saya', 'Eh iya ya', 'Nanii', m)
   let unreg = {
     unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar LynXzy.16*`
   }[type]

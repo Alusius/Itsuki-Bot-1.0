@@ -278,7 +278,7 @@ ${usedPrefix}off welcome
 let str = `
 *${type}* berhasil di *${isEnable ? 'nyala' : 'mati'}kan* ${isAll ? 'untuk bot ini' : isUser ? '' : 'untuk chat ini'}
 `.trim()
-     await conn.send2Button(m.chat, str, watermark, 'Owner', '.owner', 'Menu', '.menu', { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `radbotz-_-`, itemCount: 999, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')}}})
+     await conn.send2Button(m.chat, str, watermark, 'Owner', '.owner', 'Menu', '.menu', { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `LynXzy💌`, itemCount: 999, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')}}})
 }
 handler.help = ['on', 'off'].map(v => v + ' <opsi>')
 handler.tags = ['group', 'owner']

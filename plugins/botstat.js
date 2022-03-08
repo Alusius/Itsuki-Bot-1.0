@@ -9,14 +9,14 @@ let handler = async (m, { conn }) => {
     let uptime = clockString(_uptime)
 
     let str = `
-╭══════════════════
+╭═════════════════
 ║╭─❉ [𝐈𝐍𝐅𝐎𝐁𝐎𝐓] ❉───
 ║│➸ NameBot: LynXzy
-║│➸ Main Owner: 
+║│➸ Main Owner: LanXzy
 ║│➸ Operated Since: 25 December 2021
 ║│➸ Language Used: Nodejs (JS)
 ║│➸ Server: Heroku
-║│➸ SC: _github.com/LANxBOT_
+║│➸ SC: Desah dlu dek 🤸
 ╰═════════════════
 
 ╭═════════════════
@@ -33,8 +33,8 @@ let handler = async (m, { conn }) => {
 ║╰───────────────
 ╰════════════════
 
-╭════════════════════
-║╭──❉ Pengaturan 〕❉───
+╭════════════════
+║╭──❉ Pengaturan 〕❉─
 ║│➸ ${anon ? '✅' : '❌'} *Anon Chat*
 ║│➸ ${anticall ? '✅' : '❌'} *Anti Call*
 ║│➸ ${antispam ? '✅' : '❌'} *Anti Spam*
@@ -45,7 +45,7 @@ let handler = async (m, { conn }) => {
 ║│➸ ${nsfw ? '✅' : '❌'} *Mode Nsfw*
 ║╰─────────────────
 ╰══════════════════`.trim()
-     await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©RadBotZ ⁩×͜×', 'Owner', '.owner', 'Menu', '.menu', m)
+     await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©LynXzy💌', 'Owner', '.owner', 'Menu', '.menu', m)
 }
 handler.help = ['botstatus']
 handler.tags = ['info']

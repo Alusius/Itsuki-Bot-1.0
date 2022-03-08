@@ -12,9 +12,8 @@ let handler  = async (m, { conn, usedPrefix }) => {
   let neww = Math.round(performance.now())
   let str = `
 ╭═══════════════════════
-║╭──❉〘 ${package.name} 〙 
+║╭─❉〘 ${package.name} 〙❉─
 ║│➸ *Versi* : 1.5.0
-║│➸ *Homepage* : https://github.com/Drz103/RadBot
 ║│➸ *Issue:* ${package.bugs.url}
 ║│➸ *Prefix:* ' ${usedPrefix} '
 ║│➸ *Menu:* ${usedPrefix}menu
@@ -22,13 +21,12 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ║│➸ *Total user:* ${totalreg} *user*
 ║│➸ *Uptime:* ${uptime}
 ║│
-║╭──❉〘 𝐃𝐎𝐍𝐀𝐒𝐈 〙
+║╭─❉〘 𝐃𝐎𝐍𝐀𝐒𝐈 〙❉─
 ║│➸ DIGI [60149431385]
 ║│➸ UMOBILE [60189830350]
 ║│
-║│
 ║│ ${readMore}
-║╭──❉〘 𝐏𝐑𝐈𝐕𝐀𝐂𝐘 𝐁𝐎𝐓 〙 ═
+║╭─❉〘 𝐏𝐑𝐈𝐕𝐀𝐂𝐘 𝐁𝐎𝐓 〙❉─
 ║│➸ *KAMI TIDAK BERTANGGUNG*
 ║│➸   *JAWAB ATAS PENYALAH*
 ║│➸   *GUNAAN BOT*
@@ -40,7 +38,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ║│➸   *ANDA DI DATABASE KAMI*
 ║╰─────────
 ╰═════════════════`.trim()
-     await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©RadBotZ ⁩×͜×', 'Owner', '.owner', 'Menu', '.menu', m)
+     await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©LynXzy💌', 'Owner', '.owner', 'Menu', '.menu', m)
 }
 handler.help = ['infobot']
 handler.tags = ['info']

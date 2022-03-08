@@ -267,7 +267,7 @@ module.exports = {
           if (!'anon' in settings) settings.anon = true
           if (!'anticall' in settings) settings.anticall = true
           if (!'antispam' in settings) settings.antispam = true
-          if (!'antitroli' in settings) settings.antitroli = true
+          if (!'antitroli' in settings) settings.antitroli = false
           if (!'backup' in settings) settings.backup = false
           if (!isNumber(settings.backupDB)) settings.backupDB = 0
           if (!'groupOnly' in settings) settings.groupOnly = false
@@ -278,7 +278,7 @@ module.exports = {
           anon: true,
           anticall: true,
           antispam: true,
-          antitroli: true,
+          antitroli: false,
           backup: false,
           backupDB: 0,
           groupOnly: false,
@@ -648,12 +648,12 @@ global.dfail = (type, m, conn) => {
   }[type]
   if (owr) return conn.sendSticker(m.chat, 'https://telegra.ph/file/2848948d64ea43302c882.png', m ,{sendEphemeral: true})
   let msg = {
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
+    owner: 'Khusus owner tolol🤸',
     mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
+    premium: 'Khusus premium tolol🤸',
     group: 'Perintah ini hanya dapat digunakan di grup!',
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Perintah ini hanya untuk *Admin* grup!',
+    admin: 'Khusus Admin group tolol🤸',
     nsfw: 'Perintah ini hanya bisa diaktifkan oleh owner',
   }[type]
   if (msg) return conn.sendButton(m.chat, msg, watermark, 'OK', 'Nanii', m)

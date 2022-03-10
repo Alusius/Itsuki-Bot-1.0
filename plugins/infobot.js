@@ -21,21 +21,24 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ║│➸ *Total user:* ${totalreg} *user*
 ║│➸ *Uptime:* ${uptime}
 ║│
-║╭─❉〘 𝐃𝐎𝐍𝐀𝐒𝐈 〙❉─
-║│➸ DIGI [60149431385]
-║│➸ UMOBILE [60189830350]
+║╭─❉〘 𝐆𝐑𝐎𝐔𝐏 𝐁𝐎𝐓 〙❉─
+║│➸ 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝗚𝗿𝗼𝘂𝗽 𝗕𝗼𝘁¹
+║│➸ https://tinyurl.com/y7xymnkd
+║│
+║│➸ 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝗚𝗿𝗼𝘂𝗽 𝗕𝗼𝘁²
+║│➸ https://tinyurl.com/yc92fva7
 ║│
 ║│ ${readMore}
 ║╭─❉〘 𝐏𝐑𝐈𝐕𝐀𝐂𝐘 𝐁𝐎𝐓 〙❉─
 ║│➸ *KAMI TIDAK BERTANGGUNG*
-║│➸   *JAWAB ATAS PENYALAH*
-║│➸   *GUNAAN BOT*
+║│➸ *JAWAB ATAS PENYALAH*
+║│➸ *GUNAAN BOT*
 ║│➸ *KAMI TIDAK BERTANGGUNG*
-║│➸   *JAWAB ATAS KEBOCORAN DATA*
-║│➸   *PRIBADI ANDA*
+║│➸ *JAWAB ATAS KEBOCORAN DATA*
+║│➸ *PRIBADI ANDA*
 ║│➸ *KAMI AKAN MENYIMPAN DATA*
-║│➸   *SEPERTI NOMER TELEPON*
-║│➸   *ANDA DI DATABASE KAMI*
+║│➸ *SEPERTI NOMER TELEPON*
+║│➸ *ANDA DI DATABASE KAMI*
 ║╰─────────
 ╰═════════════════`.trim()
      await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©LynXzy💌', 'Owner', '.owner', 'Menu', '.menu', m)

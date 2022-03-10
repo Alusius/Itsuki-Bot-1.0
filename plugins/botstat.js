@@ -13,7 +13,7 @@ let handler = async (m, { conn }) => {
 ║╭─❉ [𝐈𝐍𝐅𝐎𝐁𝐎𝐓] ❉───
 ║│➸ NameBot: LynXzy
 ║│➸ Main Owner: LanXzy
-║│➸ Operated Since: 25 December 2021
+║│➸ Operated Since: Lupa gw
 ║│➸ Language Used: Nodejs (JS)
 ║│➸ Server: Heroku
 ║│➸ SC: Desah dlu dek 🤸
@@ -34,7 +34,7 @@ let handler = async (m, { conn }) => {
 ╰════════════════
 
 ╭════════════════
-║╭──❉ Pengaturan 〕❉─
+║╭──❉ [𝐏𝐄𝐍𝐆𝐀𝐓𝐔𝐑𝐀𝐍〕❉─
 ║│➸ ${anon ? '✅' : '❌'} *Anon Chat*
 ║│➸ ${anticall ? '✅' : '❌'} *Anti Call*
 ║│➸ ${antispam ? '✅' : '❌'} *Anti Spam*

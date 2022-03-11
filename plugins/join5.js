@@ -16,16 +16,16 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 ketik *#menu* untuk melihat daftar perintah`, MessageType.text, { contextInfo: { externalAdReply :{
        mediaUrl: ' ',
        mediaType: 4,
-       title: 'radbotz ×͜×',
+       title: 'LynXzy🥀',
        body: 'Whatsapp Developer Bot',
        thumbnailUrl: image,
-sourceUrl: 'https://wa.me/62858929626673?text=Assalamualaikum'
+sourceUrl: 'https://wa.me/60189830350?text=Assalamualaikum'
 }}})
 }
 handler.help = ['join5 <linkgrup> ']
 handler.tags = ['main']
 handler.command = /^join5$/i
 
-handler.limit = 7
+handler.limit = 20
 
 module.exports = handler

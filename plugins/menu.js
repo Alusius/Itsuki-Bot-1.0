@@ -10,7 +10,7 @@ const defaultMenu = {
   before: `
 ╭━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╮
 ┃╭┈─────────────⩵꙰ཱི࿐
-┃╰── %me ──➤ ↶↷*
+┃╰── Shiro-Botz ──➤ ↶↷*
 ╰•͙✩̣̣̣̣ Hai, %name!
 ⁙┃〲
 ⁙┃〲 Tersisa *%limit Limit*
@@ -31,7 +31,7 @@ const defaultMenu = {
   body: '⁙┃〲 %cmd %islimit %isPremium',
   footer: '⁙╰•°°°🕊°°°°°🕊°°°°°°🕊°°°°°°°°\n',
   after: `
-*%npmname@^%version*
+*%ShiroBotz@^%version*
 ${'```%npmdesc```'}
 `,
 }
@@ -224,7 +224,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                         "title": `*${ucapan()}, ${name}*`.trim(),
                         "description": `┏━━〔 𝐒𝐓𝐀𝐓𝐔𝐒 〕━⬣
 ┃⬡ 𝘼𝙠𝙩𝙞𝙛 𝙎𝙚𝙡𝙖𝙢𝙖 _*${uptime}*_
-┃⬡ 𝘽𝙖𝙩𝙚𝙧𝙖𝙞 _*${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}*_
+┃⬡ 𝘽𝙖𝙩𝙚𝙧𝙖𝙞 ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
 ┃⬡ _*${Object.keys(global.db.data.users).length}*_ 𝙋𝙚𝙣𝙜𝙜𝙪𝙣𝙖
 ┃⬡ _*${totaljadibot.length}*_ 𝙅𝙖𝙙𝙞𝙗𝙤𝙩
 ┃⬡ _*${conn.blocklist.length}*_ 𝙏𝙚𝙧𝙗𝙡𝙤𝙘𝙠

@@ -4,8 +4,8 @@ let info = `
 ╠═ Untuk Pembayaran Via Digi
 ╠➥ *60149431385*
 ║- Owner Bot:
-║- wa.me/60189830350
-╠═〘 LYNXZY 〙 ═
+║- wa.me/6287892711054
+╠═〘 Hyzer 〙 ═
 `.trim()
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*Sewa Bot*', 'status@broadcast') 

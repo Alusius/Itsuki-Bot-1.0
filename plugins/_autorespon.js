@@ -15,8 +15,8 @@ handler.all = async function (m, { isBlocked }) {
     try {
         if (m.mentionedJid.includes(this.user.jid) && m.isGroup) {
             await this.send2Button(m.chat,
-                isBanned ? 'LynXzy tidak aktif' : banned ? 'kamu dibanned' : 'lagi sad ga ush ngetag',
-                '©LynXzy🥀   ?',
+                isBanned ? 'Youka-Botz tidak aktif' : banned ? 'kamu dibanned' : 'lagi sad ga ush ngetag',
+                '©youka',
                 isBanned ? 'Unban' : banned ? 'Pemilik Bot' : 'Menu',
                 isBanned ? '.unban' : banned ? '.owner' : '.?',
                 m.isGroup ? 'Ban' : isBanned ? 'Unban' : 'Donasi',
@@ -38,7 +38,7 @@ handler.all = async function (m, { isBlocked }) {
 ╠➥ TOPUP/PIN
 ║- 60149431385 (Digi)
 ║- 60189830350 (Umobile)
-╠═〘 LynXzy 〙 ═`.trim(), '©LynXzy🥀', 'Digi', '#viadigi', 'Umobile', '#viaumobile', m)
+╠═〘 Youka 〙 ═`.trim(), '©youka-botz', 'Digi', '#viadigi', 'Umobile', '#viaumobile', m)
 }
 
     // salam
@@ -68,7 +68,7 @@ handler.all = async function (m, { isBlocked }) {
     if (new Date() * 1 - setting.status > 1000) {
         let _uptime = process.uptime() * 1000
         let uptime = clockString(_uptime)
-        await this.setStatus(`Aktif selama ${uptime} ⏲️| Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} 👾|Botz by LynXzy💌`).catch(_ => _)
+        await this.setStatus(`Aktif selama ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} |Bot by Hyzer. `).catch(_ => _)
         setting.status = new Date() * 1
     }
 

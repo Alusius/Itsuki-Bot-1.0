@@ -15,8 +15,8 @@ handler.all = async function (m, { isBlocked }) {
     try {
         if (m.mentionedJid.includes(this.user.jid) && m.isGroup) {
             await this.send2Button(m.chat,
-                isBanned ? 'Youka-Botz tidak aktif' : banned ? 'kamu dibanned' : 'lagi sad ga ush ngetag',
-                '©youka',
+                isBanned ? 'Shiro-Botz tidak aktif' : banned ? 'kamu dibanned' : 'lagi sad ga ush ngetag',
+                '©shirobotz',
                 isBanned ? 'Unban' : banned ? 'Pemilik Bot' : 'Menu',
                 isBanned ? '.unban' : banned ? '.owner' : '.?',
                 m.isGroup ? 'Ban' : isBanned ? 'Unban' : 'Donasi',
@@ -38,7 +38,7 @@ handler.all = async function (m, { isBlocked }) {
 ╠➥ TOPUP/PIN
 ║- 60149431385 (Digi)
 ║- 60189830350 (Umobile)
-╠═〘 Youka 〙 ═`.trim(), '©youka-botz', 'Digi', '#viadigi', 'Umobile', '#viaumobile', m)
+╠═〘 Hyzer 〙 ═`.trim(), '©shirobotz', 'Digi', '#viadigi', 'Umobile', '#viaumobile', m)
 }
 
     // salam

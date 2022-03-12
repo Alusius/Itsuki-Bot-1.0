@@ -12,7 +12,7 @@ let handler = async (m, { conn }) => {
 ╠═ Tertarik Untuk Beli Bot Ini?
 ╠➥Klil Button Di Bawah
 ║
-╠═〘 LYNXZY 〙 ═`.trim(), '©LynXzy', 'Digi', '#viadigi', 'Umobile', '#viaumobile', m)
+╠═〘 Hyzer 〙 ═`.trim(), '©shirobotz', 'Digi', '#viadigi', 'Umobile', '#viaumobile', m)
 }
 
 handler.command = /^sewabot$/i

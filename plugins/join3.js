@@ -16,10 +16,10 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 ketik *#menu* untuk melihat daftar perintah`, MessageType.text, { contextInfo: { externalAdReply :{
        mediaUrl: ' ',
        mediaType: 4,
-       title: 'LynXzy🥀',
+       title: 'Shiro-Botz',
        body: 'Whatsapp Developer Bot',
        thumbnailUrl: image,
-sourceUrl: 'https://wa.me/60189830350?text=Assalamualaikum'
+sourceUrl: 'https://wa.me/6287892711054?text=Assalamualaikum'
 }}})
 }
 handler.help = ['join3 <linkgrup> ']

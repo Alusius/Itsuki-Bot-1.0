@@ -4,8 +4,8 @@ BIG THANKS TO
 
 ➸ Allah S.W.T
 ➸ My Parent
-➸ LanXzy (Owner)
-➸ LynXzy (Bot)
+➸ Hyzer ( pemilik bot )
+➸ Shiro (Bot)
 ➸ Exc (membantu)
 ➸ Tio (membantu)
 ➸ Andrii(membantu)

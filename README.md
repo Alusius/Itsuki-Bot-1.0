@@ -4,7 +4,7 @@
 
 <p align="center"> <a href="https://Lexxy24.github.io"> <img src="https://readme-typing-svg.herokuapp.com?size=15&width=280&lines=Created+By+LynXzy+&+LanXzy+🗿" alt="Lexxy Official" /> </a> </p>
 <p align="center">
-<a href="#"><img title="Botz Lyn" src="https://img.shields.io/badge/GANTI SESSIONNYA DULU SEBELUM PAKAI-red?colorA=%255ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="Shiro-Botz" src="https://img.shields.io/badge/GANTI SESSIONNYA DULU SEBELUM PAKAI-red?colorA=%255ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 </p> 
@@ -13,7 +13,6 @@
 
 # Timdak work di termux!
 
-# Slow respon
 
 ## Deploy to heroku
 
@@ -33,8 +32,8 @@ Tutorial YouTube
 ## settings 
 Edit Nomor Owner DLL `'./config.js'`
 ```ts 
-OwnerNumber = ['wa.me/60189830350']
-GithubOwner = ['https://github.com/LANxBOT']
+OwnerNumber = ['wa.me/6287892711054']
+GithubOwner = ['https://github.com/Hyzerr']
 GroupOwner = ['https://chat.whatsapp.com/EheAWPrQMhV25xW0N7l7WD']
 Apikey? = Apikey kalian, tidak paham? chat saya di wangsaf!
 
@@ -54,7 +53,7 @@ global.kolam = 'https://telegra.ph/file/5aa5dfa3394477e11fb18.jpg'
 * Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
 
 ```bash
-git clone https://github.com/Drz103/RadBot
+git clone https://github.com/Hyzerr/Hyzer-V3
 cd RadBot
 npm install
 npm update
@@ -72,4 +71,4 @@ node .
 
 # My Sosial 
 - [Group ](https://chat.whatsapp.com/EheAWPrQMhV25xW0N7l7WD) 
-- [Whatsapp ](https://wa.me/60189830350)
+- [Whatsapp ](https://wa.me/6287892711054)

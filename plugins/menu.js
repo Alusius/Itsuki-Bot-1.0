@@ -2,37 +2,43 @@ let levelling = require('../lib/levelling')
 let { MessageType } = require('@adiwajshing/baileys')
 let fs = require('fs')
 let path = require('path')
+let image = https://telegra.ph/file/0cd842b8b7c3eabc75541.jpg
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
   before: `
-┌────〔 Shiro-Botz 〕───⬣
-│⬡ Hai, %name!
-│⬡ Tersisa *%limit Limit*
-│⬡ Role *%role*
-│⬡ Level *%level (%exp / %maxexp)*
-│⬡ [%xp4levelup]
-│⬡ %totalexp XP secara Total
-│ 
-│⬡ Tanggal: *%week %weton, %date*
-│⬡ Tanggal Islam: *%dateIslamic*
-│⬡ Waktu: *%time*
-│
-│⬡ Uptime: *%uptime (%muptime)*
-│⬡ Database: %rtotalreg dari %totalreg
-│⬡ Memory Used : *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*
-╰────────────⬣
+║╭──❉ 〔 Kanao-Bot 〕❉──
+║│➸ Hai, %name!
+║│➸ Tersisa *%limit Limit*
+║│➸ Role *%role*
+║│➸ Level *%level (%exp / %maxexp)*
+║│➸ [%xp4levelup]
+║│➸ %totalexp XP secara Total
+║│ 
+║│➸ Hari: *%week %weton*
+║│➸ Tanggal: *%date*
+║│➸ WaktuIslam:
+║│➸ *%dateIslamic*
+║│➸ Waktu: *%time*
+║│
+║│➸ Uptime: *%uptime (%muptime)*
+║│➸ Database: %rtotalreg dari %totalreg
+║│➸ Memory Used : 
+║│➸ ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+║╰────────────────────
+╰═════════════════════
 %readmore`.trimStart(),
-  header: '*┌──〔 %category〕*',
-  body: '*│*⦁ %cmd %islimit %isPremium',
-  footer: '*└────⦁*\n',
+  header: '║╭──❉ 〔 %category〕❉──',
+  body: '║│➸ %cmd %islimit %isPremium',
+  footer: '╰──────\n',
   after: `
-  ⬣━〔 SHIRO-BOTZ〕━⬣
+  ⬣━〔 𝐁𝐎𝐓𝐙 𝐁𝐘 *HYZER* 〕━⬣
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
+    let bzz = fs.readFileSync('./audio/baka.m4a')
 	let { anon, anticall, antispam, antitroli, backup, jadibot, groupOnly, nsfw } = global.db.data.settings[conn.user.jid]
     let totaljadibot = [...new Set([...global.conns.filter(conn => conn.user && conn.state !== 'close').map(conn => conn.user)])]
 
@@ -472,7 +478,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await(await fetch(fla + teks)).buffer(), text.trim(), `Runtime : ${uptime}\n${week} ${date}`, 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch(image)).buffer(), text.trim(), watermark, 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.sendFile(m.chat, bzz, 'bzz.opus', null, m, false)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

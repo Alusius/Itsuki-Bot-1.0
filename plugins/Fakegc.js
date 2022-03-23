@@ -1,27 +1,27 @@
 let fs = require('fs')
-let handler  = async (m, { conn, usedPrefix: _p }) => {
-const {
-    MessageType,
-    Mimetype
-} = require("@adiwajshing/baileys");
-const anu = {
-	"key": {
-		"fromMe": false,
-		"participant": "0@s.whatsapp.net",
-		"remoteJid": "0@s.whatsapp.net"
-	},
-	"message": {
-		"groupInviteMessage": {
-			"groupJid": "6285240750713-1610340626@g.us",
-			"inviteCode": "mememteeeekkeke",
-			"groupName": "P", 
-            "caption": "Hi lort", 
-            'jpegThumbnail': fs.readFileSync('./src/RadBotZ.jpg')
+let handler = async (m, { conn, usedPrefix: _p }) => {
+	const {
+		MessageType,
+		Mimetype
+	} = require("@adiwajshing/baileys");
+	const anu = {
+		"key": {
+			"fromMe": false,
+			"participant": "0@s.whatsapp.net",
+			"remoteJid": "0@s.whatsapp.net"
+		},
+		"message": {
+			"groupInviteMessage": {
+				"groupJid": "6285240750713-1610340626@g.us",
+				"inviteCode": "mememteeeekkeke",
+				"groupName": "P",
+				"caption": "Hi lort",
+				'jpegThumbnail': fs.readFileSync('./src/RadBotZ.jpg')
+			}
 		}
 	}
-}
-conn.sendMessage(m.chat, 'Test',
-MessageType.text, {quoted: anu, contextInfo:{"forwardingScore":999, "isForwarded": true}})
+	conn.sendMessage(m.chat, 'Test',
+		MessageType.text, { quoted: anu, contextInfo: { "forwardingScore": 999, "isForwarded": true } })
 }
 
 

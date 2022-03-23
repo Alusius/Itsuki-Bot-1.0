@@ -1,14 +1,14 @@
 let imageToBase64 = require("image-to-base64");
 
-let handler = async(m, { conn, text }) => {
+let handler = async (m, { conn, text }) => {
 
   await m.reply('Searching...')
-       imageToBase64(xteam + api + key + 'APIKEY')
-          .then((ress) => {
-            let hasil = Buffer.from(ress, 'base64')
-            let caption = `:v`
+  imageToBase64(xteam + api + key + 'APIKEY')
+    .then((ress) => {
+      let hasil = Buffer.from(ress, 'base64')
+      let caption = `:v`
 
-   conn.sendFile(m.chat, hasil, 'shitpost.mp4', caption, m)
+      conn.sendFile(m.chat, hasil, 'shitpost.mp4', caption, m)
     })
 }
 handler.help = ['shitpost']

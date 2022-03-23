@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let { MessageType } = require('@adiwajshing/baileys')
-let handler = async(m, { conn }) => {
+let handler = async (m, { conn }) => {
     let kontol = `╭═════〘 𝗥 𝗨 𝗟 𝗘 𝗦  𝗕 𝗢 𝗧 〙═══
 ⬡ 𝙈𝙤𝙝𝙤𝙣 𝙪𝙣𝙩𝙪𝙠 𝙩𝙞𝙙𝙖𝙠 𝙎𝙥𝙖𝙢 𝘽𝙤𝙩 𝙠𝙖𝙧𝙚𝙣𝙖 𝘽𝙤𝙩 𝙞𝙣𝙞 𝙨𝙪𝙙𝙖𝙝 𝙢𝙚𝙢𝙞𝙡𝙞𝙠𝙞 𝙊𝙩𝙤𝙢𝙖𝙩𝙞𝙨 𝘽𝙡𝙤𝙠𝙞𝙧 𝘽𝙖𝙜𝙞 𝙋𝙚𝙣𝙜𝙜𝙪𝙣𝙖 𝘽𝙤𝙩 𝙮𝙖𝙣𝙜 𝙎𝙥𝙖𝙢
 ⬡ 𝙈𝙤𝙝𝙤𝙣 𝙢𝙖𝙖𝙛 𝙟𝙞𝙠𝙖 𝙖𝙙 𝙮𝙜 𝙢𝙚𝙢𝙖𝙠𝙖𝙞 𝙢𝙚𝙣𝙪 𝙉𝙨𝙛𝙬 𝙢𝙖𝙠𝙖 𝙖𝙠𝙖𝙣 𝙙𝙞 𝙗𝙡𝙤𝙘𝙠 𝙤𝙡𝙚𝙝 𝙗𝙤𝙩, 𝙟𝙞𝙠𝙖 𝙙𝙞 𝙜𝙘 𝙩𝙤𝙡𝙤𝙣𝙜 𝙖𝙙𝙢𝙞𝙣 𝙪𝙣𝙩𝙪𝙠 𝙢𝙚𝙣𝙜𝙝𝙪𝙗𝙪𝙣𝙜𝙞 𝙠𝙖𝙢𝙞!!
@@ -54,18 +54,20 @@ let handler = async(m, { conn }) => {
 ║│ 𝗦𝗰𝗿𝗶𝗽 𝗼𝗿𝗶𝗴𝗶𝗻𝗮𝗹 𝗯𝘆 𝗟𝗮𝗻𝗫𝘇𝘆
 ║╰──────────────────
 ╰═════〘 𝙇𝙮𝙣𝙓𝙯𝙮 *_?_*〙 ═`.trim()
-  const button = {
+    const button = {
         buttonText: 'Klik Di sini',
         description: kontol,
-        sections:  [{title: "Silahkan di pilih gausah pilih yang gaada", rows: [
-        {title: 'Menu Utama', description: "Kembali ke Menu Utama", rowId:".?"},
-        {title: 'Sewa Bot', description: "Sewa bot dengan memasukkan bot ke grup kamu", rowId:".sewa"},
-        {title: 'Group Bot', description: "Official Group Bot Lyn", rowId:".gcbot"},
-        {title: 'Cara Invit?', description: "Cara Memasukkan Bot Di GC", rowId:".tutorbot"},
-        {title: 'Owner', description: "Owner/Creator Bot", rowId:".owner"},
-       ] }],
+        sections: [{
+            title: "Silahkan di pilih gausah pilih yang gaada", rows: [
+                { title: 'Menu Utama', description: "Kembali ke Menu Utama", rowId: ".?" },
+                { title: 'Sewa Bot', description: "Sewa bot dengan memasukkan bot ke grup kamu", rowId: ".sewa" },
+                { title: 'Group Bot', description: "Official Group Bot Lyn", rowId: ".gcbot" },
+                { title: 'Cara Invit?', description: "Cara Memasukkan Bot Di GC", rowId: ".tutorbot" },
+                { title: 'Owner', description: "Owner/Creator Bot", rowId: ".owner" },
+            ]
+        }],
         listType: 1
-       }
+    }
     conn.sendMessage(m.chat, button, MessageType.listMessage, { quoted: m })
 }
 

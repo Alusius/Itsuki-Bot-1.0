@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-   response = args.join(' ')
+  response = args.join(' ')
   if (!args[0]) throw 'Masukkan Parameter'
   m.reply('Sedang Diproses...')
   let res = await fetch(`https://leyscoders-api.herokuapp.com/api/textmaker/gradient?q=${response}&apikey=MIMINGANZ`)

@@ -2,10 +2,10 @@
 const uploadImage = require('../lib/uploadImage')
 const { sticker } = require('../lib/sticker')
 const { MessageType } = require('@adiwajshing/baileys')
-const effects = ['jail', 'gay', 'glass', 'wasted' ,'triggered']
+const effects = ['jail', 'gay', 'glass', 'wasted', 'triggered']
 
 let handler = async (m, { conn, usedPrefix, text }) => {
-    let effect = text.trim().toLowerCase()
+  let effect = text.trim().toLowerCase()
   if (!effects.includes(effect)) throw `
 *Usage:* ${usedPrefix}stickmaker <effectname>
 *Example:* ${usedPrefix}stickmaker jail
@@ -22,7 +22,7 @@ ${effects.map(effect => `_> ${effect}_`).join('\n')}
   let apiUrl = global.API('https://some-random-api.ml/canvas/', encodeURIComponent(effect), {
     avatar: url
   })
-try {
+  try {
     let stiker = await sticker(null, apiUrl, global.packname, global.author)
     await conn.sendMessage(m.chat, stiker, MessageType.sticker, {
       quoted: m

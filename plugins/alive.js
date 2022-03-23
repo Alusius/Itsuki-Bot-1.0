@@ -5,15 +5,16 @@ function clockString(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, 0) ).join(':')
+  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 
-let handler  = async (m, { conn }) => {
+let handler = async (m, { conn }) => {
   pplink = await conn.getProfilePicture(conn.user.jid)
   ppstatus = await conn.getStatus(conn.user.jid)
   totaluser = Object.keys(db.data.users)
   ppbuffer = await fetch(pplink).then(v => v.buffer())
-  conn.sendMessage(m.chat, ppbuffer, 'imageMessage', { caption:`
+  conn.sendMessage(m.chat, ppbuffer, 'imageMessage', {
+    caption: `
 ❏ *Bot Name* : ${conn.user.name}
 ❏ *Groups Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
 ❏ *Personal Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length}
@@ -24,7 +25,8 @@ let handler  = async (m, { conn }) => {
 ❏ *Platform* : Unbuntu Linux
 ❏ *Uptime Bot* : ${clockString(process.uptime() * 1000)}
 ❏ *Host Number* : @${global.conn.user.jid.split('@')[0]}
-❏ *Bio Bot* : ${ppstatus.status}`, quoted: m, sendEphemeral: true, thumbnail: fs.readFileSync('./src/RadBotZ.jpg'), contextInfo: { mentionedJid: [global.conn.user.jid]}})
+❏ *Bio Bot* : ${ppstatus.status}`, quoted: m, sendEphemeral: true, thumbnail: fs.readFileSync('./src/RadBotZ.jpg'), contextInfo: { mentionedJid: [global.conn.user.jid] }
+  })
 }
 handler.help = ['alive']
 handler.tags = ['main']

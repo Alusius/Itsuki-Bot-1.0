@@ -5,29 +5,29 @@ const uploadImage = require('../lib/uploadImage')
 let { webp2png } = require('../lib/webp2mp4')
 let fs = require('fs')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-const ftoko = {
-key: {
-			fromMe: false,
-			participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})
-		},
-		message: {
-			"productMessage": {
-				"product": {
-					"productImage":{
-						"mimetype": "image/jpeg",
-						"jpegThumbnail": fs.readFileSync('./src/RadBotZ.jpg'), //Gambarnye
-					},
-					"title": `Hai ${conn.getName(m.sender)}`, //Kasih namalu 
-					"description": `Rp 9.999.999.999`, 
-					"currencyCode": "Rp",
-					"priceAmount1000": "500000",
-					"retailerId": `ppk`,
-					"productImageCount": 1
-				},
-				    "businessOwnerJid": `628162633549@s.whatsapp.net`
-		}
-	}
-}
+  const ftoko = {
+    key: {
+      fromMe: false,
+      participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})
+    },
+    message: {
+      "productMessage": {
+        "product": {
+          "productImage": {
+            "mimetype": "image/jpeg",
+            "jpegThumbnail": fs.readFileSync('./src/RadBotZ.jpg'), //Gambarnye
+          },
+          "title": `Hai ${conn.getName(m.sender)}`, //Kasih namalu 
+          "description": `Rp 9.999.999.999`,
+          "currencyCode": "Rp",
+          "priceAmount1000": "500000",
+          "retailerId": `ppk`,
+          "productImageCount": 1
+        },
+        "businessOwnerJid": `628162633549@s.whatsapp.net`
+      }
+    }
+  }
   let stiker = false
   try {
     let q = m.quoted ? m.quoted : m
@@ -53,7 +53,7 @@ key: {
       else return m.reply('URL tidak valid!')
     }
   } finally {
-    if (stiker) await conn.sendMessage(m.chat, stiker, MessageType.sticker, { quoted: ftoko})
+    if (stiker) await conn.sendMessage(m.chat, stiker, MessageType.sticker, { quoted: ftoko })
     else throw `Gagal${m.isGroup ? ', balas gambarnya!' : ''}`
   }
 }

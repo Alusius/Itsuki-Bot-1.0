@@ -1,16 +1,15 @@
 const axios = require('axios')
 
-let handler = async(m, { conn, text, usedPrefix }) => {
+let handler = async (m, { conn, text, usedPrefix }) => {
 
-    if (!text) return conn.reply(m.chat, 'Contoh penggunaan: ' + usedPrefix + 'chord hanya rindu', m)
-    await m.reply(global.wait)
-    axios.get(`https://docs-jojo.herokuapp.com/api/chord?q=` + text)
-        .then((res) => {
-          let hasil = `*• Chord Lagu ${text} :*\n${res.data.result}`
-            conn.reply(m.chat, hasil, m)
-        })
-        .catch()
+  if (!text) return conn.reply(m.chat, 'Contoh penggunaan: ' + usedPrefix + 'chord hanya rindu', m)
+  await m.reply(global.wait)
+  let res = await axios.get(`https://docs-jojo.herokuapp.com/api/chord?q=` + text);
+  let hasil = `*• Chord Lagu ${text} :*\n${res.data.result}`
+  conn.reply(m.chat, hasil, m)
+
 }
+
 handler.help = ['chord <judul lagu>']
 handler.tags = ['edukasi']
 handler.command = /^(chord)$/i
@@ -20,11 +19,8 @@ handler.premium = false
 handler.group = false
 handler.private = false
 handler.register = true
-
 handler.admin = false
 handler.botAdmin = false
-
 handler.fail = null
 handler.limit = true
-
 module.exports = handler

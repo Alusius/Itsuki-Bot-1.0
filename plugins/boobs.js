@@ -1,11 +1,9 @@
-let axios = require('axios')
-let fetch = require('node-fetch')
-let neko = require('nekos.life')
-let Neko = new neko()
-     let handler  = async (m, { conn, usedPrefix, command }) => {
-     	if (!db.data.chats[m.chat].nsfw && m.isGroup) throw global.nsfw
-     json = await fetch(`https://meme-api.herokuapp.com/gimme/biganimetiddies`)
-   conn.sendButton(m.chat, await (await fetch(json.url)).buffer(), 'oppai', watermark, 'NEXT', `${usedPrefix + command}`, m, false)
+const fetch = require('node-fetch')
+
+let handler = async (m, { conn, usedPrefix, command }) => {
+  if (!db.data.chats[m.chat].nsfw && m.isGroup) throw global.nsfw
+  json = await fetch(`https://meme-api.herokuapp.com/gimme/biganimetiddies`)
+  conn.sendButton(m.chat, await (await fetch(json.url)).buffer(), 'oppai', watermark, 'NEXT', `${usedPrefix + command}`, m, false)
 }
 handler.help = ['boobs']
 handler.tags = ['hentai']

@@ -1,6 +1,6 @@
-let limit = 3
-let fetch = require('node-fetch')
-const { servers, yt } = require('../lib/y2mate')
+let limit = 3;
+const fetch = require('node-fetch');
+const { servers, yt } = require('../lib/y2mate');
 
 let handler = async (m, { conn, args, isPrems, isOwner }) => {
   let fs = require('fs')

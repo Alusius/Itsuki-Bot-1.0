@@ -1,12 +1,11 @@
-let axios = require("axios")
-let handler = async(m, { conn, text }) => { 
+const axios = require("axios").default;
 
-  await m.reply(global.wait) 
-   axios.get(`https://api.haipbis.xyz/jadwaltvnow`).then((res) => {
-    let hasil = `Jam : ${res.data.jam}\n\n${res.data.jadwalTV}`
-          
-    conn.reply(m.chat, hasil, m)
-    })
+let handler = async (m, { conn, text }) => {
+
+  await m.reply(global.wait)
+  let res = await axios.get(`https://api.haipbis.xyz/jadwaltvnow`)
+  let hasil = `Jam : ${res.data.jam}\n\n${res.data.jadwalTV}`
+  conn.reply(m.chat, hasil, m)
 }
 handler.command = /^(jadwaltv)$/i
 handler.owner = false

@@ -1,5 +1,5 @@
-let fetch = require('node-fetch')
-let { MessageType } = require('@adiwajshing/baileys')
+const { MessageType } = require('@adiwajshing/baileys')
+
 let handler = async (m, { conn }) => {
     let __timers = (new Date - global.db.data.users[m.sender].as)
     let _timers = (500000 - __timers)

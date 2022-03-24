@@ -7,13 +7,12 @@ let handler = async (m, { conn, text }) => {
   try {
     pp = await conn.getProfilePicture(who)
   } catch (e) {
-
+    // 
   } finally {
-    let username = conn.getName(who)
     let str = `Nihh PPnya @${who.replace(/@.+/, '')}`
     let mentionedJid = [who]
 
-    conn.sendFile(m.chat, pp, 'pp.jpg', str, m, false, { contextInfo: { mentionedJid }})
+    conn.sendFile(m.chat, pp, 'pp.jpg', str, m, false, { contextInfo: { mentionedJid } })
   }
 }
 handler.help = ['getpp @user']

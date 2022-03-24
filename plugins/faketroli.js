@@ -1,18 +1,11 @@
 const { MessageType } = require("@adiwajshing/baileys")
-let axios = require("axios");
-let fs = require("fs");
+const fs = require("fs");
+
 let handler = async (m, { conn, args, text, usedPrefix: _p }) => {
-  //if(args.length == 0) return m.reply(`Cara Penggunaan: Reply Foto, Ketik *${_p}faketroli* <TextMessage> | <OrderMessage> | <OrderTitle>\nContoh: *${_p}faketroli* Hai Wibu | ZEROBOT | 10k Bang?`) 
-  let [poop, tytyd] = text.split("|")
-  if (!poop) return m.reply("Masukkan Teks Utama")
-  if (!tytyd) tytyd = "Shiro-Botz"
-  //if(!kecil) return m.reply("Masukkan Teks Title Order!")
+  let [poop, tytyd] = text.split("|");
+  if (!poop) return m.reply("Masukkan Teks Utama");
+  if (!tytyd) tytyd = "Shiro-Botz";
   try {
-    //let q = m.quoted ? m.quoted : m
-    //let mime = (q.msg || q).mimetype || ''
-    // if (!/image\/(jpe?g|png)/.test(mime)) return m.reply("Foto Aja Om :)")
-    //let img = await q.download()
-    let img = "./src/mike.jpg"
     const xixi = {
       key: {
         participant: '0@s.whatsapp.net'

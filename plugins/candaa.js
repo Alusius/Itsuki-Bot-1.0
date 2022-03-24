@@ -1,7 +1,8 @@
-let fs = require('fs')
+const fs = require('fs');
+
 let handler = async (m) => {
-let stc = fs.readFileSync('./sticker/canda.webp')
-conn.fakeReply(m.chat, stc, '0@s.whatsapp.net', '*CANDA TOD*', 'status@broadcast')
+    let stc = fs.readFileSync('./sticker/canda.webp')
+    conn.fakeReply(m.chat, stc, '0@s.whatsapp.net', '*CANDA TOD*', 'status@broadcast')
 }
 
 handler.customPrefix = /^(canda)$/i

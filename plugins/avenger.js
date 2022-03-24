@@ -1,6 +1,7 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch')
+
 let handler = async (m, { conn, args }) => {
-   response = args.join(' ').split('|')
+  response = args.join(' ').split('|')
   if (!args[0]) throw 'Masukkan Parameter'
   m.reply('```Dalam Proses...```')
   let res = await fetch(`http://api.lolhuman.xyz/api/textprome2/avenger?apikey=rey2k21&text1=${response[0]}&text2=${response[1]}`)

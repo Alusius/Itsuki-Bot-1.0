@@ -1,5 +1,6 @@
-let moment = require('moment-timezone')
-let fs = require('fs')
+const moment = require('moment-timezone');
+const fs = require('fs');
+
 let handler = async (m, { conn, command, text }) => {
     let img = './src/RadBot.png'
     let user = global.db.data.users[m.sender]

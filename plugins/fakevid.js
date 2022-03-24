@@ -1,9 +1,7 @@
-let fs = require('fs')
+const fs = require('fs');
+
 let handler = async (m, { conn, usedPrefix: _p }) => {
-    const {
-        MessageType,
-        Mimetype
-    } = require("@adiwajshing/baileys");
+    const { MessageType } = require("@adiwajshing/baileys");
     const anu = {
         key: {
             fromMe: false,
@@ -24,16 +22,11 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
         MessageType.text, { quoted: anu, contextInfo: { "forwardingScore": 999, "isForwarded": true } })
 }
 
-
-
 handler.help = ['vid']
-
 handler.tags = ['main']
-
 handler.command = /^vid$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = true
-
 module.exports = handler

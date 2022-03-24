@@ -19,7 +19,7 @@ let handler = async (m, { conn, args, command }) => {
         await conn.groupLeave(m.chat)
     }
 }
-    
+
 handler.help = ['gc', 'gcall', 'group'].map(v => 'leave' + v)
 handler.tags = ['group']
 handler.command = /^leaveg(c|ro?up)(all|semua)?$/i

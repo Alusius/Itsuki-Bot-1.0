@@ -1,6 +1,5 @@
-let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-   response = args.join(' ')
+  response = args.join(' ')
   if (!args) throw 'Masukkan Parameter'
   m.reply('Sedang Diproses...')
   let res = `https://api.xteam.xyz/randomimage/bdsm?apikey=apivproject`

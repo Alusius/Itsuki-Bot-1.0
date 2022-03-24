@@ -1,6 +1,7 @@
-let { promises: fs } = require('fs')
-let { join } = require('path')
-const tmp = join(__dirname, '../tmp')
+const { promises: fs } = require('fs');
+const { join } = require('path');
+let tmp = join(__dirname, '../tmp')
+
 async function handler(m) {
     let { braillefy } = require('img2braille')
 

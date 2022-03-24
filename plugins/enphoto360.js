@@ -1,5 +1,6 @@
-let fetch = require('node-fetch')
-let split = '|'
+const fetch = require('node-fetch');
+let split = '|';
+
 let handler = async (m, { conn, args: [effect], text: txt }) => {
   let { effects } = await (await (fetch(global.API('xteam', '/ephoto')))).json()
   if (!effect) throw '*List Effect*\n\n' + effects.sort((a, b) => a - b).join('\n')

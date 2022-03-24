@@ -1,6 +1,6 @@
 let handler = async (m, { conn }) => {
   if (new Date - global.db.data.users[m.sender].lastclaim > 86400000) {
-    conn.reply(m.chat, 'Nih Gw Kasih Modal Buat Jadi Bot 10.000 Rupiah', m)  
+    conn.reply(m.chat, 'Nih Gw Kasih Modal Buat Jadi Bot 10.000 Rupiah', m)
     global.db.data.users[m.sender].exp += 10000
     global.db.data.users[m.sender].lastclaim = new Date * 1
   } else conn.reply(m.chat, 'Usaha Ngab Kalo Mau Dapat Uang Tambahan:v', m)

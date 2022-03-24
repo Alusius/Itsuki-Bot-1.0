@@ -1,10 +1,11 @@
-let fs = require('fs')
-let handler  = async (m, { conn, text }) => {
-m.reply('Tunggu Sebentar, Proses Getting File database.json')
-let db = fs.readFileSync('./database.json')
-conn.sendFile(m.chat, db, 'database.json', m)
+const fs = require('fs');
+
+let handler = async (m, { conn, text }) => {
+    m.reply('Tunggu Sebentar, Proses Getting File database.json')
+    let db = fs.readFileSync('./database.json')
+    conn.sendFile(m.chat, db, 'database.json', m)
 }
-handler.help = ['getdb','getdatabase'].map(v => v + ' <teks>')
+handler.help = ['getdb', 'getdatabase'].map(v => v + ' <teks>')
 handler.tags = ['owner']
 handler.command = /^(db|getdb)$/i
 handler.owner = true

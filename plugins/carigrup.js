@@ -1,4 +1,5 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
 let handler = async (m, { conn, text }) => {
     if (!text) throw 'Cari apa?'
     let res = await fetch(global.API('xteam', '/search/grupwa', {

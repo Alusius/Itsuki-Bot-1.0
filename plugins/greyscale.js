@@ -1,12 +1,10 @@
 // Tolong jangan bully saya bang,, saya cuman mau bisnis :)
-
-let uploadImage = require('../lib/uploadImage')
-let fetch = require('node-fetch')
-let util = require('util')
+const uploadImage = require('../lib/uploadImage');
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn, args }) => {
   try {
-    gay = `sayang`
+    let gay = `sayang`
 
     if (!m.quoted) throw `Tag Fotonya ` + gay // org gay
 

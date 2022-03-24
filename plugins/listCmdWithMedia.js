@@ -7,7 +7,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
 \`\`\`
 `.trim(), null, {
     contextInfo: {
-        mentionedJid: Object.values(global.db.data.sticker).map(x => x.mentionedJid).reduce((a,b) => [...a, ...b], [])
+        mentionedJid: Object.values(global.db.data.sticker).map(x => x.mentionedJid).reduce((a, b) => [...a, ...b], [])
     }
 }) : m.reply('Nothing 🤷🏻‍♂️'), {
     help: ['cmd'].map(v => 'list' + v + ' <text>'),

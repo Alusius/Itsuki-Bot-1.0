@@ -1,4 +1,5 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
 let handler = async (m, { conn, usedPrefix, command }) => {
   await m.reply(global.wait)
   let res = await fetch('https://islamic-api-zhirrr.vercel.app/api/doaharian')

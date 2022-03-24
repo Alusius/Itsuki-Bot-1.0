@@ -1,4 +1,5 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
 let handler = async (m, { args, usedPrefix, command }) => {
   if (!args[0]) throw `uhm.. id nya mana?\n\ncontoh:\n${usedPrefix + command} 1906651269`
   let res = await fetch(global.API('xteam', '/search/freefire', { id: args[0] }, 'APIKEY'))

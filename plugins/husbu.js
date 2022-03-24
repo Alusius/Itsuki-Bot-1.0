@@ -1,4 +1,5 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
 let handler = async (m, { conn, command, usedPrefix }) => {
 	
 	conn.sendButtonImg(m.chat, await ( await fetch(`https://api.xteam.xyz/randomimage/husbu2?APIKEY=apivproject`)).buffer(), 'Nih kak', watermark, 'NEXT', `${usedPrefix + command}`, m)

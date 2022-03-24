@@ -1,16 +1,16 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
 
-let handler = async(m, { conn, text }) => {
+let handler = async (m, { conn, text }) => {
 
   if (!text) return conn.reply(m.chat, 'Harap Masukan Username', m)
 
   await m.reply('Searching...')
-    let res = await fetch(`https://hadi-api.herokuapp.com/api/githubstalk?username=${text}`)
-    let json = await res.json()
-    if (res.status !== 200) throw await res.text()
-    if (!json.status) throw json
-    let thumb = await (await fetch(json.result.avatar)).buffer()
-    let hasil = `*── 「 GITHUB STALK 」 ──*
+  let res = await fetch(`https://hadi-api.herokuapp.com/api/githubstalk?username=${text}`)
+  let json = await res.json()
+  if (res.status !== 200) throw await res.text()
+  if (!json.status) throw json
+  let thumb = await (await fetch(json.result.avatar)).buffer()
+  let hasil = `*── 「 GITHUB STALK 」 ──*
 
 ➸ *Bio*: ${json.result.bio}
 ➸ *Perusahaan*: ${json.result.company}
@@ -24,7 +24,7 @@ let handler = async(m, { conn, text }) => {
 ➸ *Type:* ${json.result.Type}
 `
 
-    conn.sendFile(m.chat, thumb, 'githubstalk.jpg', hasil, m)
+  conn.sendFile(m.chat, thumb, 'githubstalk.jpg', hasil, m)
 }
 handler.help = ['githubstalk'].map(v => v + ' <query>')
 handler.tags = ['internet']

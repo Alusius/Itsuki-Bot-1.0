@@ -1,5 +1,5 @@
-let webp = require('node-webpmux')
-let util = require('util')
+const webp = require('node-webpmux');
+const util = require('util');
 
 let handler = async (m) => {
     if (!m.quoted) return m.reply('Tag stikernya!')

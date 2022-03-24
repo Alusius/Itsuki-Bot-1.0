@@ -1,4 +1,4 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch')
 let winScore = 500
 async function handler(m) {
     this.game = this.game ? this.game : {}

@@ -1,10 +1,10 @@
-let fetch = require('node-fetch')
-let limit = 78
-let handler = async (m, { conn, command, args }) => {  
+const fetch = require('node-fetch');
+
+let handler = async (m, { conn, command, args }) => {
   m.reply('_Tunggu Sebentar. . ._')
   let text = args.join` `
-  let p = await (await  fetch('https://api.zeks.xyz/api/matrix?apikey=apivinz&text=' + encodeURIComponent(text))).buffer()
-  conn.sendFile(m.chat, p, 'image.png' , 'keren gak? ya keren lah!!!', m)
+  let p = await (await fetch('https://api.zeks.xyz/api/matrix?apikey=apivinz&text=' + encodeURIComponent(text))).buffer()
+  conn.sendFile(m.chat, p, 'image.png', 'keren gak? ya keren lah!!!', m)
 }
 handler.help = ['matrix <Teks>']
 handler.tags = ['nulis']

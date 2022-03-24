@@ -1,10 +1,11 @@
-let levelling = require('../lib/levelling')
-let fetch = require('node-fetch')
+let levelling = require('../lib/levelling');
+const fetch = require('node-fetch');
+
 let handler = async (m, { conn, usedPrefix }) => {
-	if (!db.data.chats[m.chat].rpg && m.isGroup) throw global.rpg
-	let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+    if (!db.data.chats[m.chat].rpg && m.isGroup) throw global.rpg
+    let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
     let healt = global.db.data.users[who].healt
-    let armor = global.db.data.users[who].armor 
+    let armor = global.db.data.users[who].armor
     let sword = global.db.data.users[m.sender].sword
     let sdurability = global.db.data.users[m.sender].sworddurability
     let pickaxe = global.db.data.users[who].pickaxe
@@ -96,13 +97,13 @@ Total inv: *${diamond + potion + sampah + makananpet}* item\n
 │📈Exp *${exp}* -> *${max}*
 ╰────────────────
 ╭────────────────
-│Rubah🦊 ${rubah == 0 ? 'Tidak Punya' : '' || rubah > 0 && rubah < 5 ? `Level *${rubah}* To level *${rubah + 1}*\n│Exp *${_rubah}* -> *${rubah *100}*` : '' || rubah == 5 ? '*Max Level*' : ''}
+│Rubah🦊 ${rubah == 0 ? 'Tidak Punya' : '' || rubah > 0 && rubah < 5 ? `Level *${rubah}* To level *${rubah + 1}*\n│Exp *${_rubah}* -> *${rubah * 100}*` : '' || rubah == 5 ? '*Max Level*' : ''}
 ╰────────────────
 ╭────────────────
-│Kucing🐈 ${kucing == 0 ? 'Tidak Punya' : '' || kucing > 0 && kucing < 5 ? `Level *${kucing}* To level *${kucing + 1}*\n│Exp *${_kucing}* -> *${kucing *100}*` : '' || kucing == 5 ? '*Max Level*' : ''}
+│Kucing🐈 ${kucing == 0 ? 'Tidak Punya' : '' || kucing > 0 && kucing < 5 ? `Level *${kucing}* To level *${kucing + 1}*\n│Exp *${_kucing}* -> *${kucing * 100}*` : '' || kucing == 5 ? '*Max Level*' : ''}
 ╰────────────────
 ╭────────────────
-│Kuda🐎 ${kuda == 0 ? 'Tidak Punya' : '' || kuda > 0 && kuda < 5 ? `Level *${kuda}* To level *${kuda + 1}*\n│Exp *${_kuda}* -> *${kuda *100}*` : '' || kuda == 5 ? '*Max Level*' : ''}
+│Kuda🐎 ${kuda == 0 ? 'Tidak Punya' : '' || kuda > 0 && kuda < 5 ? `Level *${kuda}* To level *${kuda + 1}*\n│Exp *${_kuda}* -> *${kuda * 100}*` : '' || kuda == 5 ? '*Max Level*' : ''}
 ╰────────────────\n\n
 *achievement*
 ${readMore}
@@ -119,7 +120,7 @@ ${readMore}
 Warn: *${warn}*
 Banned: *No*
 `.trim()
-    await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©shirobotz', 'PROFILE', '.profile', 'Shop', '.shop', m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch(image)).buffer(), str, '©shirobotz', 'PROFILE', '.profile', 'Shop', '.shop', m)
 }
 handler.help = ['inventory', 'inv']
 handler.tags = ['rpg']

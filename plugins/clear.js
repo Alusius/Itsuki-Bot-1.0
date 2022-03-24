@@ -15,17 +15,17 @@ let handler = async (m, { conn, command, args }) => {
   conn.reply(m.chat, chats.length + ` chat ${args[0] ? args[0] : ''} telah dib` + ((isDelete || isClear) ? 'ersihkan' : 'isukan selamanya'), m)
 }
 handler.help = [
-  'clearchat', 
-  'clearchat chat', 
-  'clearchat group', 
-  'clearchat all', 
-  'deletechat', 
-  'deletechat chat', 
-  'deletechat group', 
-  'deletechat all', 
-  'mutechat', 
+  'clearchat',
+  'clearchat chat',
+  'clearchat group',
+  'clearchat all',
+  'deletechat',
+  'deletechat chat',
+  'deletechat group',
+  'deletechat all',
+  'mutechat',
   'mutechat chat',
-  'mutechat group', 
+  'mutechat group',
   'mutechat all'
 ]
 handler.tags = ['owner']

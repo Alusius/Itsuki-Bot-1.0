@@ -1,14 +1,12 @@
-let axios = require("axios");
-let handler = async(m, { conn, text }) => {
+const axios = require("axios").default;
 
-    if (!text) return conn.reply(m.chat, 'Silahkan Ketik Apa Yg Mau Kamu Cari,Contoh *!kusonime doraemon*', m)
+let handler = async (m, { conn, text }) => {
 
+  if (!text) return conn.reply(m.chat, 'Silahkan Ketik Apa Yg Mau Kamu Cari,Contoh *!kusonime doraemon*', m)
   await m.reply('*[❗] WAIT, Tunggu Sebentar*\n*Kalo Gak Menerima Pesan Itu Tanda Nya Kamu Salah Kasih Judul:v.*')
-	axios.get(`https://recoders-area.herokuapp.com/api/anime/kusonime?search=${text}&apikey=FreeApi`).then ((res) => {
-	 	let hasil = `*Title :${res.data.result.title}*\n*Title JP :${res.data.result.title_jp}*\n*Season :${res.data.result.season}*\n*Genre :${res.data.result.genre}*\n*Durasi :${res.data.result.duration}*\n*Descrition :${res.data.result.description}*\n*Download :*\n*Resolusi :${res.data.download.resolution}*\n*Download List :*\n*Link Download :${res.data.download_list.download_link}*\n*Media :${res.data.download_list.downloader}*`                     
-
-    conn.reply(m.chat, hasil, m)
-	})
+  let res = await axios.get(`https://recoders-area.herokuapp.com/api/anime/kusonime?search=${text}&apikey=FreeApi`)
+  let hasil = `*Title :${res.data.result.title}*\n*Title JP :${res.data.result.title_jp}*\n*Season :${res.data.result.season}*\n*Genre :${res.data.result.genre}*\n*Durasi :${res.data.result.duration}*\n*Descrition :${res.data.result.description}*\n*Download :*\n*Resolusi :${res.data.download.resolution}*\n*Download List :*\n*Link Download :${res.data.download_list.download_link}*\n*Media :${res.data.download_list.downloader}*`
+  conn.reply(m.chat, hasil, m)
 }
 handler.help = ['kusonime'].map(v => v + ' <nama>')
 handler.tags = ['anime']

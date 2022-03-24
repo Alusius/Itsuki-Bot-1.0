@@ -1,6 +1,7 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
 let handler = async (m, { conn, text }) => {
-  let ext= `
+  let ext = `
 ╭═════════════════
 ║╭──❉ [ GRUB BOT ] ❉──
 ║│➸ *𝐆𝐑𝐎𝐔𝐏 𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋¹*
@@ -11,7 +12,7 @@ let handler = async (m, { conn, text }) => {
 ╰══════════════════
 
 `.trim()
-conn.send2ButtonLoc(m.chat, await (await fetch(fla + 'GRUB SIRAD')).buffer(), ext, 'LynXzy💌', 'SIAP BANG🗿', 'AUTO JOIN', 'Donasi', '.donasi', m)
+  conn.send2ButtonLoc(m.chat, await (await fetch(fla + 'GRUB SIRAD')).buffer(), ext, 'LynXzy💌', 'SIAP BANG🗿', 'AUTO JOIN', 'Donasi', '.donasi', m)
 
 }
 handler.help = ['gcbot']

@@ -1,7 +1,7 @@
-let { promisify } = require('util')
-let _gis = require('g-i-s')
-let gis = promisify(_gis)
-let fetch = require('node-fetch')
+const { promisify } = require('util');
+const _gis = require('g-i-s');
+const gis = promisify(_gis);
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn, text, command, usedPrefix }) => {
   if (!text) throw `uhm.. cari apa?\n\ncontoh:\n${usedPrefix + command} pisang`

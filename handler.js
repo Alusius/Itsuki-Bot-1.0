@@ -31,198 +31,198 @@ module.exports = {
         let user = global.db.data.users[m.sender]
         if (typeof user !== 'object') global.db.data.users[m.sender] = {}
         if (user) {
-            if (!isNumber(user.healt)) user.healt = 0
-            if (!isNumber(user.level)) user.level = 0
-            if (!isNumber(user.exp)) user.exp = 0
-            if (!isNumber(user.title)) user.title = 'Nothing'
-            if (!isNumber(user.limit)) user.limit = 20
-            if (!isNumber(user.lastclaim)) user.lastclaim = 0
-            if (!isNumber(user.lastgetmoney)) user.lastgetmoney = 0
-            if (!isNumber(user.money)) user.money = 12000
-            
-            if (!isNumber(user.diamond)) user.diamond = 0
-            if (!isNumber(user.iron)) user.iron = 0
+          if (!isNumber(user.healt)) user.healt = 0
+          if (!isNumber(user.level)) user.level = 0
+          if (!isNumber(user.exp)) user.exp = 0
+          if (!isNumber(user.title)) user.title = 'Nothing'
+          if (!isNumber(user.limit)) user.limit = 20
+          if (!isNumber(user.lastclaim)) user.lastclaim = 0
+          if (!isNumber(user.lastgetmoney)) user.lastgetmoney = 0
+          if (!isNumber(user.money)) user.money = 12000
 
-            if (!isNumber(user.common)) user.common = 0
-            if (!isNumber(user.uncommon)) user.uncommon = 0
-            if (!isNumber(user.mythic)) user.mythic = 0
-            if (!isNumber(user.legendary)) user.legendary = 0
-            if (!isNumber(user.pet)) user.pet = 0
-        
-            if (!isNumber(user.potion)) user.potion = 0
-            if (!isNumber(user.sampah)) user.sampah = 0
-            if (!isNumber(user.armor)) user.armor = 0
-            
-            if (!isNumber(user.kucing)) user.kucing = 0
-            if (!isNumber(user.kucinglastclaim)) user.kucinglastclaim = 0
-            if (!isNumber(user.kuda)) user.kuda = 0
-            if (!isNumber(user.kudalastclaim)) user.kudalastclaim = 0
-            if (!isNumber(user.rubah)) user.rubah = 0
-            if (!isNumber(user.rubahlastclaim)) user.rubahlastclaim = 0
-            if (!isNumber(user.anjing)) user.anjing = 0
-            if (!isNumber(user.anjinglastclaim)) user.anjinglastclaim = 0
+          if (!isNumber(user.diamond)) user.diamond = 0
+          if (!isNumber(user.iron)) user.iron = 0
 
-            if (!'banned' in user) user.banned = false
-            if (!isNumber(user.warn)) user.warn = 0
+          if (!isNumber(user.common)) user.common = 0
+          if (!isNumber(user.uncommon)) user.uncommon = 0
+          if (!isNumber(user.mythic)) user.mythic = 0
+          if (!isNumber(user.legendary)) user.legendary = 0
+          if (!isNumber(user.pet)) user.pet = 0
 
-            if (!isNumber(user.afk)) user.afk = -1
-            if (!'afkReason' in user) user.afkReason = ''
-        
-            if (!isNumber(user.anakkucing)) user.anakkucing = 0
-            if (!isNumber(user.anakkuda)) user.anakkuda = 0
-            if (!isNumber(user.anakrubah)) user.anakrubah = 0
-            if (!isNumber(user.anakanjing)) user.anakanjing = 0
-            if (!isNumber(user.makananpet)) user.makananpet = 0
+          if (!isNumber(user.potion)) user.potion = 0
+          if (!isNumber(user.sampah)) user.sampah = 0
+          if (!isNumber(user.armor)) user.armor = 0
 
-            if (!isNumber(user.antispam)) user.antispam = 0
-            if (!isNumber(user.antispamlastclaim)) user.antispamlastclaim = 0
+          if (!isNumber(user.kucing)) user.kucing = 0
+          if (!isNumber(user.kucinglastclaim)) user.kucinglastclaim = 0
+          if (!isNumber(user.kuda)) user.kuda = 0
+          if (!isNumber(user.kudalastclaim)) user.kudalastclaim = 0
+          if (!isNumber(user.rubah)) user.rubah = 0
+          if (!isNumber(user.rubahlastclaim)) user.rubahlastclaim = 0
+          if (!isNumber(user.anjing)) user.anjing = 0
+          if (!isNumber(user.anjinglastclaim)) user.anjinglastclaim = 0
 
-            if (!isNumber(user.kayu)) user.kayu = 0
-            if (!isNumber(user.batu)) user.batu = 0
-            if (!isNumber(user.string)) user.string = 0
-            if (!isNumber(user.sword)) user.sword = 0
-            if (!isNumber(user.sworddurability)) user.sworddurability = 0
-            if (!isNumber(user.pickaxe)) user.pickaxe = 0
-            if (!isNumber(user.pickaxedurability)) user.pickaxedurability = 0
-            if (!isNumber(user.fishingrod)) user.fishingrod = 0
-            if (!isNumber(user.fishingroddurability)) user.fishingroddurability = 0
-            
-            if (!isNumber(user.paus)) user.paus = 0
-            if (!isNumber(user.kepiting)) user.kepiting = 0
-            if (!isNumber(user.gurita)) user.gurita = 0
-            if (!isNumber(user.cumi)) user.cumi= 0
-            if (!isNumber(user.buntal)) user.buntal = 0
-            if (!isNumber(user.dory)) user.dory = 0
-            if (!isNumber(user.lumba)) user.lumba = 0
-            if (!isNumber(user.lobster)) user.lobster = 0
-            if (!isNumber(user.hiu)) user.hiu = 0
-            if (!isNumber(user.udang)) user.udang = 0
-            if (!isNumber(user.ikan)) user.ikan = 0
-            if (!isNumber(user.orca)) user.orca = 0
-            
-            if (!isNumber(user.banteng)) user.banteng = 0
-            if (!isNumber(user.harimau)) user.harimau = 0
-            if (!isNumber(user.gajah)) user.gajah = 0
-            if (!isNumber(user.kambing)) user.kambing = 0
-            if (!isNumber(user.panda)) user.panda = 0
-            if (!isNumber(user.buaya)) user.buaya = 0
-            if (!isNumber(user.kerbau)) user.kerbau = 0
-            if (!isNumber(user.sapi)) user.sapi = 0
-            if (!isNumber(user.monyet)) user.monyet = 0
-            if (!isNumber(user.babihutan)) user.babihutan = 0
-            if (!isNumber(user.babi)) user.babi = 0
-            if (!isNumber(user.ayam)) user.ayam = 0
+          if (!'banned' in user) user.banned = false
+          if (!isNumber(user.warn)) user.warn = 0
 
-            if (!isNumber(user.lastadventure)) user.lastadventure = 0
-            if (!isNumber(user.lastfishing)) user.lastfishing = 0
-            if (!isNumber(user.lastdungeon)) user.lastdungeon = 0
-            if (!isNumber(user.lastduel)) user.lastduel = 0
-            if (!isNumber(user.lastduel)) user.lastnguli = 0
-            if (!isNumber(user.lastbansos)) user.lastbansos = 0
-            if (!isNumber(user.lastnyampah)) user.lastnyampah = 0
-            if (!isNumber(user.lastnebang)) user.lastnebang = 0
-            if (!isNumber(user.lastmining)) user.lastmining = 0
-            if (!isNumber(user.lasthunt)) user.lasthunt = 0
-            if (!isNumber(user.lastweekly)) user.lastweekly = 0
-            if (!isNumber(user.lastmonthly)) user.lastmonthly = 0
-            if (!('registered' in user)) user.registered = false
-            if (!user.registered) {
-                if (!('name' in user)) user.name = this.getName(m.sender)
-                if (!isNumber(user.age)) user.age = -1
-                if (!isNumber(user.regTime)) user.regTime = -1
-            }
-            if (!('autolevelup' in user)) user.autolevelup = true
-            if (!('lastIstugfar' in user)) user.lastIstigfar = true
+          if (!isNumber(user.afk)) user.afk = -1
+          if (!'afkReason' in user) user.afkReason = ''
+
+          if (!isNumber(user.anakkucing)) user.anakkucing = 0
+          if (!isNumber(user.anakkuda)) user.anakkuda = 0
+          if (!isNumber(user.anakrubah)) user.anakrubah = 0
+          if (!isNumber(user.anakanjing)) user.anakanjing = 0
+          if (!isNumber(user.makananpet)) user.makananpet = 0
+
+          if (!isNumber(user.antispam)) user.antispam = 0
+          if (!isNumber(user.antispamlastclaim)) user.antispamlastclaim = 0
+
+          if (!isNumber(user.kayu)) user.kayu = 0
+          if (!isNumber(user.batu)) user.batu = 0
+          if (!isNumber(user.string)) user.string = 0
+          if (!isNumber(user.sword)) user.sword = 0
+          if (!isNumber(user.sworddurability)) user.sworddurability = 0
+          if (!isNumber(user.pickaxe)) user.pickaxe = 0
+          if (!isNumber(user.pickaxedurability)) user.pickaxedurability = 0
+          if (!isNumber(user.fishingrod)) user.fishingrod = 0
+          if (!isNumber(user.fishingroddurability)) user.fishingroddurability = 0
+
+          if (!isNumber(user.paus)) user.paus = 0
+          if (!isNumber(user.kepiting)) user.kepiting = 0
+          if (!isNumber(user.gurita)) user.gurita = 0
+          if (!isNumber(user.cumi)) user.cumi = 0
+          if (!isNumber(user.buntal)) user.buntal = 0
+          if (!isNumber(user.dory)) user.dory = 0
+          if (!isNumber(user.lumba)) user.lumba = 0
+          if (!isNumber(user.lobster)) user.lobster = 0
+          if (!isNumber(user.hiu)) user.hiu = 0
+          if (!isNumber(user.udang)) user.udang = 0
+          if (!isNumber(user.ikan)) user.ikan = 0
+          if (!isNumber(user.orca)) user.orca = 0
+
+          if (!isNumber(user.banteng)) user.banteng = 0
+          if (!isNumber(user.harimau)) user.harimau = 0
+          if (!isNumber(user.gajah)) user.gajah = 0
+          if (!isNumber(user.kambing)) user.kambing = 0
+          if (!isNumber(user.panda)) user.panda = 0
+          if (!isNumber(user.buaya)) user.buaya = 0
+          if (!isNumber(user.kerbau)) user.kerbau = 0
+          if (!isNumber(user.sapi)) user.sapi = 0
+          if (!isNumber(user.monyet)) user.monyet = 0
+          if (!isNumber(user.babihutan)) user.babihutan = 0
+          if (!isNumber(user.babi)) user.babi = 0
+          if (!isNumber(user.ayam)) user.ayam = 0
+
+          if (!isNumber(user.lastadventure)) user.lastadventure = 0
+          if (!isNumber(user.lastfishing)) user.lastfishing = 0
+          if (!isNumber(user.lastdungeon)) user.lastdungeon = 0
+          if (!isNumber(user.lastduel)) user.lastduel = 0
+          if (!isNumber(user.lastduel)) user.lastnguli = 0
+          if (!isNumber(user.lastbansos)) user.lastbansos = 0
+          if (!isNumber(user.lastnyampah)) user.lastnyampah = 0
+          if (!isNumber(user.lastnebang)) user.lastnebang = 0
+          if (!isNumber(user.lastmining)) user.lastmining = 0
+          if (!isNumber(user.lasthunt)) user.lasthunt = 0
+          if (!isNumber(user.lastweekly)) user.lastweekly = 0
+          if (!isNumber(user.lastmonthly)) user.lastmonthly = 0
+          if (!('registered' in user)) user.registered = false
+          if (!user.registered) {
+            if (!('name' in user)) user.name = this.getName(m.sender)
+            if (!isNumber(user.age)) user.age = -1
+            if (!isNumber(user.regTime)) user.regTime = -1
+          }
+          if (!('autolevelup' in user)) user.autolevelup = true
+          if (!('lastIstugfar' in user)) user.lastIstigfar = true
         } else global.db.data.users[m.sender] = {
-            healt: 100,
-            level: 0,
-            title: 'Nothing',
-            exp: 0,
-            limit: 20,
-            lastclaim: 0,
-            lastgetmoney: 0,
-            money: 12000,
-            diamond: 0,
-            iron: 0,
-            common: 0,
-            uncommon: 0,
-            mythic: 0,
-            legendary: 0,
-            pet: 0,
-            potion: 0,
-            sampah: 0,
-            armor: 0,
-            kucing: 0,
-            as: 0,
-            paus: 0,
-            kepiting: 0,
-            gurita: 0,
-            cumi: 0,
-            buntal: 0,
-            dory: 0,
-            lumba: 0,
-            lobster: 0,
-            hiu: 0,
-            udang: 0,
-            ikan: 0,
-            orca: 0,
-            banteng: 0,
-            harimau: 0,
-            gajah: 0,
-            kambing: 0,
-            panda: 0,
-            buaya: 0,
-            kerbau : 0,
-            sapi: 0,
-            monyet : 0,
-            babihutan: 0,
-            babi: 0,
-            ayam: 0,
-            kucinglastclaim: 0,
-            kuda: 0,
-            kudalastclaim: 0,
-            rubah: 0,
-            rubahlastclaim: 0,
-            anjing: 0,
-            anjinglastclaim: 0,
-            banned: false,
-            warn: 0,
-            afk: -1,
-            afkReason: '',
-            anakkucing: 0,
-            anakkuda: 0,
-            anakrubah: 0,
-            anakanjing: 0,
-            makananpet: 0,
-            antispam: 0,
-            antispamlastclaim: 0,
-            kayu: 0,
-            batu: 0,
-            string: 0,
-            sword: 0,
-            sworddurability: 0,
-            pickaxe: 0,
-            pickaxedurability: 0,
-            fishingrod: 0,
-            fishingroddurability: 0,
-            lastadventure: 0,
-            lastfishing: 0,
-            lastdungeon: 0,
-            lastduel: 0,
-            lastnebang: 0,
-            lastnguli: 0,
-            lastnyampah: 0,
-            lastmining: 0,
-            lasthunt: 0,
-            lastbansos: 0,
-            lastweekly: 0,
-            lastmonthly: 0,
-            registered: false,
-            name: this.getName(m.sender),
-            age: -1,
-            regTime: -1,
-            autolevelup: true,
-            lastIstigfar: 0,
+          healt: 100,
+          level: 0,
+          title: 'Nothing',
+          exp: 0,
+          limit: 20,
+          lastclaim: 0,
+          lastgetmoney: 0,
+          money: 12000,
+          diamond: 0,
+          iron: 0,
+          common: 0,
+          uncommon: 0,
+          mythic: 0,
+          legendary: 0,
+          pet: 0,
+          potion: 0,
+          sampah: 0,
+          armor: 0,
+          kucing: 0,
+          as: 0,
+          paus: 0,
+          kepiting: 0,
+          gurita: 0,
+          cumi: 0,
+          buntal: 0,
+          dory: 0,
+          lumba: 0,
+          lobster: 0,
+          hiu: 0,
+          udang: 0,
+          ikan: 0,
+          orca: 0,
+          banteng: 0,
+          harimau: 0,
+          gajah: 0,
+          kambing: 0,
+          panda: 0,
+          buaya: 0,
+          kerbau: 0,
+          sapi: 0,
+          monyet: 0,
+          babihutan: 0,
+          babi: 0,
+          ayam: 0,
+          kucinglastclaim: 0,
+          kuda: 0,
+          kudalastclaim: 0,
+          rubah: 0,
+          rubahlastclaim: 0,
+          anjing: 0,
+          anjinglastclaim: 0,
+          banned: false,
+          warn: 0,
+          afk: -1,
+          afkReason: '',
+          anakkucing: 0,
+          anakkuda: 0,
+          anakrubah: 0,
+          anakanjing: 0,
+          makananpet: 0,
+          antispam: 0,
+          antispamlastclaim: 0,
+          kayu: 0,
+          batu: 0,
+          string: 0,
+          sword: 0,
+          sworddurability: 0,
+          pickaxe: 0,
+          pickaxedurability: 0,
+          fishingrod: 0,
+          fishingroddurability: 0,
+          lastadventure: 0,
+          lastfishing: 0,
+          lastdungeon: 0,
+          lastduel: 0,
+          lastnebang: 0,
+          lastnguli: 0,
+          lastnyampah: 0,
+          lastmining: 0,
+          lasthunt: 0,
+          lastbansos: 0,
+          lastweekly: 0,
+          lastmonthly: 0,
+          registered: false,
+          name: this.getName(m.sender),
+          age: -1,
+          regTime: -1,
+          autolevelup: true,
+          lastIstigfar: 0,
         }
 
         let chat = global.db.data.chats[m.chat]
@@ -260,8 +260,8 @@ module.exports = {
           antiLink: false,
           viewonce: true,
         }
-        
-                let settings = global.db.data.settings[this.user.jid]
+
+        let settings = global.db.data.settings[this.user.jid]
         if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
         if (settings) {
           if (!'anon' in settings) settings.anon = true
@@ -530,8 +530,8 @@ module.exports = {
       } catch (e) {
         console.log(m, m.quoted, e)
       }
-    //  if (opts['autoread']) await this.chatRead(m.chat).catch(() => { })
-    this.chatRead(m.chat).catch(() => { })
+      //  if (opts['autoread']) await this.chatRead(m.chat).catch(() => { })
+      this.chatRead(m.chat).catch(() => { })
     }
   },
   async participantsUpdate({ jid, participants, action }) {
@@ -571,19 +571,21 @@ module.exports = {
                 .setBackground("https://telegra.ph/file/89a6260f0a6720240e698.jpg")
                 .toAttachment()
 
-              this.sendButtonImg(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome👋' : 'Byee👋',action === 'add' ? 'Welcome👋' : 'Byee👋', {
-key: {
-fromMe: false,
-participant: '0@s.whatsapp.net',
-remoteJid: 'status@broadcast'
-},
-message: {
-contactMessage: {
-displayName: this.getName(user),
-vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;WA;;;\nFN:WA\nTEL;type=CELL;type=VOICE;waid=${user.split('@')[0]}:${user.split('@')[0]}\nEND:VCARD`
-}
-}
-}, false, { contextInfo: { mentionedJid: [user]
+              this.sendButtonImg(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome👋' : 'Byee👋', action === 'add' ? 'Welcome👋' : 'Byee👋', {
+                key: {
+                  fromMe: false,
+                  participant: '0@s.whatsapp.net',
+                  remoteJid: 'status@broadcast'
+                },
+                message: {
+                  contactMessage: {
+                    displayName: this.getName(user),
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;WA;;;\nFN:WA\nTEL;type=CELL;type=VOICE;waid=${user.split('@')[0]}:${user.split('@')[0]}\nEND:VCARD`
+                  }
+                }
+              }, false, {
+                contextInfo: {
+                  mentionedJid: [user]
                 }
               })
             }
@@ -608,7 +610,7 @@ vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;WA;;;\nFN:WA\nTEL;type=CELL;type=VOICE;waid
     if (m.key.fromMe) return
     let chat = global.db.data.chats[m.key.remoteJid]
     if (chat.delete) {
-    await this.sendButton(m.key.remoteJid, `*—「 Anti Delete 」—*
+      await this.sendButton(m.key.remoteJid, `*—「 Anti Delete 」—*
 *📢 Terdeteksi Penghapusan Pesan !*
 *◇ Nama :* @${m.participant.split`@`[0]}
 *◇ Type*: ${Object.keys(m.message.message)[0]}
@@ -616,14 +618,14 @@ vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;WA;;;\nFN:WA\nTEL;type=CELL;type=VOICE;waid
 
 klick untuk mematikannya atau ketik #disable delete
 `.trim(), watermark, 'DISABLE DELETE', '.disable delete', {
-      quoted: m.message,
-      contextInfo: {
-        mentionedJid: [m.participant]
-      }
-    })
-    this.copyNForward(m.key.remoteJid, m.message).catch(e => console.log(e, m))
-  }
-},
+        quoted: m.message,
+        contextInfo: {
+          mentionedJid: [m.participant]
+        }
+      })
+      this.copyNForward(m.key.remoteJid, m.message).catch(e => console.log(e, m))
+    }
+  },
   async onCall(json) {
     let { from } = json[2][0][1]
     let users = global.db.data.users
@@ -642,11 +644,11 @@ klick untuk mematikannya atau ketik #disable delete
 }
 
 global.dfail = (type, m, conn) => {
-	let name = conn.getName(m.sender)
+  let name = conn.getName(m.sender)
   let owr = {
     rowner: 'https://telegra.ph/file/2848948d64ea43302c882.png'
   }[type]
-  if (owr) return conn.sendSticker(m.chat, 'https://telegra.ph/file/2848948d64ea43302c882.png', m ,{sendEphemeral: true})
+  if (owr) return conn.sendSticker(m.chat, 'https://telegra.ph/file/2848948d64ea43302c882.png', m, { sendEphemeral: true })
   let msg = {
     owner: 'Khusus owner',
     mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
@@ -664,7 +666,7 @@ global.dfail = (type, m, conn) => {
   let unreg = {
     unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar LynXzy.16*`
   }[type]
-  if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu`, watermark, 'Verify', `#daftar ${name}.17`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `©shirobotz_\nJam ${time}`, itemCount: 2022, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')}}})
+  if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu`, watermark, 'Verify', `#daftar ${name}.17`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `©shirobotz_\nJam ${time}`, itemCount: 2022, thumbnail: fs.readFileSync('./src/RadBotZ.jpg') } } })
 }
 
 let chalk = require('chalk')

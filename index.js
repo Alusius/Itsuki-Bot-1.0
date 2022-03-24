@@ -3,7 +3,7 @@ let { spawn } = require('child_process')
 let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
-const CFonts  = require('cfonts')
+const CFonts = require('cfonts')
 CFonts.say('Rpg\nWhatsApp Bot', {
   font: 'chrome',
   align: 'center',

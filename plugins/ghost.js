@@ -16,7 +16,7 @@ let handler = async (m, { conn, args }) => {
             fs.unlinkSync(owgi)
             if (err) return m.reply('emror..')
             nobg = fs.readFileSync(rano)
-         	conn.sendMessage(m.chat, nobg, MessageType.audio, { mimetype: "audio/mp4", ptt: true, quoted: m})
+            conn.sendMessage(m.chat, nobg, MessageType.audio, { mimetype: "audio/mp4", ptt: true, quoted: m })
             fs.unlinkSync(rano)
         })
     } else {
@@ -31,4 +31,5 @@ module.exports = handler
 
 
 const getRandom = (ext) => {
-	return `${Math.floor(Math.random() * 10000)}${ext}`}
+    return `${Math.floor(Math.random() * 10000)}${ext}`
+}

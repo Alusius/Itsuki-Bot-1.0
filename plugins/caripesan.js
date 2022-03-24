@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
         let sp = total < Number(split[1]) ? `Hanya ditemukan ${total} pesan ngab` : `Ditemukan ${total} pesan`
         m.reply(sp)
 
-        result.messages.map( async ({ key }) => {
+        result.messages.map(async ({ key }) => {
             let { remoteJid: _remoteJid, id: _ids } = key
             let _message = await conn.loadMessage(_remoteJid, _ids)
             conn.reply(m.chat, 'Nih pesannya', _message)

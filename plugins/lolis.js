@@ -1,17 +1,17 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn }) => {
-await m.reply(global.wait)
-	let url = loli[Math.floor(Math.random() * loli.length)]
-	await conn.sendMessage(m.chat, {
-		contentText: 'Random Loli',
-		footerText: 'Lolinya kak..',
-		buttons: [
-			{ buttonId: '.lolis', buttonText: { displayText: 'Get Again' }, type: 1 }
-		],
-		headerType: 4,
-		imageMessage: (await conn.prepareMessageMedia(await (await fetch(url)).buffer(), 'imageMessage', {})).imageMessage
-	}, 'buttonsMessage', { quoted: m })
+  await m.reply(global.wait)
+  let url = loli[Math.floor(Math.random() * loli.length)]
+  await conn.sendMessage(m.chat, {
+    contentText: 'Random Loli',
+    footerText: 'Lolinya kak..',
+    buttons: [
+      { buttonId: '.lolis', buttonText: { displayText: 'Get Again' }, type: 1 }
+    ],
+    headerType: 4,
+    imageMessage: (await conn.prepareMessageMedia(await (await fetch(url)).buffer(), 'imageMessage', {})).imageMessage
+  }, 'buttonsMessage', { quoted: m })
 }
 handler.command = /^(lolis)$/i
 handler.tags = ['anime']

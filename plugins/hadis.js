@@ -1,4 +1,5 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
 let handler = async (m, { usedPrefix, command, args }) => {
     if (!args[0]) throw `Contoh:
 ${usedPrefix + command} bukhari 1

@@ -1,6 +1,7 @@
 // Pngocok handal
 
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
 let handler = async (m, { conn, usedPrefix, command, text }) => {
   let res = await fetch(global.API('https://some-random-api.ml', '/lyrics', {
     title: text

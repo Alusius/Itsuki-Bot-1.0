@@ -1,5 +1,5 @@
 let handler = async (m, { conn, args }) => {
-  let name = m.fromMe ? conn.user : conn.contacts[m.sender] 
+  let name = m.fromMe ? conn.user : conn.contacts[m.sender]
   let sortedExp = Object.entries(global.DATABASE.data.users).sort((a, b) => b[1].exp - a[1].exp)
   let sortedLim = Object.entries(global.DATABASE.data.users).sort((a, b) => b[1].limit - a[1].limit)
   let sortedmoney = Object.entries(global.DATABASE.data.users).sort((a, b) => b[1].money - a[1].money)
@@ -9,7 +9,7 @@ let handler = async (m, { conn, args }) => {
   let usersmoney = sortedmoney.map(v => v[0])
   let userslevel = sortedlevel.map(v => v[0])
   let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(20, sortedExp.length)
-    let text = `
+  let text = `
 ┌〔 *Level Leaderboard Top ${len}* 〕
 ├Kamu: *${userslevel.indexOf(m.sender) + 1}* dari *${userslevel.length}*
 │

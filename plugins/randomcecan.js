@@ -1,8 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, command, usedPrefix }) => {
-	
-	conn.sendButtonImg(m.chat, await ( await fetch(`https://api-alphabot.herokuapp.com/api/cecan/${command}?apikey=Alphabot`)).buffer(), 'Nih kak', watermark, 'NEXT', `${usedPrefix + command}`, m)
-
+	conn.sendButtonImg(m.chat, await (await fetch(`https://api-alphabot.herokuapp.com/api/cecan/${command}?apikey=Alphabot`)).buffer(), 'Nih kak', watermark, 'NEXT', `${usedPrefix + command}`, m)
 }
 
 handler.help = ['indonesia']

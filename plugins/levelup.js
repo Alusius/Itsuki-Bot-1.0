@@ -1,4 +1,3 @@
-let fetch = require('node-fetch')
 let levelling = require('../lib/levelling')
 const canvacord = require('canvacord')
 

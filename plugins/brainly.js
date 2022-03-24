@@ -1,4 +1,5 @@
 let fetch = require('node-fetch')
+
 let handler = async (m, { text, command, usedPrefix }) => {
     if (!text) throw `uhm.. teksnya mana?\n\ncontoh:\n${usedPrefix + command} kapan indonesia merdeka`
     let res = await fetch(`https://api.xteam.xyz/brainly?soal=${text}&APIKEY=cristian9407`)

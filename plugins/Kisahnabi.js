@@ -1,13 +1,11 @@
-let axios = require("axios");
-let handler = async(m, { conn, text }) => {
+const axios = require("axios").default;
 
-    if (!text) return conn.reply(m.chat, 'Masukan Nama Nabi nya', m)
+let handler = async (m, { conn, text }) => {
 
-	axios.get(`https://videfikri.com/api/religi/kisahnabi/?nabi=${text}`).then ((res) => {
-	 	let hasil = `*NAMA NABI*			: ${text}\n*TEMPAT LAHIR*		: ${res.data.result.tempat_lahir}\n*TAHUN KELAHIRAN*	: ${res.data.result.tahun_kelahiran}\n*UMUR*				: ${res.data.result.usia}\n*KISAH*				: ${res.data.result.description}`
-
-    conn.reply(m.chat, hasil, m)
-	})
+	if (!text) return conn.reply(m.chat, 'Masukan Nama Nabi nya', m)
+	let res = await axios.get(`https://videfikri.com/api/religi/kisahnabi/?nabi=${text}`);
+	let hasil = `*NAMA NABI*			: ${text}\n*TEMPAT LAHIR*		: ${res.data.result.tempat_lahir}\n*TAHUN KELAHIRAN*	: ${res.data.result.tahun_kelahiran}\n*UMUR*				: ${res.data.result.usia}\n*KISAH*				: ${res.data.result.description}`
+	conn.reply(m.chat, hasil, m)
 }
 handler.help = ['kisah|kisah nabi|nabi'].map(v => v + ' <nama nabi>')
 handler.tags = ['islam']

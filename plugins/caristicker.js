@@ -1,20 +1,20 @@
-let imageToBase64 = require('image-to-base64')
-let { sticker } = require('../lib/sticker')
-let fetch = require('node-fetch')
+const imageToBase64 = require('image-to-base64');
+const { sticker } = require('../lib/sticker');
+const fetch = require('node-fetch');
 
-let handler = async(m, { conn, text }) => {
+let handler = async (m, { conn, text }) => {
 
   if (!text) return conn.reply(m.chat, 'Harap masukan query!', m)
 
   await m.reply('Searching...')
-    let json = await (await fetch('https://api.zeks.xyz/api/searchsticker?apikey=MIMINGANZ&q=' + text)).json()
-    let body = JSON.parse(JSON.stringify(json.sticker))
-    let result = body[Math.floor(Math.random() * body.length)];
-    let img = await imageToBase64(result)
-    let buffer = Buffer.from(img, 'base64')
-    let hasil = await sticker(buffer, false, 'Sticker Search', 'MIMIN NETBOT')
+  let json = await (await fetch('https://api.zeks.xyz/api/searchsticker?apikey=MIMINGANZ&q=' + text)).json()
+  let body = JSON.parse(JSON.stringify(json.sticker))
+  let result = body[Math.floor(Math.random() * body.length)];
+  let img = await imageToBase64(result)
+  let buffer = Buffer.from(img, 'base64')
+  let hasil = await sticker(buffer, false, 'Sticker Search', 'MIMIN NETBOT')
 
- conn.sendFile(m.chat, hasil, 'sticker.jpg', '', m, false, { asSticker: true })
+  conn.sendFile(m.chat, hasil, 'sticker.jpg', '', m, false, { asSticker: true })
 }
 handler.help = ['caristicker <query>']
 handler.tags = ['tools']

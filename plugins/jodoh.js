@@ -1,4 +1,5 @@
-const fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!text) throw `contoh:\n${usedPrefix + command} Raditya|${conn.getName(m.sender)}`
     let [nama1, nama2] = text.split(/[&|.]/i)

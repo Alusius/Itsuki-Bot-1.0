@@ -1,4 +1,5 @@
-let { Presence } = require('@adiwajshing/baileys')
+const { Presence } = require('@adiwajshing/baileys')
+
 let handler = async (m, { conn, text }) => {
 	await conn.updatePresence(m.chat, Presence.composing) 
 	conn.reply(m.chat,`_Mohon Maaf Semuanya Saya akan keluar Dari Grup ini dalam waktu ${encodeURIComponent(text)} Jam Lagi , Terima Kasih_ >_<`, m)

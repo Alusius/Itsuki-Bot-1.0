@@ -1,6 +1,5 @@
 let handler = async (m, { conn, participants, command }) => {
-    let member = participants.map(u => u.jid)
-    let orang
+    let member = participants.map(u => u.jid), orang;
     if (/ku/i.test(command)) orang = m.sender
     else orang = member[Math.floor(Math.random() * member.length)]
     let jodoh = member[Math.floor(Math.random() * member.length)]

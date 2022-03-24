@@ -1,12 +1,11 @@
-let axios = require("axios");
-let handler = async(m, { conn, text }) => {
+const axios = require("axios");
 
-  await m.reply('Searching...')
-	axios.get(`https://leyscoders-api.herokuapp.com/api/cerpen?apikey=MIMINGANZ`).then ((res) => {
-	 	let hasil = `Judul :${res.data.result.title}\nStory :${res.data.result.story}`
+let handler = async (m, { conn, text }) => {
 
-    conn.reply(m.chat, hasil, m)
-	})
+	await m.reply('Searching...')
+	let res = await axios.get(`https://leyscoders-api.herokuapp.com/api/cerpen?apikey=MIMINGANZ`)
+	let hasil = `Judul :${res.data.result.title}\nStory :${res.data.result.story}`
+	conn.reply(m.chat, hasil, m)
 }
 handler.help = ['cerpen'].map(v => v + ' ')
 handler.tags = ['premium']

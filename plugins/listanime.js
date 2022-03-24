@@ -1,6 +1,7 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
 let handler = async (m, { conn }) => await conn.sendButtonLoc(m.chat,
-await (await fetch(fla + 'List anime')).buffer(), `
+       await (await fetch(fla + 'List anime')).buffer(), `
        『LIST ANIME』
 ${readMore}
 1. golden time ( kaga kouko & Tada Banri )
@@ -303,7 +304,7 @@ handler.help = ['listanime']
 handler.tags = ['internet', 'anime', 'fun']
 
 handler.command = /^(listanime)$/i
-  
+
 module.exports = handler
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)

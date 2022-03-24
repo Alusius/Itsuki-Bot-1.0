@@ -1,6 +1,5 @@
-let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-   response = args.join(' ')
+  response = args.join(' ')
   if (!args) throw 'Masukkan Parameter'
   m.reply('*[❗] Wait,Tunggu Bentar Kak Sedang Dalam Proses...*')
   let res = `https://api.zeks.xyz/api/breakwall?apikey=apivinz&text=${response}`

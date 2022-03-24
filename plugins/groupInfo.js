@@ -60,12 +60,11 @@ ${msToDate(expired - new Date() * 1)}
         conn.sendFile(m.key.remoteJid, pp, 'pp.jpg', caption, m, 0, { contextInfo: { mentionedJid } })
     }
 }
+
 handler.help = ['infogrup']
 handler.tags = ['group']
 handler.command = /^(gro?upinfo|info(gro?up|gc))$/i
-
 handler.group = true
-
 module.exports = handler
 
 function msToDate(ms) {

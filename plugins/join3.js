@@ -1,4 +1,4 @@
-let { MessageType } = require('@adiwajshing/baileys')
+const { MessageType } = require('@adiwajshing/baileys');
 let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
 
 let handler = async (m, { conn, text, usedPrefix }) => {
@@ -13,14 +13,18 @@ let handler = async (m, { conn, text, usedPrefix }) => {
     })
     await conn.sendMessage(res.gid, `Halo,\n *${conn.user.name}* adalah bot whatsapp yang dibangun dengan Nodejs, Saya baru saja bergabung di grup ini diundang oleh @${m.sender.split`@`[0]}
     
-ketik *#menu* untuk melihat daftar perintah`, MessageType.text, { contextInfo: { externalAdReply :{
-       mediaUrl: ' ',
-       mediaType: 4,
-       title: 'Shiro-Botz',
-       body: 'Whatsapp Developer Bot',
-       thumbnailUrl: image,
-sourceUrl: 'https://wa.me/6287892711054?text=Assalamualaikum'
-}}})
+ketik *#menu* untuk melihat daftar perintah`, MessageType.text, {
+        contextInfo: {
+            externalAdReply: {
+                mediaUrl: ' ',
+                mediaType: 4,
+                title: 'Shiro-Botz',
+                body: 'Whatsapp Developer Bot',
+                thumbnailUrl: image,
+                sourceUrl: 'https://wa.me/6287892711054?text=Assalamualaikum'
+            }
+        }
+    })
 }
 handler.help = ['join3 <linkgrup> ']
 handler.tags = ['main']

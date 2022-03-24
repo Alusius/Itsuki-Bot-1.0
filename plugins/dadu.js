@@ -1,7 +1,7 @@
 let handler = async (m, { conn, command, text }) => {
   conn.reply(m.chat, `
-Angka Dadu Anda : ${pickRandom(['1','2','3','4','5','6','7','8','9','10','11','12'])}
-Angka Dadu Bot : ${pickRandom(['1','2','3','4','5','6','7','8','9','10','11','12'])}
+Angka Dadu Anda : ${pickRandom(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'])}
+Angka Dadu Bot : ${pickRandom(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'])}
 
 Siapakah pemenangnya?
 `.trim(), m)

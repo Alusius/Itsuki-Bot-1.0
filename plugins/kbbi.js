@@ -1,4 +1,5 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
 let handler = async (m, { text, command, usedPrefix }) => {
     if (!text) throw `uhm.. teksnya mana?\n\ncontoh:\n${usedPrefix + command} membaca`
     let res = await fetch(global.API('pencarikode', '/kbbi', { kata: text }, 'APIKEY'))

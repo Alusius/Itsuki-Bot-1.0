@@ -1,6 +1,5 @@
-let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-   response = args.join(' ')
+  response = args.join(' ')
   if (!args) throw 'Masukkan Parameter'
   m.reply('*Proses...*')
   let res = `https://api.zeks.xyz/api/epep?text=${response}&apikey=apivinz`

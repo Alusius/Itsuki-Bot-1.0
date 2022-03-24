@@ -1,28 +1,27 @@
 //trying UwU
-let syntaxerror = require('syntax-error')
-let util = require('util')
-let handler  = async (m, _2) => {
-let logo = global.logo
-   let { conn, usedPrefix, command, text, noPrefix, args, groupMetadata } = _2
-let fs = require('fs')
-let fetch = require('node-fetch')
-let peli = global.logo
-let ye = global.logo
+const syntaxerror = require('syntax-error');
+const util = require('util');
+const fs = require('fs');
+
+let handler = async (m, _2) => {
+  let { conn, usedPrefix, noPrefix, args, groupMetadata } = _2
+  let peli = global.logo
+  let ye = global.logo
   let _return
   let _syntax = ''
   let _text = (/^=/.test(usedPrefix) ? 'return ' : '') + noPrefix
-  let old = m.exp * 1 
+  let old = m.exp * 1
   try {
     let i = 15
     let f = {
       exports: {}
     }
-    let exec = new (async () => {}).constructor('print', 'm', 'handler', 'require', 'conn', 'Array', 'process', 'args', 'groupMetadata', 'module', 'exports', 'argument', _text)
+    let exec = new (async () => { }).constructor('print', 'm', 'handler', 'require', 'conn', 'Array', 'process', 'args', 'groupMetadata', 'module', 'exports', 'argument', _text)
     _return = await exec.call(conn, (...args) => {
       if (--i < 1) return
       console.log(...args)
       return /*conn.reply(m.chat, util.format(...args), m)*/
-      	conn.sendMessage(m.chat, util.format(...args), 'conversation', {thumbnail: peli, contextInfo:{externalAdReply: {title: 'Relldev', sourceUrl: '', body: ``, thumbnail: ye}}})
+      conn.sendMessage(m.chat, util.format(...args), 'conversation', { thumbnail: peli, contextInfo: { externalAdReply: { title: 'Relldev', sourceUrl: '', body: ``, thumbnail: ye } } })
     }, m, handler, require, conn, CustomArray, process, args, groupMetadata, f, f.exports, [conn, _2])
   } catch (e) {
     let err = await syntaxerror(_text, 'Execution Function', {
@@ -33,14 +32,16 @@ let ye = global.logo
     _return = e
   } finally {
     /*conn.reply(m.chat, _syntax + util.format(_return), m)*/
-    prep = conn.prepareMessageFromContent(m.chat, { orderMessage: { 
-itemCount: 999999999999, status: 1,
-message: _syntax + util.format(_return),
-orderTitle: 'B',
-sellerJid: '0@s.whatsapp.net',
-thumbnail: fs.readFileSync('./src/RadBotZ.jpg')
-}}, {contextInfo: null, quoted: m})
-conn.relayWAMessage(prep)
+    prep = conn.prepareMessageFromContent(m.chat, {
+      orderMessage: {
+        itemCount: 999999999999, status: 1,
+        message: _syntax + util.format(_return),
+        orderTitle: 'B',
+        sellerJid: '0@s.whatsapp.net',
+        thumbnail: fs.readFileSync('./src/RadBotZ.jpg')
+      }
+    }, { contextInfo: null, quoted: m })
+    conn.relayWAMessage(prep)
     m.exp = old
   }
 }

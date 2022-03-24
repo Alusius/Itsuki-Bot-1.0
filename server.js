@@ -15,7 +15,7 @@ function connect(conn, PORT) {
     conn.on('qr', qr => {
         _qr = qr
     })
-    
+
     let server = app.listen(PORT, () => console.log('App listened on port', PORT))
     let io = SocketIO(server)
     io.on('connection', socket => {

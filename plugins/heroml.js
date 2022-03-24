@@ -1,16 +1,16 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch');
 
-let handler = async(m, { conn, text }) => {
+let handler = async (m, { conn, text }) => {
 
   if (!text) return conn.reply(m.chat, 'Harap Masukan Username', m)
 
   await m.reply('Searching...')
-    let res = await fetch(`https://x-restapi.herokuapp.com/api/heroml?q=${text}&apikey=BETA`)
-    let json = await res.json()
-    if (res.status !== 200) throw await res.text()
-    if (!json.status) throw json
-    let thumb = await (await fetch(json.image)).buffer()
-    let hasil = `*── 「 HERO ML 」 ──*
+  let res = await fetch(`https://x-restapi.herokuapp.com/api/heroml?q=${text}&apikey=BETA`)
+  let json = await res.json()
+  if (res.status !== 200) throw await res.text()
+  if (!json.status) throw json
+  let thumb = await (await fetch(json.image)).buffer()
+  let hasil = `*── 「 HERO ML 」 ──*
 
 ▢ *Name*: ${json.hero_name}
 ▢ *Role*: ${json.role}
@@ -52,7 +52,7 @@ ${json.attributes.mana_regen}
 ${json.background_story}
 `
 
-    conn.sendFile(m.chat, thumb, 'tiktokstalk.jpg', hasil, m)
+  conn.sendFile(m.chat, thumb, 'tiktokstalk.jpg', hasil, m)
 }
 handler.help = ['heroml'].map(v => v + ' <query>')
 handler.tags = ['internet']

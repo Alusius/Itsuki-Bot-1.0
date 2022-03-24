@@ -1,6 +1,5 @@
-let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-   response = args.join(' ').split('|')
+  response = args.join(' ').split('|')
   if (!args[0]) throw 'Masukkan Parameter'
   m.reply('Proses...')
   let res = `https://bx-hunter.herokuapp.com/api/canvas/gfx2?apikey=FuckBitch&nama=${response[0]}`

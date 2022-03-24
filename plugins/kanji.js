@@ -1,5 +1,5 @@
-let fetch = require('node-fetch')
-let fs = require("fs")
+const fetch = require('node-fetch');
+
 let handler = async (m, { conn, text }) => {
   if (!text) return conn.reply(m.chat, 'Harap masukan kanji nya', m)
   let res = await fetch(`https://kanjiapi.dev/v1/kanji/${encodeURIComponent(text)}`)
@@ -22,6 +22,6 @@ let handler = async (m, { conn, text }) => {
 }
 handler.help = ['kanji'].map(v => v + ' <kanji>')
 handler.tags = ['internet']
-handler.command =/^(kanji)$/i
+handler.command = /^(kanji)$/i
 
 module.exports = handler

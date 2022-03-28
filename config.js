@@ -14,8 +14,8 @@ let fs = require('fs')
 let chalk = require('chalk')
 
 global.linkGC = ['https://chat.whatsapp.com/Jzd9DEVB5nODtNBk1VCNrV', 'https://chat.whatsapp.com/Jzd9DEVB5nODtNBk1VCNrV', 'https://chat.whatsapp.com/HBhy7rVae3o0PkIfkhvs2N'] // ganti jadi group lu
-global.owner = ['6287892711054', '6287892711054', '6287892711054'] // Masukan nomot kalian
-global.mods = ['6287892711054', '6287892711054'] // Moderator
+global.owner = ['6285815706928', '6285815706928', '6285815706928'] // Masukan nomot kalian
+global.mods = ['6285815706928', '6285815706928'] // Moderator
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Pengguna premium tidak memerlukan limit
 global.APIs = { // API Prefix
   // name: 'https://website'
@@ -55,7 +55,7 @@ const spack = fs.readFileSync("lib/exif.json")
 const stickerpack = JSON.parse(spack)
 if (stickerpack.spackname == '') {
   var sticker_name = 'hehe'
-  var sticker_author = 'by ShiroBotz'
+  var sticker_author = 'by Kenziobotz'
 } else {
   var sticker_name = stickerpack.spackname
   var sticker_author = stickerpack.sauthor
@@ -79,7 +79,7 @@ global.nsfw = '“Katakanlah kepada orang laki-laki yang beriman: Hendaklah mere
 global.eror = '_*Error*_'
 
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&doScale=true&scaleWidth=500&scaleHeight=500&fontsize=100&fillTextType=0&backgroundColor=%23101820&text='
-global.watermark = '©shirobotz' //change the watermark (beberapa harus manual)
+global.watermark = '©Kenziobotz' //change the watermark (beberapa harus manual)
 
 // Ubah saja
 global.image = 'https://telegra.ph/file/43a5bfd09e6c7e9a8055f.jpg'

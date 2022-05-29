@@ -8,29 +8,30 @@ const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
   before: `
-╭━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╮
-┃╭┈─────────────⩵꙰ཱི࿐
-┃╰── %me ──➤ ↶↷*
-╰•͙✩̣̣̣̣ Hai, %name!
-⁙┃〲
-⁙┃〲 Tersisa *%limit Limit*
-⁙┃〲 Role *%role*
-⁙┃〲 Level *%level (%exp / %maxexp)* [%xp4levelup]
-⁙┃〲 %totalexp XP secara Total
-⁙┃〲 
-⁙┃〲 Tanggal: *%week %weton, %date*
-⁙┃〲 Tanggal Islam: *%dateIslamic*
-⁙┃〲 Waktu: *%time*
-⁙┃〲
-⁙┃〲 Uptime: *%uptime (%muptime)*
-⁙┃〲 Database: %rtotalreg dari %totalreg
-⁙┃〲 GitHub: https://github.com/Drz103/RadBot
-⁙┃〲
-⁙╰•°°°🕊°°°°°🕊°°°°°°🕊°°°°°°°°
+╭══════════════════
+║╭──❉[ *Hai, %name!* ]❉──
+║│➸ Tersisa *%limit Limit*
+║│➸ Role *%role*
+║│➸ Level 
+║│➸ *%level (%exp / %maxexp)* [%xp4levelup]
+║│➸ %totalexp XP secara Total
+║╰────────────────
+╰══════════════════
+╭══════════════════
+║╭──❉[ 𝙒𝙖𝙠𝙩𝙪 ]❉───
+║│➸ Tanggal: 
+║│➸ *%week %weton, %date*
+║│➸ Tanggal Islam:
+║│➸ *%dateIslamic*
+║│➸ Waktu: *%time*
+║│➸ Uptime: *%uptime (%muptime)*
+║│➸ Database: %rtotalreg dari %totalreg
+║╰──────────────────
+╰════════════════════
 %readmore`.trimStart(),
-  header: '╭━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╮\n┃╭┈─────────────⩵꙰ཱི࿐\n┃╰── %category ──➤ ↶↷\n╰•͙✩̣̣̣̣',
-  body: '⁙┃〲 %cmd %islimit %isPremium',
-  footer: '⁙╰•°°°🕊°°°°°🕊°°°°°°🕊°°°°°°°°\n',
+  header: '┏━━ꕥ〔 *%category* 〕ꕥ━⬣',
+  body: '┃➸ %cmd %islimit %isPremium',
+  footer: '┗━ꕥ',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -223,29 +224,41 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": `*${ucapan()}, ${name}*`.trim(),
-                        "description": `©RadBotZ`.trim(),
-                        "footerText": "Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
-                        "buttonText": "*Click Here*",
+                        "description": `┏━━〔 𝐒𝐓𝐀𝐓𝐔𝐒 〕━⬣
+┃⬡ 𝘼𝙠𝙩𝙞𝙛 𝙎𝙚𝙡𝙖𝙢𝙖 _*${uptime}*_
+┃⬡ 𝘽𝙖𝙩𝙚𝙧𝙖𝙞 _*${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}*_
+┃⬡ _*${Object.keys(global.db.data.users).length}*_ 𝙋𝙚𝙣𝙜𝙜𝙪𝙣𝙖
+┃⬡ _*${totaljadibot.length}*_ 𝙅𝙖𝙙𝙞𝙗𝙤𝙩
+┃⬡ _*${conn.blocklist.length}*_ 𝙏𝙚𝙧𝙗𝙡𝙤𝙘𝙠
+┃⬡ _*${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}*_ 𝘾𝙝𝙖𝙩 𝙩𝙚𝙧𝙗𝙖𝙣𝙣𝙚𝙙
+┃⬡ _*${Object.entries(global.db.data.users).filter(user => user[1].banned).length}*_ 𝙋𝙚𝙣𝙜𝙜𝙪𝙣𝙖 𝙏𝙚𝙧𝙗𝙖𝙣𝙣𝙚𝙙
+┗━━━━━━━━⬣`.trim(),
+                        "footerText": "Hi kk >‿‿<",
+                        "buttonText": "*Klik Disini*",
                         "listType": "SINGLE_SELECT",
                         "sections": [
                             {
                                 "rows": [{
-                                    "title": "Status Bot",
+                                    "title": "|🛠️|Status Bot",
                                     "description": "Status dan informasi Bot.",
                                     "rowId": ".botstatus"
                                 }, {
-                                    "title": "Rules",
+                                    "title": "|❗|Rules",
                                     "description": "User yang bijak selalu mematuhi Rules.",
                                     "rowId": ".rules"
                                 }, {
-                                    "title": "Sewa bot - Premium",
+                                    "title": "|👑|Sewa bot - Premium",
                                     "description": "Untuk kamu yang ingin melihat daftar harga sewa dan premium.",
                                     "rowId": ".sewabot"
+                                }, {
+                                    "title": "|💌|Group Bot",
+                                    "description": "Join bang",
+                                    "rowId": ".gcbot"
                                 }],
                                 "title": "⟣─────────❲ Tentang Bot dan lainnya ❳──────────⟢"
                             }, {
                                 "rows": [{
-                                    "title": `[🧾| Semua Perintah`,
+                                    "title": `|🧾| Semua Perintah`,
                                     "description": "Memberikan Semua Fitur Bot",
                                     "rowId": ".? all"
                                 }, { 
@@ -353,7 +366,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Info Tentang Bot",
                                     "rowId": ".? info"
                                 }, { 
-                                    "title": "Tanpa Kategori",
+                                    "title": "|─|Tanpa Kategori",
                                     "description": "",
                                     "rowId": ".? tanpakategori"
                                 }, { 
@@ -364,19 +377,19 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                 "title": "⟣──────────────❲  All-Menu  ❳──────────────⟢"
                             }, {
                                 "rows": [{
-                                    "title": "Owner bot",
-                                    "description": "pemilik RadBotZ",
+                                    "title": "|👩🏻‍💼|Owner bot",
+                                    "description": "pemilik Bot",
                                     "rowId": ".owner"
                                 }, {
-                                    "title": "Donasi",
+                                    "title": "|💰|Donasi",
                                     "description": "Jangan lupa donasi untuk mendukung bot agar aktif selalu",
                                     "rowId": ".donasi"
                                 }, {
-                                    "title": "Kata penutup",
+                                    "title": "|🥀|Kata penutup",
                                     "description": "Terimakasih untuk user yang telah menggunakan bot, jika ada kesalahan atau permintaan bisa chat ke nomor owner\nNote: chat P/main² tidak akan di respon(user bisa terkena banned/block)",
                                     "rowId": ".creator"
                                 }, {
-                                    "title": "Thanks To |🎖️|",
+                                    "title": "|❤️|Thanks To",
                                     "description": "Terima kasih banyak untuk user yang telah berpartisipasi dalam bot",
                                     "rowId": ".tqto"
                                 }],
@@ -468,15 +481,15 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await(await fetch(fla + teks)).buffer(), text.trim(), `Runtime : ${uptime}\n${week} ${date}`, 'Pemilik Bot', `${_p}owner`, 'Catalog', `${_p}! all`, m)
+    await conn.send2ButtonLoc(m.chat, await(await fetch(fla + teks)).buffer(), text.trim(), `Runtime : ${uptime}\n${week} ${date}`, 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
   }
 }
-handler.help = ['menu', '?', 'help']
+handler.help = ['menu', 'help']
 handler.tags = ['main']
-handler.command = /^(\?|help|menu)$/i
+handler.command = /^(\?|menu|help)$/i
 
 handler.register = true
 

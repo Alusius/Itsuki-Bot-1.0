@@ -119,7 +119,7 @@ ${readMore}
 Warn: *${warn}*
 Banned: *No*
 `.trim()
-    await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©RadBotZ ⁩×͜×', 'PROFILE', '.profile', 'Shop', '.shop', m)
+    await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©shirobotz', 'PROFILE', '.profile', 'Shop', '.shop', m)
 }
 handler.help = ['inventory', 'inv']
 handler.tags = ['rpg']

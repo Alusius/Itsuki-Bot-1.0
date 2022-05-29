@@ -14,22 +14,13 @@ handler.all = async function (m, { isPrems }) {
 
     let url = m.text.split(/\n| /i)[0]
 
-    if (/^.*tiktok/i.test(m.text)) {
-        let res = await fetch(API('hardianto', '/api/download/tiktok', { url }, 'apikey'))
-        if (!res.ok) return m.reply(eror)
-        let json = await res.json()
-        await m.reply(wait)
-        // m.reply(util.format(json))
-        await this.sendFile(m.chat, json.nowm, '', '©RadBotZ', m)
-    }
-
     if (/^.*cocofun/i.test(m.text)) {
         let res = await fetch(API('jojo', '/api/cocofun-no-wm', { url }))
         if (!res.ok) return m.reply(eror)
         let json = await res.json()
         await m.reply(wait)
         // m.reply(util.format(json))
-        await this.sendFile(m.chat, json.download, '', '©RadBotZ', m)
+        await this.sendFile(m.chat, json.download, '', watermark, m)
     }
 
     if (/^.*(fb.watch|facebook.com)/i.test(m.text)) {
@@ -38,7 +29,7 @@ handler.all = async function (m, { isPrems }) {
         let json = await res.json()
         if (!json.status) return m.reply(util.format(json))
         await m.reply(wait)
-        await conn.sendFile(m.chat, json.data.sd.url, '', `HD: ${json.data.hd.url}\nUkuran: ${json.data.hd.size}\n\n©RadBotZ`, m)
+        await conn.sendFile(m.chat, json.data.sd.url, '', `HD: ${json.data.hd.url}\nUkuran: ${json.data.hd.size}`, m)
     }
 
     if (/^.*instagram.com\/(p|reel|tv)/i.test(m.text)) {
@@ -47,7 +38,7 @@ handler.all = async function (m, { isPrems }) {
             let json = JSON.parse(igdl)
             await m.reply(wait)
             for (let { downloadUrl, type } of json) {
-                this.sendFile(m.chat, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), '©RadBotZ', m, 0, { thumbnail: await (await fetch(downloadUrl)).buffer() })
+                this.sendFile(m.chat, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), watermark, m, 0, { thumbnail: await (await fetch(downloadUrl)).buffer() })
             }
         }).catch(_ => _)
     }
@@ -59,7 +50,7 @@ handler.all = async function (m, { isPrems }) {
             if (!json.status) return m.reply(eror)
             await m.reply(wait)
             m.reply(util.format(json))
-            await this.sendFile(m.chat, json.data.url, '', '©RadBotZ', m)
+            await this.sendFile(m.chat, json.data.url, '', watermark, m)
         }).catch(_ => _)
     }
 
@@ -70,7 +61,7 @@ handler.all = async function (m, { isPrems }) {
             let pesan = json.data.map((v) => `Link: ${v.url}`).join('\n------------\n')
             await m.reply(wait)
             for (let { url } of json.data) {
-                this.sendFile(m.chat, url, 'ig' + (/mp4/i.test(url) ? '.mp4' : '.jpg'), '©RadBotZ', m)
+                this.sendFile(m.chat, url, 'ig' + (/mp4/i.test(url) ? '.mp4' : '.jpg'), watermark, m)
             }
         }).catch(_ => _)
     }
@@ -100,7 +91,7 @@ handler.all = async function (m, { isPrems }) {
 *Ukuran File Audio:* ${filesizeF}
 *Ukuran File Video:* ${yt2.filesizeF}
 *Server y2mate:* ${usedServer}
-`.trim(), '©RadBotZ', '🎵Audio', `.yta ${vid.url}`, '🎥Video', `.yt ${vid.url}`)
+`.trim(), watermark, '🎵Audio', `.yta ${vid.url}`, '🎥Video', `.yt ${vid.url}`)
     }
 
 }

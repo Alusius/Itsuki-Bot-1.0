@@ -1,50 +1,15 @@
-let imageToBase64 = require('image-to-base64');
-let axios = require("axios");
-let handler = async(m, { conn, text }) => {
+let fetch = require('node-fetch')
+let handler = async (m, { conn, command, usedPrefix }) => {
+	
+	conn.sendButtonImg(m.chat, await ( await fetch(`https://server-api-rey.herokuapp.com/api/wallpaper/${command}?apikey=apirey`)).buffer(), 'Nih kak', watermark, 'NEXT', `${usedPrefix + command}`, m)
 
-  await m.reply('Searching...')
-let items = ["anime girl", "anime cantik", "anime", "anime aesthetic"];
-    let cewe = items[Math.floor(Math.random() * items.length)];
-    let url = "http://fdciabdul.tech/api/pinterest/?keyword=" + cewe;
-    let str = `
-Nih Anime
-Cantik Kan? 
-`.trim()
+}
 
-    axios.get(url)
-      .then((result) => {
-        let b = JSON.parse(JSON.stringify(result.data));
-        let cewek =  b[Math.floor(Math.random() * b.length)];
-        imageToBase64(cewek) // Path to the image
-        .then(
-            (response) => {
-	let buf = Buffer.from(response, 'base64'); // Ta-da
-
-    conn.sendFile(m.chat, buf, 'foto.jpg', str, m)
-            }
-        )
-        .catch(
-            (error) => {
-                console.log(error); // Logs an error if there was one
-            }
-        )
-    
-    });
-    }
-handler.help = ['randomanime']
+handler.help = ['waifu2', 'shota', 'yotsuba', 'shinomiya', 'yumeko', 'tejina', 'chiho', 'boruto', 'kaori', 'shizuka', 'kaga', 'kotori', 'mikasa', 'akiyama', 'gremory', 'isuzu', 'shina', 'kagura', 'shinka', 'eba', 'elaina', 'erza', 'hinata', 'minato', 'naruto', 'sagiri', 'nezuko', 'rize', 'ana', 'deidara', 'yuki', 'asuna', 'ayuzawa', 'chitoge', 'emilia', 'hestia', 'inori', 'itachi', 'madara', 'sakura', 'sasuke', 'tsunade', 'onepiece', 'mobil', 'montor', 'keneki', 'toukachan', 'akira', 'itori', 'kurumi', 'pokemon']
 handler.tags = ['anime']
-handler.command = /^(randomanime)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
+handler.command = /^(waifu2|shota|yotsuba|shinomiya|yumeko|tejina|chiho|boruto|kaori|shizuka|kaga|kotori|mikasa|akiyama|gremory|isuzu|shina|kagura|shinka|eba|elaina|erza|hinata|minato|naruto|sagiri|nezuko|rize|ana|deidara|yuki|asuna|ayuzawa|chitoge|emilia|hestia|inori|itachi|madara|sakura|sasuke|tsunade|onepiece|mobil|montor|keneki|toukachan|akira|itori|kurumi|pokemon)$/i
+handler.register = true
 
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
-handler.exp = 0
-handler.limit = false
+handler.limit = true
 
 module.exports = handler

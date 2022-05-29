@@ -1,7 +1,7 @@
 let fetch = require('node-fetch')
 let handler = async(m, { conn, usedPrefix, command }) => {
 
-	let res = await (await fetch(`https://api.lolhuman.xyz/api/random/quotesnime?apikey=Dawnfrostkey`)).json()
+	let res = await (await fetch(`https://api.lolhuman.xyz/api/random/quotesnime?apikey=rey2k21`)).json()
 	 	let hasil = `${res.result.quote}
 chara: ${res.result.character}
 anime: ${res.result.anime}

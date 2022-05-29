@@ -1,29 +1,29 @@
-let axios = require("axios");
-let handler = async(m, { conn, text }) => {
+const fetch = require('node-fetch')
 
-    if (!text) return conn.reply(m.chat, 'Masukan Nama Daerah', m)
-
-  await m.reply('Searching...')
-	axios.get(`https://api.xteam.xyz/cuaca?kota=${text}&APIKEY=Dawnfrostkey`).then ((res) => {
-	 	let hasil = `Cuaca Daerah *${text}*\n\nTempat : ${res.data.message.kota}\nAngin : ${res.data.message.angin}\nCuaca : ${res.data.message.cuaca}\nDeskripsi : ${res.data.message.deskripsi}\nKelembapan : ${res.data.message.kelembapan}\nSuhu : ${res.data.message.suhu}\nUdara : ${res.data.message.pressure}`
-
-    conn.reply(m.chat, hasil, m)
-	})
+let handler = async (m, { text, usedPrefix, command }) => {
+    if (!text) throw `Pengunaan:\n${usedPrefix + command} <teks>\n\nContoh:\n${usedPrefix + command} Jakarta`
+    let res = await fetch(API('https://api.openweathermap.org', '/data/2.5/weather', {
+        q: text,
+        units: 'metric',
+        appid: '060a6bcfa19809c2cd4d97a212b19273'
+    }))
+    if (!res.ok) throw eror
+    let json = await res.json()
+    if (json.cod != 200) throw json
+    m.reply(`
+Lokasi: ${json.name}
+Negara: ${json.sys.country}
+Cuaca: ${json.weather[0].description}
+Suhu saat ini: ${json.main.temp} °C
+Suhu tertinggi: ${json.main.temp_max} °C
+Suhu terendah: ${json.main.tmemp_min} °C
+Kelembapan: ${json.main.humidity} %
+Angin: ${json.wind.speed} km/jam
+    `.trim())
 }
-handler.help = ['cuaca'].map(v => v + ' <daerah>')
-handler.tags = ['tools']
-handler.command = /^(cuaca)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
 
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
-handler.exp = 0
-handler.limit = true
+handler.help = ['cuaca']
+handler.tags = ['internet', 'tools']
+handler.command = /^(cuaca|weather)$/i
 
 module.exports = handler

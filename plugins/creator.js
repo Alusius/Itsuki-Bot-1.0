@@ -8,7 +8,7 @@ remoteJid: 'status@broadcast'
 },
 message: {
 locationMessage: {
-name: '©RadBotZ',
+name: '©shirobotz',
 jpegThumbnail: fs.readFileSync('./src/RadBotZ.jpg')
   }
  }
@@ -30,7 +30,7 @@ let list = []
 ]
 const buttonsMessage = {
     contentText: `
-Nih Kak Kontak Owner Saya Jangan Di Spam Kak
+Donasi/Sewa? Chat Owner
 `.trim(),    footerText: ``,
     buttons: buttons,
   headerType: 'EMPTY'

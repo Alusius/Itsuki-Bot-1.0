@@ -11,42 +11,37 @@ let handler  = async (m, { conn, usedPrefix }) => {
   await m.reply('wait Kakak!!')
   let neww = Math.round(performance.now())
   let str = `
-╠═〘 ${package.name} 〙 ═
-╠➥ *Versi* : 1.5.0
-╠➥ *Homepage* : https://github.com/Drz103/RadBot
-╠➥ *Issue:* ${package.bugs.url}
-╠➥ *Prefix:* ' ${usedPrefix} '
-╠➥ *Menu:* ${usedPrefix}menu
-╠➥ *Ping:* ${neww - old} *ms*
-╠➥ *Total user:* ${totalreg} *user*
-╠➥ *Uptime:* ${uptime}
-║
-╠═〘 DONASI 〙 ═
-╠➥ DANA [085714313795]
-╠➥ PULSA [085892962667]
-║
-║
-║${readMore}
-╠═〘 PIRACY BOT 〙 ═
-╠➥ *KAMI TIDAK BERTANGGUNG*
-║   *JAWAB ATAS PENYALAH*
-║   *GUNAAN BOT*
-╠➥ *KAMI TIDAK BERTANGGUNG*
-║   *JAWAB ATAS KEBOCORAN DATA*
-║   *PRIBADI ANDA*
-╠➥ *KAMI AKAN MENYIMPAN DATA*
-║   *SEPERTI NOMER TELEPON*
-║   *ANDA DI DATABASE KAMI*
-║ 
-║ 
-╠═ ©2021 ${package.name}
-╠═ Scrip original by Norutomo
-╠═ Creator : Raditya,Beniismael
-╠═ Api xsteam :St4r
-╠═ Resta
-╠═ Ariq
-╠═〘 BOTRADITYA 〙 ═`.trim()
-     await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©RadBotZ ⁩×͜×', 'Owner', '.owner', 'Menu', '.menu', m)
+╭═══════════════════════
+║╭─❉〘 ${package.name} 〙❉─
+║│➸ *Versi* : 1.5.0
+║│➸ *Issue:* ${package.bugs.url}
+║│➸ *Prefix:* ' ${usedPrefix} '
+║│➸ *Menu:* ${usedPrefix}menu
+║│➸ *Ping:* ${neww - old} *ms*
+║│➸ *Total user:* ${totalreg} *user*
+║│➸ *Uptime:* ${uptime}
+║│
+║╭─❉〘 𝐆𝐑𝐎𝐔𝐏 𝐁𝐎𝐓 〙❉─
+║│➸ 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝗚𝗿𝗼𝘂𝗽 𝗕𝗼𝘁¹
+║│➸ https://tinyurl.com/y7xymnkd
+║│
+║│➸ 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝗚𝗿𝗼𝘂𝗽 𝗕𝗼𝘁²
+║│➸ https://tinyurl.com/yc92fva7
+║│
+║│ ${readMore}
+║╭─❉〘 𝐏𝐑𝐈𝐕𝐀𝐂𝐘 𝐁𝐎𝐓 〙❉─
+║│➸ *KAMI TIDAK BERTANGGUNG*
+║│➸ *JAWAB ATAS PENYALAH*
+║│➸ *GUNAAN BOT*
+║│➸ *KAMI TIDAK BERTANGGUNG*
+║│➸ *JAWAB ATAS KEBOCORAN DATA*
+║│➸ *PRIBADI ANDA*
+║│➸ *KAMI AKAN MENYIMPAN DATA*
+║│➸ *SEPERTI NOMER TELEPON*
+║│➸ *ANDA DI DATABASE KAMI*
+║╰─────────
+╰═════════════════`.trim()
+     await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©LynXzy💌', 'Owner', '.owner', 'Menu', '.menu', m)
 }
 handler.help = ['infobot']
 handler.tags = ['info']

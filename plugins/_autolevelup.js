@@ -9,6 +9,8 @@ handler.before = async function (m) {
         })
         let pp = './src/avatar_contact.png'
         let who = m.sender
+        let role = global.db.data.users[m.sender].role
+        let exp = global.db.data.users[m.sender].exp
         let discriminator = who.substring(9, 13)
         let sortedLevel = users.map(toNumber('level')).sort(sort('level'))
         let usersLevel = sortedLevel.map(enumGetKey)

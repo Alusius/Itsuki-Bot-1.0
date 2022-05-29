@@ -17,7 +17,7 @@ handler.before = async function (m) {
       if (--this.math[id][2] == 0) {
         clearTimeout(this.math[id][3])
         delete this.math[id]
-        await this.sendButton(m.chat, `*Kesempatan habis!*\nJawaban: *${math.result}*`, '', `${math.mode.toUpperCase()}`, `.math ${math.mode}`)
+        await this.sendButton(m.chat, `*Kesempatan habis!*\nJawaban: *${math.result}*`, '', `${math.mode.toUpperCase()}`, `.math ${math.mode}`, m)
       } else m.reply(`*Jawaban Salah!*\nMasih ada ${this.math[id][2]} kesempatan`)
     }
   } catch (e) { return }

@@ -3,7 +3,7 @@ let handler = async (m, { conn, args }) => {
    response = args.join(' ')
   if (!args) throw 'Masukkan Parameter'
   m.reply('Sedang Diproses...')
-  let res = `https://api.xteam.xyz/randomimage/wpnsfwmobile?apikey=Dawnfrostkey`
+  let res = `https://api.xteam.xyz/randomimage/wpnsfwmobile?apikey=cristian9407`
   conn.sendFile(m.chat, res, 'wpnsfwmobile.jpg', `wangy wangy wangy`, m, false)
 }
 handler.help = ['wpnsfwmobile'].map(v => v + ' ')

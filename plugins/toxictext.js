@@ -3,7 +3,7 @@ let handler = async (m, { conn, args }) => {
    response = args.join(' ')
   if (!args) throw 'Masukkan Parameter'
   m.reply('*Proses...*')
-  let res = `https://lolhuman.herokuapp.com/api/textprome/toxic?apikey=Dawnfrostkey&text=${response}`
+  let res = `https://api.lolhuman.xyz/api/textprome/toxic?apikey=rey2k21&text=${response}`
   conn.sendFile(m.chat, res, 'tectprome.jpg', `Nih Kak`, m, false)
 }
 handler.help = ['toxictext'].map(v => v + ' <teks>')

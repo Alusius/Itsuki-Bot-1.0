@@ -18,10 +18,10 @@ Ketik ${usedPrefix}calo untuk bantuan
 Bonus: ${poin} XP
 `.trim()
     conn.caklontong[id] = [
-        await conn.sendButton(m.chat, caption, 'Games ×͜×', 'Bantuan', '.calo', m),
+        await conn.sendButton(m.chat, caption, watermark, 'Bantuan', '.calo', m),
         json, poin,
         setTimeout(async () => {
-            if (conn.caklontong[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*\n${json.deskripsi}`, 'Games ×͜×', 'Cak Lontong', '.caklontong')
+            if (conn.caklontong[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*\n${json.deskripsi}`, watermark, 'Cak Lontong', '.caklontong', m)
             delete conn.caklontong[id]
         }, timeout)
     ]

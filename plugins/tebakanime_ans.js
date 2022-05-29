@@ -11,7 +11,7 @@ handler.before = async function (m) {
         if (['.wa', 'Bantuan', ''].includes(m.text)) return !0
         if (m.text.toLowerCase() == json.name.toLowerCase().trim()) {
             global.db.data.users[m.sender].exp += this.tebakanime[id][2]
-            await this.sendButton(m.chat, `*Benar!* +${this.tebakanime[id][2]} XP`, 'Games', 'Tebak Anime', '.tebakanime')
+            await this.sendButton(m.chat, `*Benar!* +${this.tebakanime[id][2]} XP`, watermark, 'Tebak Anime', '.tebakanime', m)
             clearTimeout(this.tebakanime[id][3])
             delete this.tebakanime[id]
         } else if (similarity(m.text.toLowerCase(), json.name.toLowerCase().trim()) >= threshold) m.reply(`*Dikit Lagi!*`)

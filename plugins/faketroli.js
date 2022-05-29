@@ -5,7 +5,7 @@ let handler = async(m, { conn, args, text, usedPrefix: _p }) => {
 //if(args.length == 0) return m.reply(`Cara Penggunaan: Reply Foto, Ketik *${_p}faketroli* <TextMessage> | <OrderMessage> | <OrderTitle>\nContoh: *${_p}faketroli* Hai Wibu | ZEROBOT | 10k Bang?`) 
 	let [poop, tytyd] = text.split("|")
 	if(!poop) return m.reply("Masukkan Teks Utama")
-	if(!tytyd) tytyd = "RadBotZ"
+	if(!tytyd) tytyd = "Shiro-Botz"
 	//if(!kecil) return m.reply("Masukkan Teks Title Order!")
   try{
 //let q = m.quoted ? m.quoted : m
@@ -23,7 +23,7 @@ let handler = async(m, { conn, args, text, usedPrefix: _p }) => {
                             status: 1,
                             surface : 1,
                             message: tytyd,
-                            orderTitle: "RadBotZ",
+                            orderTitle: "Shiro-Botz",
                             thumbnail: fs.readFileSync("./src/mike.jpg"),
                             sellerJid: '0@s.whatsapp.net'
                         }

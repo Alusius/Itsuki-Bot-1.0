@@ -52,7 +52,7 @@ Nyawa mu berkurang -${healt * 1} karena Kamu telah berpetualang sampai ${json.te
             global.db.data.users[m.sender].uncommon += uncommon * 1
             global.db.data.users[m.sender].sampah += sampah * 1
             global.db.data.users[m.sender].lastadventure = new Date * 1
-            conn.sendButtonLoc(m.chat, img, str, '©RadBotZ', 'HEAL', '.heal', m)
+            conn.sendButtonLoc(m.chat, img, str, watermark, 'HEAL', '.heal', m)
             if (mythic > 0) {
                    global.db.data.users[m.sender].mythic += mythic * 1
                    conn.sendButton(m.chat, '*Selamat anda mendapatkan item Rare yaitu*\n' + mythic + ' Mythic Crate', watermark, 'Open', '.open mythic 1', m)

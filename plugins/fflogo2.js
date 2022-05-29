@@ -3,7 +3,7 @@ let handler = async (m, { conn, args }) => {
    response = args.join(' ')
   if (!args) throw 'Masukkan Parameter'
   m.reply('*Proses...*')
-  let res = `http://lolhuman.herokuapp.com/api/ephoto1/freefire?apikey=Dawnfrostkey&text=${response}`
+  let res = `http://api.lolhuman.xyz/api/ephoto1/freefire?apikey=rey2k21&text=${response}`
   conn.sendFile(m.chat, res, 'nama.jpg', `Dasar Player 8 Bit`, m, false)
 }
 handler.help = ['fflogo2'].map(v => v + ' <teks>')

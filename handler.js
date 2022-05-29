@@ -2,6 +2,7 @@ let util = require('util')
 let fs = require('fs')
 let fetch = require('node-fetch')
 let simple = require('./lib/simple')
+let time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
 const uploadImage = require('./lib/uploadImage')
 const knights = require('knights-canvas')
 let { MessageType } = require('@adiwajshing/baileys')
@@ -123,7 +124,7 @@ module.exports = {
             if (!isNumber(user.lastmining)) user.lastmining = 0
             if (!isNumber(user.lasthunt)) user.lasthunt = 0
             if (!isNumber(user.lastweekly)) user.lastweekly = 0
-            if (!isNumber(user.lastmonthly)) user.lastmontly = 0
+            if (!isNumber(user.lastmonthly)) user.lastmonthly = 0
             if (!('registered' in user)) user.registered = false
             if (!user.registered) {
                 if (!('name' in user)) user.name = this.getName(m.sender)
@@ -228,29 +229,31 @@ module.exports = {
         if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
         if (chat) {
           if (!('isBanned' in chat)) chat.isBanned = false
-          if (!('welcome' in chat)) chat.welcome = false
+          if (!('welcome' in chat)) chat.welcome = true
           if (!('detect' in chat)) chat.detect = false
           if (!('sWelcome' in chat)) chat.sWelcome = ''
           if (!('sBye' in chat)) chat.sBye = ''
           if (!('sPromote' in chat)) chat.sPromote = ''
           if (!('sDemote' in chat)) chat.sDemote = ''
           if (!('descUpdate' in chat)) chat.descUpdate = true
-          if (!('delete' in chat)) chat.delete = false
+          if (!('delete' in chat)) chat.delete = true
           if (!('antiBadword' in chat)) chat.antiBadword = true
+          if (!('stiker' in chat)) chat.stiker = false
           if (!('rpg' in chat)) chat.delete = true
           if (!('nsfw' in chat)) chat.delete = false
           if (!('antiLink' in chat)) chat.antiLink = false
           if (!('viewonce' in chat)) chat.viewonce = true
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
-          welcome: false,
+          welcome: true,
           detect: false,
           sWelcome: '',
           sBye: '',
           sPromote: '',
           sDemote: '',
           descUpdate: true,
-          delete: false,
+          delete: true,
+          stiker: false,
           rpg: true,
           nsfw: false,
           antiBadword: true,
@@ -264,7 +267,7 @@ module.exports = {
           if (!'anon' in settings) settings.anon = true
           if (!'anticall' in settings) settings.anticall = true
           if (!'antispam' in settings) settings.antispam = true
-          if (!'antitroli' in settings) settings.antitroli = true
+          if (!'antitroli' in settings) settings.antitroli = false
           if (!'backup' in settings) settings.backup = false
           if (!isNumber(settings.backupDB)) settings.backupDB = 0
           if (!'groupOnly' in settings) settings.groupOnly = false
@@ -275,10 +278,10 @@ module.exports = {
           anon: true,
           anticall: true,
           antispam: true,
-          antitroli: true,
+          antitroli: false,
           backup: false,
           backupDB: 0,
-          groupOnly: true,
+          groupOnly: false,
           jadibot: false,
           onsfw: true,
           status: 0,
@@ -541,8 +544,8 @@ module.exports = {
           let groupMetadata = await this.groupMetadata(jid)
           for (let user of participants) {
             // let pp = './src/avatar_contact.png'
-            let pp = './src/mikey.jpg'
-            let ppgc = './src/mikey.jpg'
+            let pp = './src/RadBotZ.jpg'
+            let ppgc = './src/RadBotZ.jpg'
             try {
               pp = await uploadImage(await (await fetch(await this.getProfilePicture(user))).buffer())
               ppgc = await uploadImage(await (await fetch(await this.getProfilePicture(jid))).buffer())
@@ -592,7 +595,8 @@ vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;WA;;;\nFN:WA\nTEL;type=CELL;type=VOICE;waid
       case 'demote':
         if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```is no longer Admin```')
         text = text.replace('@user', '@' + participants[0].split('@')[0])
-        if (chat.detect) this.sendMessage(jid, text, MessageType.extendedText, {
+        let kntl = fs.readFileSync('./src/RadBotZ.jpg')
+        if (chat.detect) this.send2ButtonLoc(jid, kntl, text, watermark, 'MENU', '#menu', 'OWNER', '#owner', null, {
           contextInfo: {
             mentionedJid: this.parseMention(text)
           }
@@ -604,13 +608,14 @@ vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;WA;;;\nFN:WA\nTEL;type=CELL;type=VOICE;waid
     if (m.key.fromMe) return
     let chat = global.db.data.chats[m.key.remoteJid]
     if (chat.delete) {
-    if (chat.delete) return
-    await this.sendButton(m.key.remoteJid, `
-Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
+    await this.sendButton(m.key.remoteJid, `*—「 Anti Delete 」—*
+*📢 Terdeteksi Penghapusan Pesan !*
+*◇ Nama :* @${m.participant.split`@`[0]}
+*◇ Type*: ${Object.keys(m.message.message)[0]}
+*◇ Number*: ${require('awesome-phonenumber')(`+${m.participant.split`@`[0]}`).getNumber('international')}
 
-Untuk mematikan fitur ini, ketik
-*.enable delete*
-`.trim(), watermark, 'DISABLE DELETE', '#off antidelete', {
+klick untuk mematikannya atau ketik #disable delete
+`.trim(), watermark, 'DISABLE DELETE', '.disable delete', {
       quoted: m.message,
       contextInfo: {
         mentionedJid: [m.participant]
@@ -643,20 +648,23 @@ global.dfail = (type, m, conn) => {
   }[type]
   if (owr) return conn.sendSticker(m.chat, 'https://telegra.ph/file/2848948d64ea43302c882.png', m ,{sendEphemeral: true})
   let msg = {
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
+    owner: 'Khusus owner',
     mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
+    premium: 'Khusus premium',
     group: 'Perintah ini hanya dapat digunakan di grup!',
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Perintah ini hanya untuk *Admin* grup!',
+    admin: 'Khusus Admin group',
     nsfw: 'Perintah ini hanya bisa diaktifkan oleh owner',
-    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
   }[type]
   if (msg) return conn.sendButton(m.chat, msg, watermark, 'OK', 'Nanii', m)
-  let unreg = {
-    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar RadBotZ.16*`
+  let botAdmin = {
+    botAdmin: 'Mikir dkit lah bang *BOT NYA BUKAN ADMIN*',
   }[type]
-  if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu`, watermark, 'Verify', '#daftar Undefined.17', { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `©radbotz_`, itemCount: 2022, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')}}})
+  if (botAdmin) return conn.sendButton(m.chat, botAdmin, 'Lupa Saya', 'Eh iya ya', 'Nanii', m)
+  let unreg = {
+    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar LynXzy.16*`
+  }[type]
+  if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu`, watermark, 'Verify', `#daftar ${name}.17`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `©shirobotz_\nJam ${time}`, itemCount: 2022, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')}}})
 }
 
 let chalk = require('chalk')
